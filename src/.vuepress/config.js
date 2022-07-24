@@ -3,6 +3,7 @@ const path = require('path')
 let dynamicRoutes = []
 module.exports = {
   extendPageData ($page) {
+    //contains list of pages data
     const routes = $page._context.pages
     routes.map ((urlPath) => {
       let addPath = urlPath.path.replace(".html", "")
