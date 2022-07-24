@@ -7,6 +7,8 @@
     </div>
     <Bar/>
 
+    <Content/>
+
     <button @click="btnFn()">Click</button>
     {{ sample }}
   </div>
