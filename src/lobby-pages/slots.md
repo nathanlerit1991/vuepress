@@ -1,5 +1,5 @@
 ---
-layout: Lobby
+layout: 'Lobby'
 slug: slots
 locale: ja
 seo:

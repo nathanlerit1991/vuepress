@@ -1,6 +1,23 @@
 const { description } = require('../../package')
-
+const path = require('path')
+let dynamicRoutes = []
 module.exports = {
+  extendPageData ($page) {
+    const routes = $page._context.pages
+    routes.map ((urlPath) => {
+      let addPath = urlPath.path.replace(".html", "")
+      let filePath = urlPath.path.replace(".html", ".md")
+      dynamicRoutes.push({
+        path: addPath,
+        filePath: path.resolve(__dirname, '../' + filePath)
+      })
+    })
+  },
+  additionalPages: [
+    dynamicRoutes.map((data) => {
+      return data
+    })
+  ],
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -31,13 +48,7 @@ module.exports = {
      editLinks: false,
      docsDir: '',
      editLinkText: '',
-     lastUpdated: false,
-     nav: [
-       {
-         text: 'VJ',
-         link: 'lobby-pages/slots/',
-       },
-     ]
+     lastUpdated: false
    },
 
   /**
