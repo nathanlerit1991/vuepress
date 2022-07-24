@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .theme-container {
     background: green;
   }
