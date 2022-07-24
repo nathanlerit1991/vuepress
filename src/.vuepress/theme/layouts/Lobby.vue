@@ -26,10 +26,10 @@
       <section>
         <div class="container">
           <div class="row">
-            <BannerSlider
+            <!-- <BannerSlider
               :banner-data="$page.frontmatter.banner"
               class="o-hidden"
-            />
+            /> -->
           </div>
         </div>
       </section>
