@@ -14,8 +14,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^7.0.1",
-    "sass-loader": "^13.0.2",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.1.1",
     "vuepress": "^1.5.3"
   }
 }
