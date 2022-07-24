@@ -35,7 +35,7 @@ module.exports = {
      nav: [
        {
          text: 'VJ',
-         link: 'lobby-pages/vj/',
+         link: 'lobby-pages/slots/',
        },
      ]
    },
