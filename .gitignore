@@ -3,3 +3,7 @@ node_modules/
 node_modules/**
 **/node_modules/**
 **/vuepress/node_modules/**
+package-lock.json/
+package-lock.json/**
+**/package-lock.json/**
+**/vuepress/package-lock.json/**
