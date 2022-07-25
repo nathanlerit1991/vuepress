@@ -1,6 +1,7 @@
 <template>
   <div>
     <Games :games="$page.frontmatter.game" />
+    {{ $site }}
     <Content/>
   </div>
 </template>
