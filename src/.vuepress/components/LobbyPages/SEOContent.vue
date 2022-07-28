@@ -6,7 +6,7 @@
 <script>
 export default {
   mounted () {
-    window.onload = function() {
+    if( document.readyState !== 'loading' ) {
       const typographyType = [
         'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'A', 'LI'
       ]
