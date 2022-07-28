@@ -36,7 +36,7 @@
         </div>
       </section>
       <section id="s-cta">
-        <img class="cta-logo d-block" :src="`/assets/${brand}/LobbyPages/cta.png`" :alt="`${brand} Logo`">
+        <img class="cta-logo d-block" width="180" height="82" :src="`/assets/${brand}/LobbyPages/cta.png`" :alt="`${brand} Logo`">
         <FooterLinks 
           :brand="brand"
           :footer-data="footerData"
