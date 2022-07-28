@@ -2,7 +2,7 @@
   <div>
     <div class="g-footer-item" v-for="(dataFooterLink, dataFooterLink_index) in footerData" :key="dataFooterLink_index">
       <a class="v-center h-center" :href="`https://${brand}.com${dataFooterLink.link}`">
-        <img :src="dataFooterLink.image" />
+        <img width="25" height="25" :src="dataFooterLink.image">
         <span class="d-inline-block txt__primary1 txt--size2">{{ dataFooterLink.text }}</span>
       </a>
     </div>

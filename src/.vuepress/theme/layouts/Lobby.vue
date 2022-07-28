@@ -5,13 +5,13 @@
         <div id="nav-home" class="h-left">
           <a :href="`https://${brand}.com/ja`">
             <!-- <img src="~assets/verajohn/LobbyPages/logo.png" alt="Logo"> -->
-            <img :src="`/assets/${brand}/LobbyPages/home-icon.png`" alt="Home icon">
+            <img width="24" height="22" :src="`/assets/${brand}/LobbyPages/home-icon.png`" alt="Home icon">
           </a>
         </div>
 
         <div class="h-center">
           <a :href="`https://${brand}.com/ja`">
-            <img class="logo" :src="`/assets/${brand}/LobbyPages/logo.png`" :alt="`${brand} Logo`">
+            <img class="logo" width="73" height="54" :src="`/assets/${brand}/LobbyPages/logo.png`" :alt="`${brand} Logo`">
           </a>
         </div>
 
