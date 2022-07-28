@@ -16,7 +16,7 @@
       <div v-for="(list, list_index) in gameData.game_list" :key="list_index">
         <a class="left-icon" :href="list.url">
           <i class="is-hot"></i>
-          <img width="88" height="88" class="m-auto" :src="list.image" :alt="list.image">
+          <img class="m-auto" :src="list.image" :alt="list.image">
           <p :class="gameTitleClassName" class="txt-ellipsis">{{ list.title }}</p>
         </a>
       </div>
