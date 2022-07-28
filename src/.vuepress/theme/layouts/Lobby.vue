@@ -106,6 +106,4 @@ export default {
 
 <style lang="scss">
   @import '~styles/DesignPattern/layout-grid.scss';
-  @import '~styles/Branding/Verajohn/style.scss';
-  @import '~styles/LobbyPages/Verajohn/style.scss';
 </style>
