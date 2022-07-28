@@ -24,7 +24,7 @@
         </div>
       </nav>
     </header>
-    <main>
+    <main v-if="DOMready">
       <section id="s-games">
         <div class="container">
           <div class="row">
@@ -74,6 +74,7 @@ export default {
   },
   data () {
     return {
+      DOMready: false,
       footerData: [
         {
           text: 'ヘルプ・センター',
@@ -94,6 +95,11 @@ export default {
         label: '今すぐ登録しよう',
         link: '/ja/#join'
       },
+    }
+  },
+  mounted () {
+    if( document.readyState !== 'loading' ) {
+      this.DOMready = true
     }
   },
   computed: {
