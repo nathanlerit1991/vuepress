@@ -50,11 +50,11 @@
         </div>
       </section>
     </main>
-    <FooterSticky
+    <!-- <FooterSticky
       :brand="brand"
       :sign-in-data="signInBtnData" 
       :join-data="joinBtnData"
-    />
+    /> -->
   </div>
 </template>
 
@@ -63,14 +63,14 @@ import Button from "~components/LobbyPages/Button";
 import Games from "~components/LobbyPages/Games";
 import FooterLinks from "~components/LobbyPages/FooterLinks";
 import SEOContent from "~components/LobbyPages/SEOContent";
-import FooterSticky from "~components/LobbyPages/FooterSticky";
+// import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
     Button,
     Games,
     FooterLinks,
-    SEOContent,
-    FooterSticky
+    SEOContent
+    // FooterSticky
   },
   data () {
     return {
