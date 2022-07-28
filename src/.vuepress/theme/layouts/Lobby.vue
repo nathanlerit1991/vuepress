@@ -35,6 +35,12 @@
           </div>
         </div>
       </section>
+      <section id="s-cta">
+        <FooterLinks 
+          :brand="brand"
+          :footer-data="footerData"
+        />
+      </section>
       <section id="s-seo-contents">
         <div class="container">
           <div class="row">
@@ -49,15 +55,30 @@
 <script>
 import Button from "~components/LobbyPages/Button";
 import Games from "~components/LobbyPages/Games";
+import FooterLinks from "~components/LobbyPages/FooterLinks";
 import SEOContent from "~components/LobbyPages/SEOContent";
 export default {
   components: {
     Button,
     Games,
+    FooterLinks,
     SEOContent
   },
   data () {
-    return {}
+    return {
+      footerData: [
+        {
+          text: 'ヘルプ・センター',
+          link: 'https://www.yuugado.com/ja/help',
+          image: '/assets/verajohn/LobbyPages/help-icon.png'
+        },
+        {
+          text: 'ビギナーズガイド',
+          link: 'https://www.yuugado.com/ja/about/beginnersguidemb',
+          image: '/assets/verajohn/LobbyPages/beginner-guide-icon.png'
+        }
+      ]
+    }
   },
   computed: {
     brand(){
