@@ -35,6 +35,13 @@
           </div>
         </div>
       </section>
+      <section id="s-cta">
+        <img class="cta-logo d-block" :src="`/assets/${brand}/LobbyPages/cta.png`" alt="Logo">
+        <FooterLinks 
+          :brand="brand"
+          :footer-data="footerData"
+        />
+      </section>
       <section id="s-seo-contents">
         <div class="container">
           <div class="row">
@@ -49,15 +56,30 @@
 <script>
 import Button from "~components/LobbyPages/Button";
 import Games from "~components/LobbyPages/Games";
+import FooterLinks from "~components/LobbyPages/FooterLinks";
 import SEOContent from "~components/LobbyPages/SEOContent";
 export default {
   components: {
     Button,
     Games,
+    FooterLinks,
     SEOContent
   },
   data () {
-    return {}
+    return {
+      footerData: [
+        {
+          text: 'ヘルプ・センター',
+          link: '/ja/help',
+          image: '/assets/verajohn/LobbyPages/help-icon.png'
+        },
+        {
+          text: 'ビギナーズガイド',
+          link: '/ja/about/beginnersguidemb',
+          image: '/assets/verajohn/LobbyPages/beginner-guide-icon.png'
+        }
+      ]
+    }
   },
   computed: {
     brand(){
