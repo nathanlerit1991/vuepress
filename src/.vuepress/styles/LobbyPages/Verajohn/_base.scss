@@ -1,0 +1,157 @@
+//add border top separator
+.separator-top{
+  &:after{
+    background: $SEPARATOR_COLOR;
+    display: block;
+    content: '';
+    position: absolute;
+    top: -$PADDING;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+}
+//add border bottom separator
+.separator-bottom{
+  &:before{
+    background: $SEPARATOR_COLOR;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -$PADDING;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+}
+
+
+// RESET
+html body .container,
+html body .container-grid{
+  max-width: 768px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+#s-nav-bar-main {
+  background: $NAV_BAR_MAIN_BG;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 0 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px 0px $NAV_BAR_MAIN_SHADOW;
+  max-height: 53px;
+
+  #nav-home img {
+    max-width: 30px;
+  }
+
+  .logo {
+    max-width: $NAV_BAR_MAIN_LOGO_WIDTH;
+  }
+
+  button {
+    border-radius: 10px;
+    height: 38px;
+  }
+
+  > div {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    align-items: center;
+  }
+}
+
+//==== MAIN CONTENT ==//
+main{
+  position: relative;
+  transition: all .3s ease;
+  min-height: 100vh;
+  height: 100%;
+  background: $MAIN_BG;
+  padding-top: $NAV_HEIGHT;
+  padding-bottom: 50px;
+}
+
+#s-games{
+  padding: $PADDING 0;
+  text-align: center;
+  .container{
+    position: relative;
+  }
+
+  @include gameListImage(
+    $HOT_ICON,
+    $GAME_LIST_BORDER_RADIUS,
+    $GAME_LIST_BORDER
+  );
+}
+
+#s-lobby-tiles{
+  padding: $PADDING 0;
+
+  @include podImage(
+    $LOBBY_TILES_ICON_WIDTH,
+    $LOBBY_TILES_ICON_HEIGHT,
+    $LOBBY_TILES_ICON_BORDER_RADIUS,
+    $LOBBY_TILES_ICON_BG,
+    $LOBBY_TILES_BG,
+    $LOBBY_TILES_BORDER
+  );
+}
+
+#s-cta{
+  background: $SECONDARY_MAIN_BG;
+  padding: $PADDING 0;
+
+  .cta-logo {
+    margin: 30px auto;
+    max-width: 180px;
+  }
+
+  .g-footer-item {
+    background: $FOOTER_ITEM_BG;
+    margin: $MARGINS 0;
+    padding: calc(#{$PADDING} / 2);
+  }
+}
+
+#s-seo-contents{
+  background: $SECONDARY_MAIN_BG;
+  padding: $PADDING 0;
+
+  h1,h2{
+    text-align: center;
+  }
+}
+
+#s-footer-icon-wrapper{
+  background: $SECONDARY_MAIN_BG;
+  padding: $PADDING 0;
+
+  .footer-icons {
+    border-radius: 8px 8px 0 0;
+    border: solid 2px $FOOTER_CONTENT_BORDER;
+
+    > div:first-child {
+      margin-top: -2px;
+    }
+  }
+}
+
+.g-payment-provider,
+.g-game-providers,
+.g-license{
+  padding: $PADDING;
+  outline: solid 2px $FOOTER_CONTENT_BORDER;
+  margin-top: 2px;
+  background: $FOOTER_CONTENT_BG;
+}

@@ -1,0 +1,274 @@
+@at-root html{
+  scroll-behavior: smooth
+}
+
+@at-root body{
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.container,
+.container-grid{
+  margin: auto;
+}
+
+.container-grid > .row{
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.row{
+  display: flex;
+  position: relative;
+}
+.row > div{
+  flex-grow: 1;
+}
+.container > .row > div{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+button,
+a{
+  cursor: pointer;
+  outline: 0;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 280px) {
+  .container > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .column-1 > div{
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .column-1,
+  .column-2,
+  .column-3,
+  .column-4,
+  .column-5,
+  .column-6,
+  .column-7,
+  .column-8{
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px) {
+  .container,
+  .container-grid{
+    max-width: 540px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+  .container,
+  .container-grid{
+    max-width: 720px;
+  }
+  .container > .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+  .container,
+  .container-grid{
+    max-width: 960px;
+  }
+
+  .column-2 > div{
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .column-5 > div{
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  .column-6 > div{
+    -ms-flex: 0 0 16.6666666667%;
+    flex: 0 0 16.6666666667%;
+    max-width: 0 0 16.6666666667%;
+  }
+  .column-7 > div{
+    -ms-flex: 0 0 14.2857142857%;
+    flex: 0 0 14.2857142857%;
+    max-width: 0 0 14.2857142857%;
+  }
+  .column-8 > div{
+    -ms-flex: 0 0 12.5%;
+    flex: 0 0 12.5%;
+    max-width: 0 0 12.5%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+  .column-3 > div{
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .column-4 > div{
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .container,
+  .container-grid{
+    max-width: 1140px;
+  }
+}
+
+
+.h-left {
+  display: flex;
+  justify-content: flex-start;
+}
+.h-center {
+  display: flex;
+  justify-content: center;
+}
+.h-right {
+  display: flex;
+  justify-content: flex-end;
+}
+.v-center {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.full-screen {
+  width: 100%;
+  height: 100vh;
+}
+
+.gutter {
+  grid-gap: 15px;
+}
+
+.left-icon {
+  position: relative;
+  display: block;
+
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.right-icon {
+  position: relative;
+  display: block;
+
+  i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// FLEX //
+.f-no-wrap {
+  flex-wrap: nowrap;
+}
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+// DISPLAY //
+.d-flex {
+  display: flex;
+
+  > * {
+    flex-grow: 1;
+  }
+}
+.d-block {
+  display: block;
+}
+.d-inline-block {
+  display: inline-block;
+}
+
+// OVERFLOW //
+.o-hidden-x {
+  overflow-x: hidden;
+}
+.o-hidden-y {
+  overflow-y: hidden;
+}
+.o-hidden {
+  overflow: hidden;
+}
+
+.o-scroll-x {
+  overflow-x: scroll;
+}
+.o-scroll-y {
+  overflow-y: scroll;
+}
+.o-scroll {
+  overflow: scroll;
+}
+
+// MARGIN //
+.m-auto {
+  display: block;
+  margin: auto;
+}
+
+// TEXT //
+.txt-left {
+  text-align: left;
+}
+.txt-center {
+  text-align: center;
+}
+.txt-right {
+  text-align: right;
+}
+.txt-ellipsis {
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}

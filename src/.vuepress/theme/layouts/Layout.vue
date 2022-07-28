@@ -4,12 +4,12 @@
     <div v-for="(games, games_index) in $page.games" :key="games_index">
       <p>{{ games.title }}</p>
     </div>
-    <Content/>
+    <Content />
   </div>
 </template>
 
 <style scoped>
-  .theme-container {
-    background: red;
-  }
+.theme-container {
+  background: red;
+}
 </style>

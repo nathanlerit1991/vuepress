@@ -2,12 +2,22 @@ const { description } = require('../../package')
 const path = require('path')
 let dynamicRoutes = []
 module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '~components': path.resolve(__dirname, 'components'),
+        'assets': path.resolve(__dirname,"assets"),
+        '~styles': path.resolve(__dirname, 'styles')
+      }
+    }
+  },
   extendPageData ($page) {
-    //contains list of pages data
+    //Contains list of pages data
     const routes = $page._context.pages
     routes.map ((urlPath) => {
       let addPath = urlPath.path.replace(".html", "")
       let filePath = urlPath.path.replace(".html", ".md")
+      //Pass all MD files
       dynamicRoutes.push({
         path: addPath,
         filePath: path.resolve(__dirname, '../' + filePath)
@@ -15,6 +25,7 @@ module.exports = {
     })
   },
   additionalPages: [
+    //Create new routes base on MD files
     dynamicRoutes.map((data) => {
       return data
     })

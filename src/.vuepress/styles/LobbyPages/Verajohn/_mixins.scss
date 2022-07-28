@@ -1,0 +1,23 @@
+@mixin gameListImage ($ICON, $RADIUS, $BORDER) {
+  .right-icon i,
+  .left-icon i,{
+    background-image: $ICON;
+  }
+  img{
+    border-radius: $RADIUS;
+    border: $BORDER;
+  }
+}
+
+@mixin podImage ($ICON_WIDTH, $ICON_HEIGHT, $ICON_RADIUS, $ICON_BG, $POD_BG, $POD_BORDER) {
+  .pod-feat-img{
+    width: $ICON_WIDTH;
+    max-height: $ICON_HEIGHT;
+    border-radius: $ICON_RADIUS;
+    background-image: $ICON_BG;
+  }
+
+  .pods{
+    background-image: linear-gradient($POD_BG, $POD_BG), $POD_BORDER;
+  }
+}
