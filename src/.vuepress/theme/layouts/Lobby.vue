@@ -38,7 +38,7 @@
       <section id="s-seo-contents">
         <div class="container">
           <div class="row">
-            <Content />
+            <SEOContent/>
           </div>
         </div>
       </section>
@@ -49,10 +49,12 @@
 <script>
 import Button from "~components/LobbyPages/Button";
 import Games from "~components/LobbyPages/Games";
+import SEOContent from "~components/LobbyPages/SEOContent";
 export default {
   components: {
     Button,
-    Games
+    Games,
+    SEOContent
   },
   data () {
     return {}

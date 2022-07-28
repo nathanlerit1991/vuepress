@@ -15,7 +15,7 @@
     <div class="game-list d-flex o-scroll-y">
       <div v-for="(list, list_index) in gameData.game_list" :key="list_index">
         <a class="left-icon" :href="list.url">
-          <i class="is-hot">{{ list.is_hot }}</i>
+          <i class="is-hot"></i>
           <img class="m-auto" :src="list.image">
           <p :class="gameTitleClassName" class="txt-ellipsis">{{ list.title }}</p>
         </a>
@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: 'GameList',
   props: {
     gameData: {
       type: Object,
