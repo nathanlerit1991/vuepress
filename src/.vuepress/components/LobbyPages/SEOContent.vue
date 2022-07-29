@@ -90,6 +90,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .g-seo-content {
+  h1 {
+    font-size: 22px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 15px;
+  }
   > *:first-child {
     margin-top: 0;
   }
