@@ -45,30 +45,34 @@
             :footer-data="footerData"
           />
         </section>
-        <Hydrate ssr-only>
-          <section id="s-seo-contents">
-            <div class="container">
-              <div class="row">
-                <SEOContent/>
-              </div>
+        <section id="s-seo-contents">
+          <div class="container">
+            <div class="row">
+              <SEOContent/>
             </div>
-          </section>
-          <footer id="s-footer-icon-wrapper">
-            <div class="container footer-icons o-hidden">
+          </div>
+        </section>
+        <footer id="s-footer-icon-wrapper">
+          <div class="container footer-icons o-hidden">
+            <Hydrate when-visible>
               <PaymentProvider
                   :brand="brandName"
                   :payment-title="'入出金方法'"
                   :payment-provider-images="paymentProvider"
                 />
+            </Hydrate>
+            <Hydrate when-visible>
               <GameProvider
                 :brand="brandName"
                 :game-title="'ゲーム配信会社'"
                 :game-provider-images="gameProvider"
               />
+            </Hydrate>
+            <Hydrate when-visible>
               <License :brand="brandName" :regulatory-images="license" />
-            </div>
-          </footer>
-        </Hydrate>
+            </Hydrate>
+          </div>
+        </footer>
       </main>
     <FooterSticky
       :brand="brandName"
