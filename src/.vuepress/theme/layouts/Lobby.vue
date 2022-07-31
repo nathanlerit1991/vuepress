@@ -54,24 +54,23 @@
             </div>
           </section>
         </LazyHydrate>
-
-        <LazyHydrate when-visible>
-          <footer id="s-footer-icon-wrapper">
-            <div class="container footer-icons o-hidden">
-              <PaymentProvider
-                  :brand="brandName"
-                  :payment-title="'入出金方法'"
-                  :payment-provider-images="paymentProvider"
-                />
-              <GameProvider
+        <footer id="s-footer-icon-wrapper">
+          <div class="container footer-icons o-hidden">
+            <PaymentProvider
                 :brand="brandName"
-                :game-title="'ゲーム配信会社'"
-                :game-provider-images="gameProvider"
+                :payment-title="'入出金方法'"
+                :payment-provider-images="paymentProvider"
               />
+            <GameProvider
+              :brand="brandName"
+              :game-title="'ゲーム配信会社'"
+              :game-provider-images="gameProvider"
+            />
+            <LazyHydrate when-visible>
               <License :brand="brandName" :regulatory-images="license" />
-            </div>
-          </footer>
-        </LazyHydrate>
+            </LazyHydrate>
+          </div>
+        </footer>
       </main>
     <FooterSticky
       :brand="brandName"
@@ -87,10 +86,8 @@ import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
 import FooterLinks from "~components/LobbyPages/FooterLinks";
-import SEOContent from "~components/LobbyPages/SEOContent";
 import PaymentProvider from "~components/LobbyPages/PaymentProvider";
 import GameProvider from "~components/LobbyPages/GameProvider";
-import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
@@ -99,10 +96,10 @@ export default {
     NavMainTitleLogo,
     Games,
     FooterLinks,
-    SEOContent,
+    SEOContent: () => import("~components/LobbyPages/SEOContent"),
     PaymentProvider,
     GameProvider,
-    License,
+    License: () => import("~components/LobbyPages/License"),
     FooterSticky
   },
   data () {
