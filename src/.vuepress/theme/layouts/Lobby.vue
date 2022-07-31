@@ -45,14 +45,14 @@
             :footer-data="footerData"
           />
         </section>
-        <section id="s-seo-contents">
-          <div class="container">
-            <div class="row">
-              <SEOContent/>
+        <Hydrate :force="isItReady">
+          <section id="s-seo-contents">
+            <div class="container">
+              <div class="row">
+                <SEOContent/>
+              </div>
             </div>
-          </div>
-        </section>
-        <Hydrate :with-delay="2000">
+          </section>
           <footer id="s-footer-icon-wrapper">
             <div class="container footer-icons o-hidden">
               <PaymentProvider
