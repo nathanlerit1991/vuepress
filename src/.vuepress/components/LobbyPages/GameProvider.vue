@@ -8,7 +8,7 @@
         <img
           v-for="(game_providers, game_providers_index) in gameProviderImages"
           :key="game_providers_index.image"
-          :src="game_providers.image"
+          :src="`/assets/${brand}/${game_providers.image}`"
           alt="Game Providers"
         />
       </div>
@@ -20,6 +20,10 @@
 export default {
   name: "game-provider",
   props: {
+    brand: {
+      type: String,
+      required: true
+    },
     gameTitle: {
       type: String,
       required: true

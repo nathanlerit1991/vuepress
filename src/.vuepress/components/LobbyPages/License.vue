@@ -12,7 +12,7 @@
           </a>
           <img
             v-for="(regulatory_image, regulatory_index) in regulatoryImages"
-            :key="index"
+            :key="regulatory_index"
             :src="regulatory_image.image"
             alt="License"
           >

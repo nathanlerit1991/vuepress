@@ -8,7 +8,7 @@
         <img
           v-for="(payment_providers, payment_providers_index) in paymentProviderImages"
           :key="payment_providers_index"
-          :src="payment_providers.image"
+          :src="`/assets/${brand}/${payment_providers.image}`"
           alt="Provider"
         >
       </div>
@@ -20,6 +20,10 @@
   export default {
     name: 'PaymentProvider',
     props: {
+      brand: {
+        type: String,
+        required: true
+      },
       paymentProviderImages: {
         type: Array,
         required: false,

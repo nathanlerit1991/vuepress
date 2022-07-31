@@ -3,22 +3,25 @@
     <header>
      <nav id="s-nav-bar-main">
         <div id="nav-home" class="h-left">
-          <a :href="`https://${brand}.com/ja`">
+          <a :href="`https://${brandName}.com/ja`">
             <!-- <img src="~assets/verajohn/LobbyPages/logo.png" alt="Logo"> -->
-            <img width="24" height="22" :src="`/assets/${brand}/LobbyPages/home-icon.png`" alt="Home icon">
+            <img width="24" height="22" :src="`/assets/${brandName}/LobbyPages/home-icon.png`" alt="Home icon">
           </a>
         </div>
 
         <div class="h-center">
-          <a :href="`https://${brand}.com/ja`">
-            <img class="logo" width="73" height="54" :src="`/assets/${brand}/LobbyPages/logo.png`" :alt="`${brand} Logo`">
-          </a>
+          <NavMainTitleLogo
+            :brand="brandName"
+            :logo="`/assets/${brandName}/LobbyPages/logo.png`"
+            :title="''"
+            :title-class-name="'heading__primary1 heading--size1'"
+          />
         </div>
 
         <div class="h-right">
           <Button
             :btn-text="'ログイン'"
-            :btn-link="`https://${brand}.com/ja/#signin`"
+            :btn-link="`https://${brandName}.com/ja/#signin`"
             :btn-class-name="'btn-secondary txt--size3'"
           />
         </div>
@@ -36,9 +39,9 @@
         </div>
       </section>
       <section id="s-cta">
-        <img class="cta-logo d-block" width="180" height="82" :src="`/assets/${brand}/LobbyPages/cta.png`" :alt="`${brand} Logo`">
+        <img class="cta-logo d-block" width="180" height="82" :src="`/assets/${brandName}/LobbyPages/cta.png`" :alt="`${brandName} Logo`">
         <FooterLinks 
-          :brand="brand"
+          :brand="brandName"
           :footer-data="footerData"
         />
       </section>
@@ -53,19 +56,21 @@
       <footer id="s-footer-icon-wrapper">
         <div class="container footer-icons o-hidden">
           <PaymentProvider
+              :brand="brandName"
               :payment-title="'入出金方法'"
               :payment-provider-images="paymentProvider"
             />
           <GameProvider
+            :brand="brandName"
             :game-title="'ゲーム配信会社'"
             :game-provider-images="gameProvider"
           />
-          <License :brand="brand" :regulatory-images="license" />
+          <License :brand="brandName" :regulatory-images="license" />
         </div>
       </footer>
     </main>
     <FooterSticky
-      :brand="brand"
+      :brand="brandName"
       :sign-in-data="signInBtnData" 
       :join-data="joinBtnData"
     />
@@ -74,6 +79,7 @@
 
 <script>
 import Button from "~components/LobbyPages/Button";
+import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
 import FooterLinks from "~components/LobbyPages/FooterLinks";
 import SEOContent from "~components/LobbyPages/SEOContent";
@@ -84,6 +90,7 @@ import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
     Button,
+    NavMainTitleLogo,
     Games,
     FooterLinks,
     SEOContent,
@@ -108,27 +115,27 @@ export default {
       ],
       paymentProvider: [
         {
-          image: '/assets/verajohn/LobbyPages/payment-provider/1-master-icon.png'
+          image: 'LobbyPages/payment-provider/1-master-icon.png'
         },
         {
-          image: '/assets/verajohn/LobbyPages/payment-provider/2-venus-point.png'
+          image: 'LobbyPages/payment-provider/2-venus-point.png'
         },
         {
-          image: '/assets/verajohn/LobbyPages/payment-provider/3-bitcoin-icon.png'
+          image: 'LobbyPages/payment-provider/3-bitcoin-icon.png'
         },
         {
-          image: '/assets/verajohn/LobbyPages/payment-provider/4-playsafe-icon.png'
+          image: 'LobbyPages/payment-provider/4-playsafe-icon.png'
         },
         {
-          image: '/assets/verajohn/LobbyPages/payment-provider/5-eco-icon.png'
+          image: 'LobbyPages/payment-provider/5-eco-icon.png'
         },
         {
-          image: '/assets/verajohn/LobbyPages/payment-provider/6-i-wallet-icon.png'
+          image: 'LobbyPages/payment-provider/6-i-wallet-icon.png'
         }
       ],
       gameProvider: [
         {
-          image: '/assets/verajohn/LobbyPages/game-provider/1-e-icon.png'
+          image: 'LobbyPages/game-provider/1-e-icon.png'
         }
       ],
       license: [
@@ -147,7 +154,7 @@ export default {
     }
   },
   computed: {
-    brand(){
+    brandName(){
       return this.$page.path.includes('verajohn') ? 'verajohn' : this.$page.path.includes('intercasino') ? 'intercasino' : 'yuugado'
     }
   }
