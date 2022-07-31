@@ -45,15 +45,13 @@
             :footer-data="footerData"
           />
         </section>
-        <LazyHydrate when-visible>
-          <section id="s-seo-contents">
-            <div class="container">
-              <div class="row">
-                <SEOContent/>
-              </div>
+        <section id="s-seo-contents">
+          <div class="container">
+            <div class="row">
+              <SEOContent/>
             </div>
-          </section>
-        </LazyHydrate>
+          </div>
+        </section>
         <footer id="s-footer-icon-wrapper">
           <div class="container footer-icons o-hidden">
             <PaymentProvider
@@ -66,9 +64,7 @@
               :game-title="'ゲーム配信会社'"
               :game-provider-images="gameProvider"
             />
-            <LazyHydrate when-visible>
-              <License :brand="brandName" :regulatory-images="license" />
-            </LazyHydrate>
+            <License :brand="brandName" :regulatory-images="license" />
           </div>
         </footer>
       </main>
@@ -86,8 +82,10 @@ import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
 import FooterLinks from "~components/LobbyPages/FooterLinks";
+import SEOContent from "~components/LobbyPages/SEOContent";
 import PaymentProvider from "~components/LobbyPages/PaymentProvider";
 import GameProvider from "~components/LobbyPages/GameProvider";
+import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
@@ -96,10 +94,10 @@ export default {
     NavMainTitleLogo,
     Games,
     FooterLinks,
-    SEOContent: () => import("~components/LobbyPages/SEOContent"),
+    SEOContent,
     PaymentProvider,
     GameProvider,
-    License: () => import("~components/LobbyPages/License"),
+    License,
     FooterSticky
   },
   data () {
