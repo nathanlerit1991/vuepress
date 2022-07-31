@@ -27,7 +27,6 @@
         </div>
       </nav>
     </header>
-    <Hydrate when-visible>
       <main>
         <section id="s-games">
           <div class="container">
@@ -53,24 +52,24 @@
             </div>
           </div>
         </section>
-
-        <footer id="s-footer-icon-wrapper">
-          <div class="container footer-icons o-hidden">
-            <PaymentProvider
+        <Hydrate :with-delay="2000">
+          <footer id="s-footer-icon-wrapper">
+            <div class="container footer-icons o-hidden">
+              <PaymentProvider
+                  :brand="brandName"
+                  :payment-title="'入出金方法'"
+                  :payment-provider-images="paymentProvider"
+                />
+              <GameProvider
                 :brand="brandName"
-                :payment-title="'入出金方法'"
-                :payment-provider-images="paymentProvider"
+                :game-title="'ゲーム配信会社'"
+                :game-provider-images="gameProvider"
               />
-            <GameProvider
-              :brand="brandName"
-              :game-title="'ゲーム配信会社'"
-              :game-provider-images="gameProvider"
-            />
-            <License :brand="brandName" :regulatory-images="license" />
-          </div>
-        </footer>
+              <License :brand="brandName" :regulatory-images="license" />
+            </div>
+          </footer>
+        </Hydrate>
       </main>
-    </Hydrate>
     <FooterSticky
       :brand="brandName"
       :sign-in-data="signInBtnData"
