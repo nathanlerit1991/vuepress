@@ -49,6 +49,20 @@
           </div>
         </div>
       </section>
+
+      <footer id="s-footer-icon-wrapper">
+        <div class="container footer-icons o-hidden">
+          <PaymentProvider
+              :payment-title="'入出金方法'"
+              :payment-provider-images="paymentProvider"
+            />
+          <GameProvider
+            :game-title="'ゲーム配信会社'"
+            :game-provider-images="gameProvider"
+          />
+          <License :brand="brand" :regulatory-images="license" />
+        </div>
+      </footer>
     </main>
     <FooterSticky
       :brand="brand"
@@ -63,6 +77,9 @@ import Button from "~components/LobbyPages/Button";
 import Games from "~components/LobbyPages/Games";
 import FooterLinks from "~components/LobbyPages/FooterLinks";
 import SEOContent from "~components/LobbyPages/SEOContent";
+import PaymentProvider from "~components/LobbyPages/PaymentProvider";
+import GameProvider from "~components/LobbyPages/GameProvider";
+import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
@@ -70,6 +87,9 @@ export default {
     Games,
     FooterLinks,
     SEOContent,
+    PaymentProvider,
+    GameProvider,
+    License,
     FooterSticky
   },
   data () {
@@ -84,6 +104,36 @@ export default {
           text: 'ビギナーズガイド',
           link: '/ja/about/beginnersguidemb',
           image: '/assets/verajohn/LobbyPages/beginner-guide-icon.png'
+        }
+      ],
+      paymentProvider: [
+        {
+          image: '/assets/verajohn/LobbyPages/payment-provider/1-master-icon.png'
+        },
+        {
+          image: '/assets/verajohn/LobbyPages/payment-provider/2-venus-point.png'
+        },
+        {
+          image: '/assets/verajohn/LobbyPages/payment-provider/3-bitcoin-icon.png'
+        },
+        {
+          image: '/assets/verajohn/LobbyPages/payment-provider/4-playsafe-icon.png'
+        },
+        {
+          image: '/assets/verajohn/LobbyPages/payment-provider/5-eco-icon.png'
+        },
+        {
+          image: '/assets/verajohn/LobbyPages/payment-provider/6-i-wallet-icon.png'
+        }
+      ],
+      gameProvider: [
+        {
+          image: '/assets/verajohn/LobbyPages/game-provider/1-e-icon.png'
+        }
+      ],
+      license: [
+        {
+          image: '/assets/verajohn/LobbyPages/license/20+.svg'
         }
       ],
       signInBtnData: {
