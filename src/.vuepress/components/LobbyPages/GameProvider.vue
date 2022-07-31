@@ -5,7 +5,7 @@
     </div>
     <div class="d-flex">
       <div>
-        <img
+        <img-lazy
           v-for="(game_providers, game_providers_index) in gameProviderImages"
           :key="game_providers_index.image"
           :src="`/assets/${brand}/${game_providers.image}`"
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
 export default {
   name: "game-provider",
   props: {
@@ -33,7 +34,8 @@ export default {
       required: false,
       default: () => [""]
     }
-  }
+  },
+  components: { ImgLazy }
 };
 </script>
 

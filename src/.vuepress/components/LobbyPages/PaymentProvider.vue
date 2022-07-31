@@ -5,36 +5,38 @@
     </div>
     <div class="d-flex">
       <div>
-        <img
+        <img-lazy
           v-for="(payment_providers, payment_providers_index) in paymentProviderImages"
           :key="payment_providers_index"
           :src="`/assets/${brand}/${payment_providers.image}`"
           alt="Provider"
-        >
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'PaymentProvider',
-    props: {
-      brand: {
-        type: String,
-        required: true
-      },
-      paymentProviderImages: {
-        type: Array,
-        required: false,
-        default: () => ['']
-      },
-      paymentTitle: {
-        type: String,
-        required: true
-      }
+import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
+export default {
+  name: 'PaymentProvider',
+  props: {
+    brand: {
+      type: String,
+      required: true
+    },
+    paymentProviderImages: {
+      type: Array,
+      required: false,
+      default: () => ['']
+    },
+    paymentTitle: {
+      type: String,
+      required: true
     }
-  }
+  },
+  components: { ImgLazy }
+}
 </script>
 <style scoped lang="scss">
 .g-payment-provider{
