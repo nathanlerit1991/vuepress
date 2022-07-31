@@ -27,57 +27,60 @@
         </div>
       </nav>
     </header>
-    <main>
-      <section id="s-games">
-        <div class="container">
-          <div class="row">
-            <Games 
-              :gameData="$page.frontmatter.game"
-              :gameTitleClassName="'txt__primary1 txt--size1'"
-            />
+    <Hydrate when-visible>
+      <main>
+        <section id="s-games">
+          <div class="container">
+            <div class="row">
+              <Games
+                :gameData="$page.frontmatter.game"
+                :gameTitleClassName="'txt__primary1 txt--size1'"
+              />
+            </div>
           </div>
-        </div>
-      </section>
-      <section id="s-cta">
-        <img class="cta-logo d-block" width="180" height="82" :src="`/assets/${brandName}/LobbyPages/cta.png`" :alt="`${brandName} Logo`">
-        <FooterLinks 
-          :brand="brandName"
-          :footer-data="footerData"
-        />
-      </section>
-      <section id="s-seo-contents">
-        <div class="container">
-          <div class="row">
-            <SEOContent/>
-          </div>
-        </div>
-      </section>
-
-      <footer id="s-footer-icon-wrapper">
-        <div class="container footer-icons o-hidden">
-          <PaymentProvider
-              :brand="brandName"
-              :payment-title="'入出金方法'"
-              :payment-provider-images="paymentProvider"
-            />
-          <GameProvider
+        </section>
+        <section id="s-cta">
+          <img class="cta-logo d-block" width="180" height="82" :src="`/assets/${brandName}/LobbyPages/cta.png`" :alt="`${brandName} Logo`">
+          <FooterLinks
             :brand="brandName"
-            :game-title="'ゲーム配信会社'"
-            :game-provider-images="gameProvider"
+            :footer-data="footerData"
           />
-          <License :brand="brandName" :regulatory-images="license" />
-        </div>
-      </footer>
-    </main>
+        </section>
+        <section id="s-seo-contents">
+          <div class="container">
+            <div class="row">
+              <SEOContent/>
+            </div>
+          </div>
+        </section>
+
+        <footer id="s-footer-icon-wrapper">
+          <div class="container footer-icons o-hidden">
+            <PaymentProvider
+                :brand="brandName"
+                :payment-title="'入出金方法'"
+                :payment-provider-images="paymentProvider"
+              />
+            <GameProvider
+              :brand="brandName"
+              :game-title="'ゲーム配信会社'"
+              :game-provider-images="gameProvider"
+            />
+            <License :brand="brandName" :regulatory-images="license" />
+          </div>
+        </footer>
+      </main>
+    </Hydrate>
     <FooterSticky
       :brand="brandName"
-      :sign-in-data="signInBtnData" 
+      :sign-in-data="signInBtnData"
       :join-data="joinBtnData"
     />
   </div>
 </template>
 
 <script>
+import Hydrate from 'lazy-hydration';
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -89,6 +92,7 @@ import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
+    Hydrate,
     Button,
     NavMainTitleLogo,
     Games,
