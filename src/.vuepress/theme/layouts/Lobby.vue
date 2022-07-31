@@ -45,7 +45,7 @@
             :footer-data="footerData"
           />
         </section>
-        <Hydrate :force="isItReady">
+        <Hydrate ssr-only>
           <section id="s-seo-contents">
             <div class="container">
               <div class="row">
