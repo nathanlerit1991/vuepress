@@ -10,12 +10,12 @@
           >
             <img :src="`https://verification.curacao-egaming.com/validate.ashx?domain=${brand}.com`" alt="alt img" />
           </a>
-          <img
+          <img-lazy
             v-for="(regulatory_image, regulatory_index) in regulatoryImages"
             :key="regulatory_index"
             :src="regulatory_image.image"
             alt="License"
-          >
+          />
         </div>
         <div class="license-text">
           <span class="txt__primary3 txt--size3">当ウェブサイトの運営は、Breckenridge Curacao B.V.（登録住所: 36 Julianaplein, Willemstad, Curaçao）です。<br>
@@ -26,20 +26,23 @@
 </template>
 
 <script>
-  export default {
-    name: 'license',
-    props: {
-      brand: {
-        type: String,
-        required: true
-      },
-      regulatoryImages: {
-        type: Array,
-        required: false,
-        default: () => ['']
-      }
+import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
+
+export default {
+  name: 'license',
+  props: {
+    brand: {
+      type: String,
+      required: true
+    },
+    regulatoryImages: {
+      type: Array,
+      required: false,
+      default: () => ['']
     }
-  }
+  },
+  components: { ImgLazy }
+}
 </script>
 <style scoped lang="scss">
 .g-license{
