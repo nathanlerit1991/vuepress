@@ -45,7 +45,7 @@
             :footer-data="footerData"
           />
         </section>
-        <Hydrate :force="isItReady">
+        <LazyHydrate when-visible>
           <section id="s-seo-contents">
             <div class="container">
               <div class="row">
@@ -53,6 +53,9 @@
               </div>
             </div>
           </section>
+        </LazyHydrate>
+
+        <LazyHydrate when-visible>
           <footer id="s-footer-icon-wrapper">
             <div class="container footer-icons o-hidden">
               <PaymentProvider
@@ -68,7 +71,7 @@
               <License :brand="brandName" :regulatory-images="license" />
             </div>
           </footer>
-        </Hydrate>
+        </LazyHydrate>
       </main>
     <FooterSticky
       :brand="brandName"
@@ -79,7 +82,7 @@
 </template>
 
 <script>
-import Hydrate from 'lazy-hydration';
+import LazyHydrate from 'vue-lazy-hydration';
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -91,7 +94,7 @@ import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
-    Hydrate,
+    LazyHydrate,
     Button,
     NavMainTitleLogo,
     Games,
