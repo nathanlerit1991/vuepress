@@ -1,7 +1,7 @@
 <template>
   <div>
     <a v-if="!title" :href="brand === 'intercasino' ? 'https://intercasino.com/ja' : brand === 'verajohn' ? 'https://verajohn.com/ja' : 'https://yuugado.com/ja'">
-      <img class="logo" :src="logo" />
+      <img class="logo" :src="logo" :alt="`${brand} logo`" />
     </a>
     <h2 :class="titleClassName" v-if="title">{{ title }}</h2>
   </div>
