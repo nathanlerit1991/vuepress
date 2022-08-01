@@ -52,27 +52,23 @@
             </div>
           </div>
         </section>
-        <footer id="s-footer-icon-wrapper">
-          <div class="container footer-icons o-hidden">
-            <Hydrate when-visible>
+        <lazy-component :is-intersected="true">
+          <footer id="s-footer-icon-wrapper">
+            <div class="container footer-icons o-hidden">
               <PaymentProvider
                   :brand="brandName"
                   :payment-title="'入出金方法'"
                   :payment-provider-images="paymentProvider"
                 />
-            </Hydrate>
-            <Hydrate when-visible>
               <GameProvider
                 :brand="brandName"
                 :game-title="'ゲーム配信会社'"
                 :game-provider-images="gameProvider"
               />
-            </Hydrate>
-            <Hydrate when-visible>
               <License :brand="brandName" :regulatory-images="license" />
-            </Hydrate>
-          </div>
-        </footer>
+            </div>
+          </footer>
+        </lazy-component>
       </main>
     <FooterSticky
       :brand="brandName"
@@ -83,7 +79,7 @@
 </template>
 
 <script>
-import Hydrate from 'lazy-hydration';
+import LazyComponent from "v-lazy-component";
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -95,7 +91,7 @@ import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
-    Hydrate,
+    LazyComponent,
     Button,
     NavMainTitleLogo,
     Games,
