@@ -52,7 +52,7 @@
             </div>
           </div>
         </section>
-        <lazy-component :is-intersected="true">
+        <lazy-component @intersected>
           <footer id="s-footer-icon-wrapper">
             <div class="container footer-icons o-hidden">
               <PaymentProvider
@@ -104,6 +104,7 @@ export default {
   },
   data () {
     return {
+      isIntersected: false,
       footerData: [
         {
           text: 'ヘルプ・センター',
