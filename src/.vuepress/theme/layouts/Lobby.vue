@@ -45,6 +45,7 @@
             :footer-data="footerData"
           />
         </section>
+        <lazy-component @intersected>
         <section id="s-seo-contents">
           <div class="container">
             <div class="row">
@@ -52,6 +53,7 @@
             </div>
           </div>
         </section>
+        </lazy-component>
         <lazy-component @intersected>
           <footer id="s-footer-icon-wrapper">
             <div class="container footer-icons o-hidden">
