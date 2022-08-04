@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
 export default {
   name: 'PaymentProvider',
   props: {
@@ -34,8 +33,7 @@ export default {
       type: String,
       required: true
     }
-  },
-  components: { ImgLazy }
+  }
 }
 </script>
 <style scoped lang="scss">

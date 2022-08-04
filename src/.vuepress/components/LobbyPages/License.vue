@@ -26,8 +26,6 @@
 </template>
 
 <script>
-import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
-
 export default {
   name: 'license',
   props: {
@@ -40,8 +38,7 @@ export default {
       required: false,
       default: () => ['']
     }
-  },
-  components: { ImgLazy }
+  }
 }
 </script>
 <style scoped lang="scss">

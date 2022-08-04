@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import ImgLazy from 'vuepress-plugin-img-lazy/ImgLazy'
 export default {
   name: "game-provider",
   props: {
@@ -34,8 +33,7 @@ export default {
       required: false,
       default: () => [""]
     }
-  },
-  components: { ImgLazy }
+  }
 };
 </script>
 
