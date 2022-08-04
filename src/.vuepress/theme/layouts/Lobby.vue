@@ -52,21 +52,23 @@
             </div>
           </div>
         </section>
-        <footer id="s-footer-icon-wrapper">
-          <div class="container footer-icons o-hidden">
-            <PaymentProvider
+        <lazy-component @intersected>
+          <footer id="s-footer-icon-wrapper">
+            <div class="container footer-icons o-hidden">
+              <PaymentProvider
+                  :brand="brandName"
+                  :payment-title="'入出金方法'"
+                  :payment-provider-images="paymentProvider"
+                />
+              <GameProvider
                 :brand="brandName"
                 :payment-title="'入出金方法'"
                 :payment-provider-images="paymentProvider"
               />
-            <GameProvider
-              :brand="brandName"
-              :game-title="'ゲーム配信会社'"
-              :game-provider-images="gameProvider"
-            />
-            <License :brand="brandName" :regulatory-images="license" />
-          </div>
-        </footer>
+              <License :brand="brandName" :regulatory-images="license" />
+            </div>
+          </footer>
+        </lazy-component>
       </main>
     <FooterSticky
       :brand="brandName"
@@ -77,6 +79,7 @@
 </template>
 
 <script>
+import LazyComponent from "v-lazy-component";
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -88,6 +91,7 @@ import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
+    LazyComponent,
     Button,
     NavMainTitleLogo,
     Games,
@@ -100,6 +104,7 @@ export default {
   },
   data () {
     return {
+      isIntersected: false,
       footerData: [
         {
           text: 'ヘルプ・センター',

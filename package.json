@@ -19,7 +19,7 @@
     "vuepress": "^1.5.3"
   },
   "dependencies": {
-    "vue-lazy-hydration": "*",
+    "v-lazy-component": "^2.1.0",
     "vuepress-plugin-img-lazy": "^1.0.4"
   }
 }
