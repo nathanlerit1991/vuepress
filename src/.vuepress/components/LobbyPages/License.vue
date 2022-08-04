@@ -10,7 +10,7 @@
           >
             <img :src="`https://verification.curacao-egaming.com/validate.ashx?domain=${brand}.com`" alt="alt img" />
           </a>
-          <img-lazy
+          <img
             v-for="(regulatory_image, regulatory_index) in regulatoryImages"
             :key="regulatory_index"
             :src="regulatory_image.image"
