@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Modal v-if="isModal" :iframe-src="gameIframe"/>
     <header>
      <nav id="s-nav-bar-main">
         <div id="nav-home" class="h-left">
@@ -28,6 +29,14 @@
       </nav>
     </header>
       <main>
+
+        <div>
+          <div v-for="(modal, modal_index) in $page.frontmatter.game.game_list">
+            <p @click="gameModal(modal.url)">{{ modal.title }}</p>
+            =={{ gameIframe }}
+          </div>
+        </div>
+
         <section id="s-games">
           <div class="container">
             <div class="row">
@@ -77,6 +86,7 @@
 </template>
 
 <script>
+import Modal from "~components/Global/Modal";
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -88,6 +98,7 @@ import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
+    Modal,
     Button,
     NavMainTitleLogo,
     Games,
@@ -100,6 +111,8 @@ export default {
   },
   data () {
     return {
+      isModal: false,
+      gameIframe: '',
       footerData: [
         {
           text: 'ヘルプ・センター',
@@ -155,6 +168,12 @@ export default {
   computed: {
     brandName(){
       return this.$page.path.includes('verajohn') ? 'verajohn' : this.$page.path.includes('intercasino') ? 'intercasino' : 'yuugado'
+    }
+  },
+  methods: {
+    gameModal (iframe) {
+      this.gameIframe = iframe
+      this.isModal = true
     }
   }
 };

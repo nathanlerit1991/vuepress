@@ -17,7 +17,7 @@ game:
     - is_hot: true
       title: "金蛙神 : ドリーム・オブ・ゴールド"
       image: /marketing/img/vj-dreams-of-gold-mobile.png
-      url: https://www.verajohn.com/ja/play/dreams-of-gold-mobile
+      url: https://www.google.com/search?client=opera&q=First+Contentful+Paint&sourceid=opera&ie=UTF-8&oe=UTF-8
     - is_hot: true
       title: ハワイアンドリーム
       image: /marketing/img/hawaiian-dream.png
