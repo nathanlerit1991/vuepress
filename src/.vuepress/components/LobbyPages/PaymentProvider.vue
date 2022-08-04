@@ -10,6 +10,7 @@
           :key="payment_providers_index"
           :src="`/assets/${brand}/${payment_providers.image}`"
           alt="Provider"
+          loading="lazy"
         />
       </div>
     </div>

@@ -10,6 +10,7 @@
           :key="game_providers_index.image"
           :src="`/assets/${brand}/${game_providers.image}`"
           alt="Game Providers"
+          loading="lazy"
         />
       </div>
     </div>
