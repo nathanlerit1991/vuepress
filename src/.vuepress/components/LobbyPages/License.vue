@@ -8,13 +8,14 @@
             rel="noopener"
             :href="`https://verification.curacao-egaming.com/validateview.aspx?domain=${brand}.com`"
           >
-            <img :src="`https://verification.curacao-egaming.com/validate.ashx?domain=${brand}.com`" alt="alt img" />
+            <img loading="lazy" :src="`https://verification.curacao-egaming.com/validate.ashx?domain=${brand}.com`" alt="alt img" />
           </a>
           <img
             v-for="(regulatory_image, regulatory_index) in regulatoryImages"
             :key="regulatory_index"
             :src="regulatory_image.image"
             alt="License"
+            loading="lazy"
           />
         </div>
         <div class="license-text">
