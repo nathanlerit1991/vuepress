@@ -2,6 +2,10 @@ const { description } = require('../../package')
 const path = require('path')
 let dynamicRoutes = []
 module.exports = {
+  env: {
+    browser: true,
+    node: true,
+  },
   configureWebpack: {
     resolve: {
       alias: {
