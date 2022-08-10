@@ -161,7 +161,7 @@ export default {
       let imgWidth = img.width
       let imgHeight = img.height
 
-      img.setAttribute('width', imgWidth, 'height', imgHeight)
+      img.setAttribute('width', imgWidth)
       img.setAttribute('height', imgHeight)
     });
 
