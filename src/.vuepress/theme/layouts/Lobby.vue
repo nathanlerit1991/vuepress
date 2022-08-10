@@ -263,8 +263,8 @@ export default {
       return (
         rect.top >= 0 &&
         rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        rect.bottom <= (document.documentElement.clientHeight) &&
+        rect.right <= (document.documentElement.clientWidth)
       )
     },
     deferImageAssets() {
