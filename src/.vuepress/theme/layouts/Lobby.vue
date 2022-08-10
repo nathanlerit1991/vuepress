@@ -196,7 +196,7 @@ export default {
     }
   },
   mounted () {
-    window.addEventListener('scroll', this.handleScroll);
+    document.addEventListener('scroll', this.handleScroll);
     //Replace all src to data-src onload
     let removeSrc = document.querySelectorAll('.lazy')
     for (const remove of removeSrc) {
@@ -252,10 +252,10 @@ export default {
     }
   },
   created () {
-     window.addEventListener('scroll', this.handleScroll);
+     document.addEventListener('scroll', this.handleScroll);
    },
    destroyed () {
-     window.removeEventListener('scroll', this.handleScroll);
+     document.removeEventListener('scroll', this.handleScroll);
    },
   methods: {
     isInViewport() {
