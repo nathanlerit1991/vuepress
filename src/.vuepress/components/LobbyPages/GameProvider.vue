@@ -11,6 +11,7 @@
           :src="`/assets/${brand}/${game_providers.image}`"
           alt="Game Providers"
           loading="lazy"
+          class="lazy"
         />
       </div>
     </div>

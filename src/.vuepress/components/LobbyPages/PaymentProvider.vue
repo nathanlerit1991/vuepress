@@ -11,6 +11,7 @@
           :src="`/assets/${brand}/${payment_providers.image}`"
           alt="Provider"
           loading="lazy"
+          class="lazy"
         />
       </div>
     </div>

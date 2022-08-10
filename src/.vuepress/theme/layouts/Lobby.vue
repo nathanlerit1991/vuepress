@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Modal v-if="isModal" :iframe-src="gameIframe"/>
     <header>
      <nav id="s-nav-bar-main">
         <div id="nav-home" class="h-left">
@@ -29,14 +28,6 @@
       </nav>
     </header>
       <main>
-
-        <div>
-          <div v-for="(modal, modal_index) in $page.frontmatter.game.game_list">
-            <p @click="gameModal(modal.url)">{{ modal.title }}</p>
-            =={{ gameIframe }}
-          </div>
-        </div>
-
         <section id="s-games">
           <div class="container">
             <div class="row">
@@ -86,7 +77,6 @@
 </template>
 
 <script>
-import Modal from "~components/Global/Modal";
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -98,7 +88,6 @@ import License from "~components/LobbyPages/License";
 import FooterSticky from "~components/LobbyPages/FooterSticky";
 export default {
   components: {
-    Modal,
     Button,
     NavMainTitleLogo,
     Games,
@@ -111,7 +100,6 @@ export default {
   },
   data () {
     return {
-      isModal: false,
       gameIframe: '',
       footerData: [
         {
@@ -164,6 +152,53 @@ export default {
         link: '/ja/#join'
       },
     }
+  },
+  mounted () {
+
+    //Replace all src to data-src onload
+    let removeSrc = document.querySelectorAll('.lazy')
+    for (const remove of removeSrc) {
+      remove.setAttribute('data-src', remove.src)
+      remove.src = ""
+    }
+
+    //Replace all data-src to src once the element is visible to the screen
+    function deferAssets() {
+      var iframeElem = document.getElementsByTagName('iframe');
+      var imgElem = document.getElementsByTagName('img');
+      for ( var i = 0; i < iframeElem.length; i++ ) {
+        if(iframeElem[i].getAttribute('data-src')) {
+          iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
+        }
+      }
+      for ( var i = 0; i < imgElem.length; i++ ) {
+        if(imgElem[i].getAttribute('data-src')) {
+          imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
+        }
+      }
+    }
+
+    //Check if element is visible using classname 'lazy'
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect()
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      )
+    }
+
+    //Trigger deferAssets function once element is visible in the screen
+    const lazyElement = document.querySelector('.lazy')
+    document.addEventListener('scroll', function () {
+      if (isInViewport(lazyElement)) {
+        let elementVisible = document.querySelectorAll('.lazy')
+        for (const visible of elementVisible) {
+          window.onload = deferAssets();
+        }
+      }
+    })
   },
   computed: {
     brandName(){
