@@ -52,6 +52,7 @@
             </div>
           </div>
         </section>
+        <iframe class="lazy" width="560" height="315" src="https://www.youtube.com/embed/r4uVfQSPAMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <footer id="s-footer-icon-wrapper">
           <div class="container footer-icons o-hidden">
             <PaymentProvider
