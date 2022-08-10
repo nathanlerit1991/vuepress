@@ -29,6 +29,8 @@ export default {
   .g-footer-item {
     img {
       max-width: 25px;
+      width: 100%;
+      height: 100%;
       margin-right: 10px;
     }
   }
