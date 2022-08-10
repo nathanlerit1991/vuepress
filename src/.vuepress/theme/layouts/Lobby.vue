@@ -196,6 +196,7 @@ export default {
     }
   },
   mounted () {
+    window.addEventListener('scroll', this.handleScroll);
     //Replace all src to data-src onload
     let removeSrc = document.querySelectorAll('.lazy')
     for (const remove of removeSrc) {
