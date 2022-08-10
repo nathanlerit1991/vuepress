@@ -47,6 +47,7 @@ export default {
   img {
     width: auto;
     max-height: 25px;
+    height: 100%;
     margin: 8px 2px;
   }
 }

@@ -49,6 +49,8 @@ export default {
     width: 100%;
     max-width: 50px;
     max-height: 100px;
+    width: 100%;
+    height: 100%;
   }
 }
 

@@ -155,6 +155,18 @@ export default {
     }
   },
   mounted () {
+    //Check all img dimension
+    let imgDimension = document.querySelectorAll('img')
+    imgDimension.forEach((img, i) => {
+      let imgWidth = img.width
+      let imgHeight = img.height
+
+      img.setAttribute('width', imgWidth, 'height', imgHeight)
+      img.setAttribute('height', imgHeight)
+    });
+
+
+
     //Replace all src to data-src onload
     let removeSrc = document.querySelectorAll('.lazy')
     for (const remove of removeSrc) {
@@ -185,14 +197,16 @@ export default {
     }
 
     //Trigger deferAssets function once element is visible in the screen
-    window.addEventListener('scroll', function () {
-      if (isInViewport()) {
-        let elementVisible = document.querySelectorAll('.lazy')
-        for (const visible of elementVisible) {
-          deferAssets()
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', function () {
+        if (isInViewport()) {
+          let elementVisible = document.querySelectorAll('.lazy')
+          for (const visible of elementVisible) {
+            deferAssets()
+          }
         }
-      }
-    })
+      })
+    }
   },
   computed: {
     brandName(){
