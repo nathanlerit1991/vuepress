@@ -52,7 +52,47 @@
             </div>
           </div>
         </section>
-        <iframe class="lazy" width="560" height="315" src="https://www.youtube.com/embed/r4uVfQSPAMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- <iframe
+          class="neru"
+          src="https://www.youtube.com/embed/r4uVfQSPAMM"
+          srcdoc=
+          "<style>
+            body, .full {
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              position: absolute;
+              display: flex;
+              justify-content: center;
+            }
+          </style>
+          <a class='full' href='https://www.youtube.com/embed/r4uVfQSPAMM'>
+            <img src='https://www.youtube.com/embed/r4uVfQSPAMM' alt=''>
+            <svg
+              version='1.1'
+              viewBox='0 0 68 48'
+              width='68px'
+              style='position: relative;'
+            >
+              <path d='M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z' fill='#f00'></path>
+              <path d='M 45,24 27,14 27,34' fill='#fff'></path>
+            </svg>
+          </a>"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen=""/> -->
+        <iframe
+          class="lazy"
+          src="https://www.youtube.com/embed/r4uVfQSPAMM"
+          title="YouTube video player1"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
+        <iframe
+          class="lazy"
+          src="https://www.youtube.com/embed/3vGulEj6C3Q"
+          title="YouTube video player2"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen/>
         <footer id="s-footer-icon-wrapper">
           <div class="container footer-icons o-hidden">
             <PaymentProvider
@@ -101,6 +141,7 @@ export default {
   },
   data () {
     return {
+      listIframe: [],
       gameIframe: '',
       footerData: [
         {
@@ -155,7 +196,6 @@ export default {
     }
   },
   mounted () {
-
     //Replace all src to data-src onload
     let removeSrc = document.querySelectorAll('.lazy')
     for (const remove of removeSrc) {
@@ -163,24 +203,62 @@ export default {
       remove.src = ""
     }
 
-    //Replace all data-src to src once the element is visible to the screen
-    function deferAssets() {
-      var iframeElem = document.getElementsByTagName('iframe');
-      var imgElem = document.getElementsByTagName('img');
-      for ( var i = 0; i < iframeElem.length; i++ ) {
-        if(iframeElem[i].getAttribute('data-src')) {
-          iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
-        }
-      }
-      for ( var i = 0; i < imgElem.length; i++ ) {
-        if(imgElem[i].getAttribute('data-src')) {
-          imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
-        }
+    //Get all iframes - Add this to component
+    let iframeElem = document.getElementsByTagName('iframe');
+    for ( let i = 0; i < iframeElem.length; i++ ) {
+      if(iframeElem[i].getAttribute('data-src')) {
+        this.listIframe.push(iframeElem[i].getAttribute('data-src'))
+        iframeElem[i].removeAttribute('data-src')
       }
     }
 
+    //Replace all image data-src to src once the element is visible to the screen
+    // function deferAssets() {
+    //   let imgElem = document.getElementsByTagName('img');
+    //   for ( let i = 0; i < imgElem.length; i++ ) {
+    //     if(imgElem[i].getAttribute('data-src')) {
+    //       imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
+    //     }
+    //   }
+    // }
+
     //Check if element is visible using classname 'lazy'
-    function isInViewport(el) {
+    // function isInViewport() {
+    //   let el = document.querySelector('.lazy')
+    //   const rect = el.getBoundingClientRect()
+    //   return (
+    //     rect.top >= 0 &&
+    //     rect.left >= 0 &&
+    //     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    //     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    //   )
+    // }
+
+    //Trigger deferAssets function once element is visible in the screen
+    // window.addEventListener('scroll', function () {
+    //   if (isInViewport()) {
+    //     let elementVisible = document.querySelectorAll('.lazy')
+    //     for (const visible of elementVisible) {
+    //       // this.deferIframeAssets()
+    //       deferAssets()
+    //     }
+    //   }
+    // })
+  },
+  computed: {
+    brandName(){
+      return this.$page.path.includes('verajohn') ? 'verajohn' : this.$page.path.includes('intercasino') ? 'intercasino' : 'yuugado'
+    }
+  },
+  created () {
+     window.addEventListener('scroll', this.handleScroll);
+   },
+   destroyed () {
+     window.removeEventListener('scroll', this.handleScroll);
+   },
+  methods: {
+    isInViewport() {
+      let el = document.querySelector('.lazy')
       const rect = el.getBoundingClientRect()
       return (
         rect.top >= 0 &&
@@ -188,28 +266,31 @@ export default {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       )
-    }
-
-    //Trigger deferAssets function once element is visible in the screen
-    const lazyElement = document.querySelector('.lazy')
-    document.addEventListener('scroll', function () {
-      if (isInViewport(lazyElement)) {
-        let elementVisible = document.querySelectorAll('.lazy')
-        for (const visible of elementVisible) {
-          window.onload = deferAssets();
+    },
+    deferImageAssets() {
+      let imgElem = document.getElementsByTagName('img');
+      for ( let i = 0; i < imgElem.length; i++ ) {
+        if(imgElem[i].getAttribute('data-src')) {
+          imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
         }
       }
-    })
-  },
-  computed: {
-    brandName(){
-      return this.$page.path.includes('verajohn') ? 'verajohn' : this.$page.path.includes('intercasino') ? 'intercasino' : 'yuugado'
-    }
-  },
-  methods: {
-    gameModal (iframe) {
-      this.gameIframe = iframe
-      this.isModal = true
+    },
+    deferIframeAssets() {
+      let deferIframeElem = document.getElementsByTagName('iframe');
+      for ( let i = 0; i < deferIframeElem.length; i++ ) {
+        this.listIframe.forEach((item, i) => {
+          deferIframeElem[i].src = item
+        })
+      }
+    },
+    handleScroll (event) {
+      if (this.isInViewport()) {
+        let elementVisible = document.querySelectorAll('.lazy')
+        for (const visible of elementVisible) {
+          this.deferIframeAssets()
+          this.deferImageAssets()
+        }
+      }
     }
   }
 };
