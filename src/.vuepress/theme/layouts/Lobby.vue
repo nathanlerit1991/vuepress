@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="lobby">
     <header>
      <nav id="s-nav-bar-main">
         <div id="nav-home" class="h-left">
@@ -161,6 +161,8 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~styles/Branding/Verajohn/style.scss';
-  @import '~styles/LobbyPages/Verajohn/style.scss';
+  .lobby {
+    @import '~styles/Branding/Verajohn/style.scss';
+    @import '~styles/LobbyPages/Verajohn/style.scss';
+  }
 </style>

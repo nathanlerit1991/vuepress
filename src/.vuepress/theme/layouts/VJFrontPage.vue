@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="vjfp">
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -45,5 +45,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~styles/Vjfp/style.scss';
+  .vjfp {
+		@import '~styles/Vjfp/style.scss';
+	}
 </style>
