@@ -156,7 +156,7 @@ export default {
   },
   mounted () {
     //Check all img dimension then add the approriate dimension
-    let imgDimension = document.querySelectorAll('img')
+    let imgDimension = document.querySelectorAll('section img, footer img')
     imgDimension.forEach((img, i) => {
       let imgWidth = img.width
       let imgHeight = img.height
