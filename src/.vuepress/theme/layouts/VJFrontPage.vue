@@ -18,9 +18,21 @@
 								{{ $page.frontmatter.welcome_verajohn.cta_text }}
 							</a>
 						</button>
+						<small v-html="$page.frontmatter.welcome_verajohn.text_hyperlink" />
 					</div>
 				</div>
-				<small v-html="$page.frontmatter.welcome_verajohn.text_hyperlink" />
+			</div>
+		</section>
+		<section id="s-about">
+			<div class="container">
+				<div class="row">
+					<div id="image-wrapper">
+						<img :src="$page.frontmatter.about_us.header_image" />
+					</div>
+					<div id="text-wrapper">
+						<div v-html="$page.frontmatter.about_us.text_content" />
+					</div>
+				</div>
 			</div>
 		</section>
 	</div>
