@@ -166,7 +166,7 @@ export default {
     });
 
     //Replace all src to data-src onload
-    let removeSrc = document.querySelectorAll('.lazy')
+    let removeSrc = document.querySelectorAll('img.lazy')
     for (const remove of removeSrc) {
       remove.setAttribute('data-src', remove.src)
       remove.src = ""
@@ -174,7 +174,7 @@ export default {
 
     //Replace all image data-src to src once the element is visible to the screen
     function deferAssets() {
-      let imgElem = document.getElementsByTagName('img');
+      let imgElem = document.getElementsByTagName('img.lazy');
       for ( let i = 0; i < imgElem.length; i++ ) {
         if(imgElem[i].getAttribute('data-src')) {
           imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
@@ -184,7 +184,7 @@ export default {
 
     //Check if element is visible using classname 'lazy'
     function isInViewport() {
-      let el = document.querySelector('.lazy')
+      let el = document.querySelector('img.lazy')
       const rect = el.getBoundingClientRect()
       return (
         rect.top >= 0 &&
@@ -198,7 +198,7 @@ export default {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', function () {
         if (isInViewport()) {
-          let elementVisible = document.querySelectorAll('.lazy')
+          let elementVisible = document.querySelectorAll('img.lazy')
           for (const visible of elementVisible) {
             deferAssets()
           }
