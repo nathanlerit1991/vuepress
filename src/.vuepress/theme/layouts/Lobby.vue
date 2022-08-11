@@ -156,7 +156,7 @@ export default {
   },
   mounted () {
     //Check all img dimension then add the approriate dimension
-    let imgDimension = document.querySelectorAll('section img, footer img')
+    let imgDimension = document.querySelectorAll('img')
     imgDimension.forEach((img, i) => {
       let imgWidth = img.width
       let imgHeight = img.height
@@ -166,7 +166,7 @@ export default {
     });
 
     //Replace all src to data-src onload
-    let removeSrc = document.querySelectorAll('img.lazy')
+    let removeSrc = document.querySelectorAll('.lazy')
     for (const remove of removeSrc) {
       remove.setAttribute('data-src', remove.src)
       remove.src = ""
@@ -174,7 +174,7 @@ export default {
 
     //Replace all image data-src to src once the element is visible to the screen
     function deferAssets() {
-      let imgElem = document.getElementsByTagName('img.lazy');
+      let imgElem = document.getElementsByTagName('img');
       for ( let i = 0; i < imgElem.length; i++ ) {
         if(imgElem[i].getAttribute('data-src')) {
           imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
@@ -184,7 +184,7 @@ export default {
 
     //Check if element is visible using classname 'lazy'
     function isInViewport() {
-      let el = document.querySelector('img.lazy')
+      let el = document.querySelector('.lazy')
       const rect = el.getBoundingClientRect()
       return (
         rect.top >= 0 &&
@@ -198,7 +198,7 @@ export default {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', function () {
         if (isInViewport()) {
-          let elementVisible = document.querySelectorAll('img.lazy')
+          let elementVisible = document.querySelectorAll('.lazy')
           for (const visible of elementVisible) {
             deferAssets()
           }
