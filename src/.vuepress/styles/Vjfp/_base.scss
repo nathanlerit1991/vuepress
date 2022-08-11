@@ -103,11 +103,10 @@ button {
     overflow: hidden;
   }
   #image-wrapper img {
-    width: 327px;
-    height: 338px;
+    width: 100%;
+    height: auto;
   }
   #text-wrapper {
-    flex: 0 0 75%;
-    max-width: 75%;
+    padding: 0;
   }
 }

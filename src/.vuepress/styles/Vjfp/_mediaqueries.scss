@@ -1,6 +1,9 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 280px) {
 	#s-about {
+		.row {
+			flex-direction: column-reverse;
+		}
 		#image-wrapper {
 			max-width: 300px;
 			margin: 0 auto -50px;
@@ -14,14 +17,21 @@
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 576px) {
 	#s-about {
+		.row {
+			flex-direction: inherit;
+		}
 		#image-wrapper {
 			position: absolute;
-			transform: translateY(50px);
+			transform: translateY(0);
 			top: 0;
 			bottom: 0;
 			margin: auto;
 			left: -150px;
 			min-width: 75%;
+		}
+		#text-wrapper {
+			flex: 0 0 50%;
+			max-width: 50%;
 		}
 	}
 }
@@ -30,9 +40,13 @@
 @media only screen and (min-width : 768px) {
 	#s-about {
 		#image-wrapper {
-			transform: translateY(35px);
+			transform: translateY(-35px);
 			left: -120px;
 			min-width: 50%;
+		}
+		#text-wrapper {
+			flex: 0 0 60%;
+			max-width: 60%;
 		}
 	}
 }
@@ -43,6 +57,10 @@
 		#image-wrapper {
 			left: -120px;
 			min-width: 35%;
+		}
+		#text-wrapper {
+			flex: 0 0 75%;
+			max-width: 75%;
 		}
 	}
 }
