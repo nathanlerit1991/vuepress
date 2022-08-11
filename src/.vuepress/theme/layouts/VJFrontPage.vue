@@ -49,11 +49,11 @@
 						<ol>
 							<li v-for="(listGames, listGamesIndex) in games.list_top_games" :key="listGamesIndex">
 								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modal = true, modalData = listGames.url, gameTitle = listGames.name">
-									<img class="lazy" :src="listGames.image" />
+									<img class="lazy" :src="listGames.image" alt="verajohn games" />
 									{{ listGames.name }}
 								</span>
 								<p v-else>
-									<img class="lazy" :src="listGames.image" />
+									<img class="lazy" :src="listGames.image" alt="verajohn games" />
 									{{ listGames.name }}
 								</p>
 							</li>
