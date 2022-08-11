@@ -77,7 +77,6 @@
 </template>
 
 <script>
-import '../../plugins/imageOptimize.js'
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
