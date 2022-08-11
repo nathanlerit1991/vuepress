@@ -86,7 +86,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .g-seo-content {
   h1 {
     font-size: 22px;

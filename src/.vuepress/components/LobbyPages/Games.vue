@@ -41,7 +41,7 @@ export default {
 </script>
 
 
-<style lang="scss">
+<style scoped lang="scss">
 .game-list {
   grid-gap: 10px;
   img {
