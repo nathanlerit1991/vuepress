@@ -5,7 +5,7 @@
         <div id="nav-home" class="h-left">
           <a :href="`https://${brandName}.com/ja`">
             <!-- <img src="~assets/verajohn/LobbyPages/logo.png" alt="Logo"> -->
-            <img width="24" height="22" :src="`/assets/${brandName}/LobbyPages/home-icon.png`" alt="Home icon">
+            <img :src="`/assets/${brandName}/LobbyPages/home-icon.png`" alt="Home icon">
           </a>
         </div>
 
@@ -39,7 +39,7 @@
           </div>
         </section>
         <section id="s-cta">
-          <img class="cta-logo d-block" width="180" height="82" :src="`/assets/${brandName}/LobbyPages/cta.png`" :alt="`${brandName} Logo`">
+          <img class="cta-logo d-block" :src="`/assets/${brandName}/LobbyPages/cta.png`" :alt="`${brandName} Logo`">
           <FooterLinks
             :brand="brandName"
             :footer-data="footerData"
@@ -100,8 +100,6 @@ export default {
   },
   data () {
     return {
-      listIframe: [],
-      gameIframe: '',
       footerData: [
         {
           text: 'ヘルプ・センター',

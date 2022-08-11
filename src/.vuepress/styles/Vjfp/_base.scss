@@ -1,0 +1,53 @@
+a {
+  color: $TEXT_LINK_COLOR;
+  text-decoration: none;
+}
+
+small,
+p {
+  color: $TEXT_BASE_COLOR;
+}
+
+button {
+  border: 0;
+}
+
+.btn-primary {
+  background: $BTN_PRIMARY_COLOR;
+  padding: $BTN_PADDING;
+  border-radius: $BTN_BORDER_RADIUS;
+  > a {
+    color: $BTN_PRIMARY_TEXT_COLOR;
+  }
+}
+
+@at-root body {
+  padding-top: 48.5px;
+}
+
+#s-sticky-nav {
+  background: $NAV_BG;
+  position: fixed;
+  top: 0;
+  padding: 15px 0;
+  width: 100%;
+  z-index: 2;
+  text-align: right;
+
+  small {
+    width: 100%;
+  }
+}
+
+#s-welcome {
+  .logo {
+    max-width: 120px;
+    max-height: 120px;
+    width: 100%;
+    height: 100%;
+  }
+  #welcome_wrapper {
+    margin-top: 90px;
+    text-align: center;
+  }
+}
