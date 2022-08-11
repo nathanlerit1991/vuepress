@@ -27,7 +27,7 @@
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
-						<img :src="$page.frontmatter.about_us.header_image" :alt="removeExtension($page.frontmatter.about_us.header_image)" />
+						<img :src="$page.frontmatter.about_us.header_image" alt="lucky" />
 					</div>
 					<div id="text-wrapper">
 						<div v-html="$page.frontmatter.about_us.text_content" />
@@ -40,12 +40,7 @@
 
 <script>
 export default {
-	methods: {
-    /* eslint-disable no-useless-escape */
-    removeExtension (value) {
-      return value.replace(/\.[^/.]+$/, '').replace(/^.*[\\\/]/, '')
-    }
-  }
+
 }
 </script>
 
