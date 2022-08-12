@@ -165,7 +165,7 @@ export default {
 					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
 				}
 			}
-		}, 2000)
+		}, 3000)
 	}
 }
 </script>
