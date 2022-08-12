@@ -239,5 +239,8 @@ section#s-customer-support {
     border-radius: $CONTAINER_BORDER_RADIUS;
     padding: 0 $BASE_PADDING;
     box-sizing: border-box;
+    img {
+      width: 100%;
+    }
   }
 }

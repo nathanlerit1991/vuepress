@@ -176,14 +176,14 @@
 				<div class="row txt-center">
 					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
 				</div>
-				
+
 				<div class="row honourable-pods">
 					<div
 						v-for="(honourableMentionsTile, honourableMentionsTileindex) in $page.frontmatter.honourable_mentions.list_of_tiles"
 						:key="honourableMentionsTileindex"
 						class="box txt-center"
 					>
-						<img :src="honourableMentionsTile.bg_image">
+						<img :src="honourableMentionsTile.bg_image" alt="verajohn honourable">
 						<div v-html="honourableMentionsTile.text_content" />
 					</div>
 				</div>
