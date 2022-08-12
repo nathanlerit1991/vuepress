@@ -67,6 +67,16 @@ button {
   }
 }
 
+.image-bg {
+  overflow: hidden;
+  img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+
 .container .row .testimonial-wrapper {
   padding: 0 8%;
 }
@@ -169,7 +179,6 @@ button {
     background: #fff;
     border-radius: $CONTAINER_BORDER_RADIUS;
     text-align: center;
-    padding: calc(#{$BASE_PADDING} - 20px) $BASE_PADDING;
 
     img {
       max-height: 40px;
@@ -198,6 +207,7 @@ button {
 #s-beginners-bonus {
   .row > div {
     margin-bottom: 10px;
+    width: 100%;
   }
   .bonus {
     background: #006997;
@@ -234,13 +244,18 @@ section#s-customer-support {
 }
 
 #s-honourable-mentions {
+  .honourable-pods > div {
+    padding: 7px;
+    width: 100%;
+  }
   .box {
     background: $PODS_BG;
     border-radius: $CONTAINER_BORDER_RADIUS;
-    padding: 0 $BASE_PADDING;
     box-sizing: border-box;
+    height: 100%;
     img {
       width: 100%;
+      min-width: 600px;
     }
   }
 }

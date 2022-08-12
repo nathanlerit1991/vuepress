@@ -114,7 +114,7 @@
 				<div class="row column-2">
 					<div>
 						<div class="bonus">
-							<div class="image-wrapper">
+							<div class="image-wrapper image-bg">
 								<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
 							</div>
 							<div v-html="$page.frontmatter.beginners_bonus.text_content" />
@@ -172,19 +172,20 @@
 			</div>
 		</section>
 		<section id="s-honourable-mentions">
-			<div class="container-grid">
+			<div class="container">
 				<div class="row txt-center">
 					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
 				</div>
 
-				<div class="row honourable-pods">
-					<div
-						v-for="(honourableMentionsTile, honourableMentionsTileindex) in $page.frontmatter.honourable_mentions.list_of_tiles"
-						:key="honourableMentionsTileindex"
-						class="box txt-center"
-					>
-						<img :src="honourableMentionsTile.bg_image" alt="verajohn honourable">
-						<div v-html="honourableMentionsTile.text_content" />
+				<div class="row column-2 honourable-pods">
+					<div v-for="(honourableMentionsTile, honourableMentionsTileindex) in $page.frontmatter.honourable_mentions.list_of_tiles"
+							:key="honourableMentionsTileindex">
+						<div class="box txt-center">
+							<div class="image-bg">
+								<img :src="honourableMentionsTile.bg_image" alt="verajohn honourable">
+							</div>
+							<div v-html="honourableMentionsTile.text_content" />
+						</div>
 					</div>
 				</div>
 
