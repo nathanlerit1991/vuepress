@@ -12,12 +12,14 @@ if (typeof window !== 'undefined') {
 		})
 
 		//Display none element NOT in DOM --- FIX LAYOUT SHIFT
+		//Will not sacrifice SEO
 		let notVisible = document.querySelectorAll('.lazy-component')
 		for (const visible of notVisible) {
 			visible.setAttribute("style", "display: none;")
 		}
 
 		//Display block element NOT in DOM --- FIX LAYOUT SHIFT
+		//Will not sacrifice SEO
 		function displayElement() {
 			let isVisible = document.querySelectorAll('.lazy-component')
 			for (const visible of isVisible) {
