@@ -307,3 +307,55 @@ section#s-customer-support {
     border-bottom: 2px dotted #85ceef;
   }
 }
+
+#s-other-info {
+  padding: $BASE_PADDING !important;
+  background: #f8f8f8;
+  text-align: center;
+
+  h2 {
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    color: #db2d96;
+  }
+
+  ul {
+    padding: 0;
+  }
+  li {
+    list-style: none;
+    margin: 10px;
+    a {
+      color: #0093d4;
+      text-decoration: none;
+    }
+  }
+
+  .footer-twitter-button-pure {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 26px;
+    max-width: 250px;
+    box-sizing: border-box;
+    background-color: #1b95e0;
+    color: #fff;
+    font-weight: 500;
+    height: 28px;
+    border-radius: 4px;
+    padding: 1px 10px 1px 9px;
+    margin-bottom: 5px;
+    margin: auto;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 18px;
+      height: auto;
+    }
+  }
+}
