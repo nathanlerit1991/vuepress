@@ -11,22 +11,6 @@ if (typeof window !== 'undefined') {
 			img.setAttribute('height', imgHeight)
 		})
 
-		//Display none element NOT in DOM --- FIX LAYOUT SHIFT
-		//Will not sacrifice SEO
-		let notVisible = document.querySelectorAll('.lazy-component')
-		for (const visible of notVisible) {
-			visible.setAttribute("style", "visibility:hidden;")
-		}
-
-		//Display block element NOT in DOM --- FIX LAYOUT SHIFT
-		//Will not sacrifice SEO
-		function displayElement() {
-			let isVisible = document.querySelectorAll('.lazy-component')
-			for (const visible of isVisible) {
-				visible.setAttribute("style", "visibility:visible;")
-			}
-		}
-
 		//Replace all src to data-src onload
 		let removeSrc = document.querySelectorAll('img.lazy')
 		for (const remove of removeSrc) {
