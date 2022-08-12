@@ -1,5 +1,6 @@
 if (typeof window !== 'undefined') {
 	window.onload = function() {
+
 		//Check all img dimension then add the approriate dimension
 		let imgDimension = document.querySelectorAll('img')
 		imgDimension.forEach((img, i) => {
@@ -17,21 +18,18 @@ if (typeof window !== 'undefined') {
 			remove.src = ""
 		}
 
-		//Replace all image data-src to src once the element is visible to the screen
+		//Replace all image and iframes data-src to src
 		function deferAssets() {
 			let imgElem = document.querySelectorAll('img.lazy')
+			let iframeElem = document.querySelectorAll('iframe.lazy')
 			for ( let i = 0; i < imgElem.length; i++ ) {
 				if(imgElem[i].getAttribute('data-src')) {
 					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
 				}
 			}
-		}
-
-		function deferiFrame() {
-			let imgElem = document.querySelectorAll('iframe.lazy')
-			for ( let i = 0; i < imgElem.length; i++ ) {
-				if(imgElem[i].getAttribute('data-src')) {
-					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
+			for ( let i = 0; i < iframeElem.length; i++ ) {
+				if(iframeElem[i].getAttribute('data-src')) {
+					iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
 				}
 			}
 		}
@@ -55,7 +53,6 @@ if (typeof window !== 'undefined') {
 					let elementVisible = document.querySelectorAll('img.lazy')
 					for (const visible of elementVisible) {
 						deferAssets()
-						deferiFrame()
 					}
 				}
 			})
