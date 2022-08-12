@@ -205,6 +205,10 @@ a{
   }
 }
 
+section, div, main, footer {
+  content-visibility: auto;
+}
+
 // FLEX //
 .f-no-wrap {
   flex-wrap: nowrap;
