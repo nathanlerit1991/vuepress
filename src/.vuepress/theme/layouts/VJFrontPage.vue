@@ -202,6 +202,13 @@
 				</div>
 			</div>
 		</section>
+		<section id="s-seo-contents">
+			<div class="container">
+				<div class="row">
+					<Content/>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 
