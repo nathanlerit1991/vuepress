@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
 
 			img.setAttribute('width', imgWidth)
 			img.setAttribute('height', imgHeight)
-		});
+		})
 
 		//Replace all src to data-src onload
 		let removeSrc = document.querySelectorAll('img.lazy')

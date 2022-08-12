@@ -1,5 +1,13 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 280px) {
+	@at-root .vjfp {
+    background: #0081b8;
+	}
+	#s-sticky-nav + *~section {
+		> .container{
+			padding: calc(#{$BASE_PADDING - 30px});
+		}
+	}
 	#s-about {
 		.row {
 			flex-direction: column-reverse;
@@ -57,6 +65,11 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	#s-sticky-nav + *~section {
+		> .container{
+			padding: $BASE_PADDING;
+		}
+	}
 	#s-about {
 		#image-wrapper {
 			left: -135px;

@@ -114,8 +114,8 @@
 				<div class="row column-2">
 					<div>
 						<div class="bonus txt-center">
-							<div v-html="$page.frontmatter.beginners_bonus.text_content" />
 							<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
+							<div v-html="$page.frontmatter.beginners_bonus.text_content" />
 						</div>
 					</div>
 
