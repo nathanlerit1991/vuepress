@@ -166,7 +166,5 @@ export default {
 </script>
 
 <style lang="scss">
-  .vjfp {
-		@import '~styles/Vjfp/style.scss';
-	}
+	@import '~styles/Vjfp/style.scss';
 </style>

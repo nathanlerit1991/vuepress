@@ -27,8 +27,10 @@
 
 
 // RESET
-html body .container,
-html body .container-grid{
+@at-root html body .container{
+  max-width: 768px;
+}
+@at-root html body .container-grid{
   max-width: 768px;
 }
 a {

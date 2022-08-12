@@ -1,4 +1,6 @@
-@import 'variables';
-@import 'mixins';
-@import 'base';
-@import 'mediaqueries';
+.lobby {
+	@import 'variables';
+	@import 'mixins';
+	@import 'base';
+	@import 'mediaqueries';
+}
