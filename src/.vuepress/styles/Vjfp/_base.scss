@@ -8,11 +8,13 @@
 html:lang(jp) {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
     font-family: $FONT_FAMILY_JP;
+    font-display: swap;
   }
 }
 html:lang(en) {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
     font-family: $FONT_FAMILY_EN;
+    font-display: swap;
   }
 }
 
@@ -261,49 +263,49 @@ section#s-customer-support {
   }
 }
 
-// #s-seo-contents {
-//   margin-bottom: 30px;
-//   border-radius: 15px;
+#s-seo-contents {
+  margin-bottom: 30px;
+  border-radius: 15px;
 
-//   .container {
-//     background: #0093d4;
-//     padding: 30px 10% !important;
-//   }
+  .container {
+    background: #0093d4;
+    padding: 30px 10% !important;
+  }
 
-//   h1, h2, h3, h4, h5, h6 {
-//     color: #FFEA00;
-//     font-family: Lucida Grande,sans-serif;
-//     margin: 0;
-//   }
-//   h1 {
-//     font-size: 22px;
-//     margin: 0 0 40px 0;
-//   }
-//   h2 {
-//     font-size: 18px;
-//   }
-//   h3 {
-//     font-size: 16px;
-//   }
-//   h4 {
-//     font-size: 15px;
-//   }
-//   h5 {
-//     font-size: 13px;
-//   }
-//   h6 {
-//     font-size: 12px;
-//   }
-//   p, ol li, ul li {
-//     color: #FFF;
-//     font-size: 15px;
-//   }
-//   a {
-//     color: #FFEA00;
-//     text-decoration: none;
-//     border-bottom: 2px dotted #85ceef;
-//   }
-// }
+  h1, h2, h3, h4, h5, h6 {
+    color: #FFEA00;
+    margin: 0;
+    font-display: swap;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0 0 40px 0;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  h5 {
+    font-size: 13px;
+  }
+  h6 {
+    font-size: 12px;
+  }
+  p, ol li, ul li {
+    color: #FFF;
+    font-size: 15px;
+  }
+  a {
+    color: #FFEA00;
+    text-decoration: none;
+    border-bottom: 2px dotted #85ceef;
+  }
+}
 
 #s-other-info {
   padding: $BASE_PADDING !important;
