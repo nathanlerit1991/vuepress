@@ -209,7 +209,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-other-info">
+		<!-- <section id="s-other-info">
 			<div class="container no-container">
 				<div class="row">
 					<div>
@@ -228,7 +228,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 	</div>
 </template>
 
