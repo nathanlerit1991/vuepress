@@ -11,6 +11,20 @@ if (typeof window !== 'undefined') {
 			img.setAttribute('height', imgHeight)
 		})
 
+		//Display none element NOT in DOM --- FIX LAYOUT SHIFT
+		let notVisible = document.querySelectorAll('.lazy-component')
+		for (const visible of notVisible) {
+			visible.setAttribute("style", "display: none;")
+		}
+
+		//Display block element NOT in DOM --- FIX LAYOUT SHIFT
+		function displayElement() {
+			let isVisible = document.querySelectorAll('.lazy-component')
+			for (const visible of isVisible) {
+				visible.setAttribute("style", "display: block;")
+			}
+		}
+
 		//Replace all src to data-src onload
 		let removeSrc = document.querySelectorAll('img.lazy')
 		for (const remove of removeSrc) {
@@ -53,6 +67,7 @@ if (typeof window !== 'undefined') {
 					let elementVisible = document.querySelectorAll('img.lazy')
 					for (const visible of elementVisible) {
 						deferAssets()
+						displayElement()
 					}
 				}
 			})
