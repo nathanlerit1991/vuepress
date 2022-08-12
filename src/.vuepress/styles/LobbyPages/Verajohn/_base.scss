@@ -27,10 +27,10 @@
 
 
 // RESET
-@at-root html body .container{
+@at-root .lobby .container{
   max-width: 768px;
 }
-@at-root html body .container-grid{
+@at-root .container-grid{
   max-width: 768px;
 }
 a {
