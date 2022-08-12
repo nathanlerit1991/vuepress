@@ -121,15 +121,15 @@
 
 					<div>
 						<div class="guide txt-center">
-							<!-- <iframe
+							<iframe
 								width="100%"
 								height="auto"
-								:src="$page.frontmatter.beginners_guide.video_url"
+								:data-src="$page.frontmatter.beginners_guide.video_url"
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
-								/> -->
+								/>
 							<div v-html="$page.frontmatter.beginners_guide.text_content" />
 						</div>
 					</div>
@@ -151,7 +151,16 @@
 
 <script>
 export default {
-
+	data () {
+		return {
+			iframes: false
+		}
+	},
+	mounted () {
+		setTimeout(function(){ 
+			
+		}, 2000)
+	}
 }
 </script>
 
