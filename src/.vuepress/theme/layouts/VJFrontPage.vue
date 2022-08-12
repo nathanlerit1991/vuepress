@@ -111,14 +111,14 @@
     </section>
 
 		<section id="s-beginners-bonus">
-			<div class="container">
+			<div class="container no-container">
 				<div class="row column-2">
 					<div>
 						<div class="bonus">
 							<div class="image-wrapper image-bg">
 								<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
 							</div>
-							<div v-html="$page.frontmatter.beginners_bonus.text_content" />
+							<div class="bonus-description" v-html="$page.frontmatter.beginners_bonus.text_content" />
 						</div>
 					</div>
 
@@ -134,7 +134,7 @@
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
 								/>
-							<div v-html="$page.frontmatter.beginners_guide.text_content" />
+							<div class="bonus-description" v-html="$page.frontmatter.beginners_guide.text_content" />
 						</div>
 					</div>
 				</div>
@@ -173,7 +173,7 @@
 			</div>
 		</section>
 		<section id="s-honourable-mentions">
-			<div class="container">
+			<div class="container no-container">
 				<div class="row txt-center">
 					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
 				</div>
