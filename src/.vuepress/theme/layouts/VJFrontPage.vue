@@ -99,6 +99,7 @@
 						<h2> {{ $page.frontmatter.first_customers_quote.title }}</h2>
 						<div class="profile-pic">
 							<img
+								class="lazy"
 								:src="$page.frontmatter.first_customers_quote.profile_image"
 								alt="verajohn profile"
 							>
@@ -164,7 +165,7 @@
 					<div class="testimonial-wrapper">
 						<h2> {{ $page.frontmatter.second_customers_quote.title }}</h2>
 						<div class="profile-pic">
-							<img :src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
+							<img class="lazy" :src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
 						</div>
 						<p v-html="$page.frontmatter.second_customers_quote.text_content" />
 					</div>
@@ -182,7 +183,7 @@
 							:key="honourableMentionsTileindex">
 						<div class="box txt-center">
 							<div class="image-bg">
-								<img :src="honourableMentionsTile.bg_image" alt="verajohn honourable">
+								<img class="lazy" :src="honourableMentionsTile.bg_image" alt="verajohn honourable">
 							</div>
 							<div v-html="honourableMentionsTile.text_content" />
 						</div>
