@@ -122,7 +122,7 @@
 					<div>
 						<div class="guide txt-center">
 							<iframe
-								class="lazy-frame"
+								class="lazy"
 								width="100%"
 								height="auto"
 								:data-src="$page.frontmatter.beginners_guide.video_url"
@@ -152,21 +152,6 @@
 
 <script>
 export default {
-	data () {
-		return {
-			iframes: false
-		}
-	},
-	mounted () {
-		setTimeout(function(){ 
-			let imgElem = document.querySelectorAll('.lazy-frame')
-			for ( let i = 0; i < imgElem.length; i++ ) {
-				if(imgElem[i].getAttribute('data-src')) {
-					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
-				}
-			}
-		}, 3000)
-	}
 }
 </script>
 

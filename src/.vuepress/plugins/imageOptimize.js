@@ -27,6 +27,15 @@ if (typeof window !== 'undefined') {
 			}
 		}
 
+		function deferiFrame() {
+			let imgElem = document.querySelectorAll('iframe.lazy')
+			for ( let i = 0; i < imgElem.length; i++ ) {
+				if(imgElem[i].getAttribute('data-src')) {
+					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
+				}
+			}
+		}
+
 		//Check if element is visible using classname 'lazy'
 		function isInViewport() {
 			let el = document.querySelector('img.lazy')
@@ -46,6 +55,7 @@ if (typeof window !== 'undefined') {
 					let elementVisible = document.querySelectorAll('img.lazy')
 					for (const visible of elementVisible) {
 						deferAssets()
+						deferiFrame()
 					}
 				}
 			})
