@@ -1,5 +1,5 @@
 <template>
-	<div class="vjfp">
+	<div class="vjfp" :style="cssBackground">
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -152,6 +152,14 @@
 
 <script>
 export default {
+	computed: {
+    cssBackground () {
+      const mainBg = this.$page.frontmatter.vjfp_bg
+      return {
+        '--main-bg': `url('${mainBg}')`
+      }
+    }
+  },
 }
 </script>
 
