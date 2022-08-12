@@ -193,8 +193,11 @@ button {
     border-radius: 16px;
     padding: 30px 20px;
     height: 100%;
-    img {
-      width: 100%;
+    .image-wrapper {
+      overflow: hidden;
+      img {
+        min-width: 250px;
+      }
     }
   }
   
