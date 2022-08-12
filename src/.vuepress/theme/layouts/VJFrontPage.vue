@@ -171,6 +171,35 @@
 				</div>
 			</div>
 		</section>
+		<section id="s-honourable-mentions">
+			<div class="container-grid">
+				<div class="row txt-center">
+					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
+				</div>
+				
+				<div class="row honourable-pods">
+					<div
+						v-for="(honourableMentionsTile, honourableMentionsTileindex) in $page.frontmatter.honourable_mentions.list_of_tiles"
+						:key="honourableMentionsTileindex"
+						class="box txt-center"
+					>
+						<img :src="honourableMentionsTile.bg_image">
+						<div v-html="honourableMentionsTile.text_content" />
+					</div>
+				</div>
+
+				<div class="row h-center">
+					<button data-test-id="registration-button" class="btn-primary">
+						<a :href="$page.frontmatter.honourable_mentions.cta_link">
+							{{ $page.frontmatter.honourable_mentions.cta_text }}
+						</a>
+					</button>
+				</div>
+				<div class="row h-center">
+					<small class="small" v-html="$page.frontmatter.honourable_mentions.text_hyperlink" />
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -185,7 +214,7 @@ export default {
 				'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
       }
     }
-  },
+  }
 }
 </script>
 

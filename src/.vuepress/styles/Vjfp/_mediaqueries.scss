@@ -20,6 +20,17 @@
 			position: relative;
 		}
 	}
+	#s-honourable-mentions {
+		h3 {
+			font-size: 30px;
+			line-height: 24px;
+		}
+	}
+	#s-honourable-mentions {
+		.honourable-pods {
+			grid-template-columns: 1fr;
+		}
+	}
 }
 
 /* Extra Small Devices, Phones */
@@ -46,6 +57,12 @@
 			max-width: 50%;
 		}
 	}
+	#s-honourable-mentions {
+		h3 {
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
 }
 
 /* Small Devices, Tablets */
@@ -61,6 +78,13 @@
 			max-width: 60%;
 		}
 	}
+
+	#s-honourable-mentions {
+		.honourable-pods {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
 }
 
 /* Medium Devices, Desktops */

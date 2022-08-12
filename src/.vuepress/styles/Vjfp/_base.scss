@@ -79,7 +79,7 @@ button {
   padding: 15px;
   > .container{
     background: $CONTAINER_BG;
-    border-radius: 16px;
+    border-radius: $CONTAINER_BORDER_RADIUS;
   }
 }
 
@@ -167,7 +167,7 @@ button {
 #s-payment {
   #payment-icons {
     background: #fff;
-    border-radius: 16px;
+    border-radius: $CONTAINER_BORDER_RADIUS;
     text-align: center;
     padding: calc(#{$BASE_PADDING} - 20px) $BASE_PADDING;
 
@@ -201,7 +201,7 @@ button {
   }
   .bonus {
     background: #006997;
-    border-radius: 16px;
+    border-radius: $CONTAINER_BORDER_RADIUS;
     padding: 30px 20px;
     height: 100%;
     .image-wrapper {
@@ -214,7 +214,7 @@ button {
   
   .guide {
     background: #006997;
-    border-radius: 16px;
+    border-radius: $CONTAINER_BORDER_RADIUS;
     padding: 30px;
     height: 100%;
   }
@@ -230,5 +230,14 @@ section#s-customer-support {
     background-repeat: no-repeat;
     background-position: right bottom;
     background-size: cover;
+  }
+}
+
+#s-honourable-mentions {
+  .box {
+    background: $PODS_BG;
+    border-radius: $CONTAINER_BORDER_RADIUS;
+    padding: 0 $BASE_PADDING;
+    box-sizing: border-box;
   }
 }
