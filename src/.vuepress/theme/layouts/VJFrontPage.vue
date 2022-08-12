@@ -72,6 +72,41 @@
 				</div>
 			</div>
 		</section>
+
+		<section id="s-payment">
+			<div class="container">
+				<div class="row">
+					<div>
+						<div class="txt-center" v-html="$page.frontmatter.our_payment_methods.text_content" />
+						<div id="payment-icons">
+							<img
+								v-for="(paymentIcons, paymentIconsindex) in $page.frontmatter.our_payment_methods.payment_method_icons"
+								:key="paymentIconsindex"
+								alt="verajohn payment providers"
+								:src="paymentIcons.image"
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+    </section>
+
+		<section id="s-testimonials">
+			<div class="container">
+				<div class="row txt-center">
+					<div class="testimonial-wrapper">
+						<h2> {{ $page.frontmatter.first_customers_quote.title }}</h2>
+						<div class="profile-pic">
+							<img
+								:src="$page.frontmatter.first_customers_quote.profile_image"
+								alt="verajohn profile"
+							>
+						</div>
+						<p v-html="$page.frontmatter.first_customers_quote.text_content" />
+					</div>
+				</div>
+			</div>
+    </section>
 	</div>
 </template>
 
