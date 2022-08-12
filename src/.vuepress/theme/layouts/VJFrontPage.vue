@@ -203,7 +203,7 @@
 			</div>
 		</section>
 		<section id="s-seo-contents">
-			<div class="container">
+			<div class="container txt-lazy">
 				<div class="row">
 					<Content class="txt-center" />
 				</div>

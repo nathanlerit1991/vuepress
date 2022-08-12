@@ -205,10 +205,6 @@ a{
   }
 }
 
-section, div, main, footer {
-  content-visibility: auto;
-}
-
 // FLEX //
 .f-no-wrap {
   flex-wrap: nowrap;
@@ -275,4 +271,7 @@ section, div, main, footer {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0 auto;
+}
+.txt-lazy {
+  content-visibility: auto;
 }
