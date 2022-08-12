@@ -221,7 +221,7 @@
 						</ul>
 						<div class="footer-twitter-button-pure">
 							<a :href="$page.frontmatter.twitter_link">
-								<img src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
+								<img class="lazy" src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
 								<span>{{ $page.frontmatter.twitter_title }}</span>
 							</a>
 						</div>
