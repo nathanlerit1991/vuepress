@@ -80,6 +80,7 @@
 						<div class="txt-center" v-html="$page.frontmatter.our_payment_methods.text_content" />
 						<div id="payment-icons">
 							<img
+								class="lazy"
 								v-for="(paymentIcons, paymentIconsindex) in $page.frontmatter.our_payment_methods.payment_method_icons"
 								:key="paymentIconsindex"
 								alt="verajohn payment providers"
@@ -104,6 +105,44 @@
 						</div>
 						<p v-html="$page.frontmatter.first_customers_quote.text_content" />
 					</div>
+				</div>
+			</div>
+    </section>
+
+		<section id="s-beginners-bonus">
+			<div class="container">
+				<div class="row column-2">
+					<div>
+						<div class="bonus txt-center">
+							<div v-html="$page.frontmatter.beginners_bonus.text_content" />
+							<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
+						</div>
+					</div>
+
+					<div>
+						<div class="guide txt-center">
+							<iframe
+								width="100%"
+								height="auto"
+								:src="$page.frontmatter.beginners_guide.video_url"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+								/>
+							<div v-html="$page.frontmatter.beginners_guide.text_content" />
+						</div>
+					</div>
+				</div>
+				<div class="row h-center">
+					<button data-test-id="registration-button" class="btn-primary">
+						<a :href="$page.frontmatter.beginners_guide.cta_link">
+							{{ $page.frontmatter.beginners_guide.cta_text }}
+						</a>
+					</button>
+				</div>
+				<div class="row h-center">
+					<small v-html="$page.frontmatter.beginners_guide.text_hyperlink" />
 				</div>
 			</div>
     </section>

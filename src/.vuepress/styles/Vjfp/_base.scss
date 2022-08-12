@@ -8,19 +8,19 @@ html:lang(en) {
 h1 {
   color: $HEADING_COLOR;
   font-size: 54px;
-  line-height: 59px;
+  line-height: 64.8px;
   margin: 0;
 }
 h2 {
   color: $HEADING_COLOR;
   font-size: 30px;
-  line-height: 23px;
+  line-height: 36px;
   margin: 0;
 }
 h3 {
   color: $HEADING_COLOR;
   font-size: 20px;
-  line-height: 26px;
+  line-height: 24px;
   margin: 0;
 }
 
@@ -66,7 +66,7 @@ button {
 }
 
 #s-sticky-nav + *~section {
-  padding: 15px 0;
+  padding: 15px;
   > .container{
     background: $CONTAINER_BG;
     border-radius: 16px;
@@ -183,5 +183,28 @@ button {
     img {
       width: 130px;
     }
+  }
+}
+
+#s-beginners-bonus {
+  .bonus {
+    background: #006997;
+    border-radius: 16px;
+    padding: 30px 0;
+    height: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  
+  .guide {
+    background: #006997;
+    border-radius: 16px;
+    padding: 30px;
+    height: 100%;
+  }
+  iframe {
+    min-height: 250px;
+    margin-bottom: 20px;
   }
 }
