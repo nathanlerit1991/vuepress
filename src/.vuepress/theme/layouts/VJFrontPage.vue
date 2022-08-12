@@ -205,7 +205,7 @@
 		<section id="s-seo-contents">
 			<div class="container">
 				<div class="row">
-					<Content/>
+					<Content class="txt-center" />
 				</div>
 			</div>
 		</section>
