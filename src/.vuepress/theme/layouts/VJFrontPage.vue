@@ -113,7 +113,7 @@
 			<div class="container">
 				<div class="row column-2">
 					<div>
-						<div class="bonus txt-center">
+						<div class="bonus">
 							<div class="image-wrapper">
 								<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
 							</div>
@@ -122,7 +122,7 @@
 					</div>
 
 					<div>
-						<div class="guide txt-center">
+						<div class="guide">
 							<iframe
 								class="lazy"
 								width="100%"
@@ -149,6 +149,28 @@
 				</div>
 			</div>
     </section>
+		<section id="s-customer-support">
+			<div class="container">
+				<div class="row">
+					<div id="text-wrapper">
+						<div v-html="$page.frontmatter.customer_support.text_content" />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="s-testimonials2">
+			<div class="container">
+				<div class="row txt-center">
+					<div class="testimonial-wrapper">
+						<h2> {{ $page.frontmatter.second_customers_quote.title }}</h2>
+						<div class="profile-pic">
+							<img :src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
+						</div>
+						<p v-html="$page.frontmatter.second_customers_quote.text_content" />
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </template>
 
@@ -156,9 +178,11 @@
 export default {
 	computed: {
     cssBackground () {
-      const mainBg = this.$page.frontmatter.vjfp_bg
+			const mainBg = this.$page.frontmatter.vjfp_bg
+			const customerSupportBackgroundImage = this.$page.frontmatter.customer_support.bg_image
       return {
-        '--main-bg': `url('${mainBg}')`
+				'--main-bg': `url('${mainBg}')`,
+				'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
       }
     }
   },

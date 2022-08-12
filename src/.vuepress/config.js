@@ -2,6 +2,13 @@ const { description } = require('../../package')
 const path = require('path')
 let dynamicRoutes = []
 module.exports = {
+  locales: {
+    '/': {
+      lang: 'ja',
+      title: 'VuePress',
+      description: 'Vue-powered Static Site Generator'
+    },
+  },
   configureWebpack: {
     resolve: {
       alias: {

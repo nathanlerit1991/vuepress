@@ -1,7 +1,18 @@
+//FONTS
+@font-face {
+  font-family: 'Lucida Grande';
+  src: url('/fonts/all.generic.lucida-sans-regular.ttf');
+  font-display: swap;
+}
+
+html:lang(jp) {
+  h1,h2,h3,h4,h5,h6,p,span,li,a,small{
+    font-family: $FONT_FAMILY_JP;
+  }
+}
 html:lang(en) {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
-    font-family: "Lucida Grande";
-    font-display: swap;
+    font-family: $FONT_FAMILY_EN;
   }
 }
 
@@ -23,7 +34,6 @@ h3 {
   line-height: 24px;
   margin: 0;
 }
-
 a {
   color: $TEXT_LINK_COLOR;
   text-decoration: none;
@@ -170,7 +180,8 @@ button {
   }
 }
 
-#s-testimonials {
+#s-testimonials,
+#s-testimonials2 {
   .profile-pic {
     width: 130px;
     height: 130px;
@@ -210,5 +221,14 @@ button {
   iframe {
     min-height: 250px;
     margin-bottom: 20px;
+  }
+}
+
+section#s-customer-support {
+  .container {
+    background-image: linear-gradient(to left,transparent, $CONTAINER_BG),var(--customer-support-background-image);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: cover;
   }
 }
