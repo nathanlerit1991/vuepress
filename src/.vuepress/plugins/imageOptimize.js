@@ -18,11 +18,12 @@ if (typeof window !== 'undefined') {
 			remove.src = ""
 		}
 
-		let removeASrc = document.querySelectorAll('a.lazy')
-		for (const remove of removeASrc) {
-			remove.setAttribute('data-src', remove.href)
-			remove.href = ""
-		}
+		//Replace all href to data-src onload
+		// let removeHref = document.querySelectorAll('a.lazy')
+		// for (const remove of removeHref) {
+		// 	remove.setAttribute('data-src', remove.href)
+		// 	remove.href = ""
+		// }
 
 		//Replace all image and iframes data-src to src
 		function deferAssets() {
@@ -40,8 +41,8 @@ if (typeof window !== 'undefined') {
 				}
 			}
 			for ( let i = 0; i < anchorElem.length; i++ ) {
-				if(anchorElem[i].getAttribute('data-src')) {
-					anchorElem[i].setAttribute('href',anchorElem[i].getAttribute('data-src'));
+				if(anchorElem[i].getAttribute('data-href')) {
+					anchorElem[i].setAttribute('href',anchorElem[i].getAttribute('data-href'));
 				}
 			}
 		}

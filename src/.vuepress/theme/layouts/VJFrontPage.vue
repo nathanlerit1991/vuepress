@@ -243,7 +243,7 @@
 						aria-label="CEG"
 						target="_blank"
 						rel="noopener"
-						href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
+						data-href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
 					>
 						<img class="lazy curacao-regulator" src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
 					</a>
