@@ -239,6 +239,7 @@
 				</div>
 				<div class="row footer-icon">
 					<a
+						class="lazy"
 						aria-label="CEG"
 						target="_blank"
 						rel="noopener"
