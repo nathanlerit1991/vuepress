@@ -209,7 +209,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- <section id="s-other-info">
+		<section id="s-other-info">
 			<div class="container no-container">
 				<div class="row">
 					<div>
@@ -228,7 +228,28 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div>
+						<small>{{ $page.frontmatter.footer_text }}</small>
+					</div>
+				</div>
+				<div class="row footer-icon">
+					<a
+						aria-label="CEG"
+						target="_blank"
+						rel="noopener"
+						href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
+					>
+						<img class="lazy curacao-regulator" src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
+					</a>
+					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
+				</div>
+			</div>
+		</footer>
 	</div>
 </template>
 

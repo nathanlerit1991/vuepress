@@ -78,7 +78,7 @@ button {
     transform: translate(-50%, 0);
   }
 }
-@at-root .vjfp section .no-container {
+@at-root .vjfp .no-container {
   padding: 0 !important;
   background: none !important;
 }
@@ -355,6 +355,25 @@ section#s-customer-support {
     img {
       width: 18px;
       height: auto;
+    }
+  }
+}
+
+footer {
+  background: #f8f8f8;
+  padding: 15px;
+  small {
+    color: #13021b;
+    font-size: 13px;
+    line-height: 15.6px;
+  }
+  .container {
+    .footer-icon {
+      justify-content: center;
+      img {
+        height: 40px;
+        width: auto;
+      }
     }
   }
 }
