@@ -4,9 +4,7 @@ let dynamicRoutes = []
 module.exports = {
   locales: {
     '/': {
-      lang: 'ja',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
+      lang: 'ja'
     },
   },
   configureWebpack: {
@@ -40,7 +38,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  // title: ,
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
