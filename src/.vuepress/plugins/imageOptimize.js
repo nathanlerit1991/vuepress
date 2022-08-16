@@ -6,9 +6,9 @@ if (typeof window !== 'undefined') {
 		imgDimension.forEach((img, i) => {
 			let imgWidth = img.width
 			let imgHeight = img.height
-
-			img.setAttribute('width', imgWidth)
-			img.setAttribute('height', imgHeight)
+			//
+			// img.setAttribute('width', imgWidth)
+			// img.setAttribute('height', imgHeight)
 			// img.setAttribute('loading', 'lazy')
 		})
 
