@@ -17,7 +17,6 @@ if (typeof window !== 'undefined') {
 		for (const remove of removeSrc) {
 			remove.setAttribute('data-src', remove.src)
 			remove.src = ""
-			removeSrc.setAttribute('loading', 'lazy')
 		}
 
 		//Replace all image and iframes data-src to src
