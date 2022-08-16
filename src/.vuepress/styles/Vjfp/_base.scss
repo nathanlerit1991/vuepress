@@ -5,13 +5,13 @@
   font-display: optional;
 }
 
-html:lang(jp) {
+@at-root html:lang(ja) .vjfp {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
     font-family: $FONT_FAMILY_JP;
     font-display: optional;
   }
 }
-html:lang(en) {
+@at-root html:lang(en) .vjfp {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
     font-family: $FONT_FAMILY_EN;
     font-display: optional;
@@ -35,6 +35,10 @@ h3 {
   font-size: 20px;
   line-height: 24px;
   margin: 0;
+}
+p {
+  font-size: 16px;
+  line-height: 20px;
 }
 a {
   color: $TEXT_LINK_COLOR;
@@ -86,7 +90,7 @@ button {
   padding: 0 8%;
 }
 @at-root body {
-  padding-top: 48.5px;
+  padding-top: 42px;
 }
 
 #s-sticky-nav + *~section {
