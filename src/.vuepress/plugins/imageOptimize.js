@@ -9,6 +9,7 @@ if (typeof window !== 'undefined') {
 
 			img.setAttribute('width', imgWidth)
 			img.setAttribute('height', imgHeight)
+			img.setAttribute('loading', 'lazy')
 		})
 
 		//Replace all src to data-src onload
@@ -16,14 +17,8 @@ if (typeof window !== 'undefined') {
 		for (const remove of removeSrc) {
 			remove.setAttribute('data-src', remove.src)
 			remove.src = ""
+			removeSrc.setAttribute('loading', 'lazy')
 		}
-
-		//Replace all href to data-src onload
-		// let removeHref = document.querySelectorAll('a.lazy')
-		// for (const remove of removeHref) {
-		// 	remove.setAttribute('data-src', remove.href)
-		// 	remove.href = ""
-		// }
 
 		//Replace all image and iframes data-src to src
 		function deferAssets() {
@@ -38,11 +33,6 @@ if (typeof window !== 'undefined') {
 			for ( let i = 0; i < iframeElem.length; i++ ) {
 				if(iframeElem[i].getAttribute('data-src')) {
 					iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
-				}
-			}
-			for ( let i = 0; i < anchorElem.length; i++ ) {
-				if(anchorElem[i].getAttribute('data-href')) {
-					anchorElem[i].setAttribute('href',anchorElem[i].getAttribute('data-href'));
 				}
 			}
 		}
