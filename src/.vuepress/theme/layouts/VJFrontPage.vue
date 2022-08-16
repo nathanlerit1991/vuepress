@@ -203,9 +203,9 @@
 			</div>
 		</section>
 		<section id="s-seo-contents">
-			<div class="container txt-lazy">
+			<div class="container">
 				<div class="row">
-					<Content class="txt-center" />
+					<Content class="txt-center txt-lazy" />
 				</div>
 			</div>
 		</section>
