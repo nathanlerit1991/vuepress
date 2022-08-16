@@ -243,9 +243,9 @@
 						aria-label="CEG"
 						target="_blank"
 						rel="noopener"
-						data-href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
+						href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
 					>
-						<img class="lazy curacao-regulator" data-src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
+						<img class="lazy curacao-regulator" src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
 					</a>
 					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
 				</div>
