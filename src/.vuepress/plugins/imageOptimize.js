@@ -66,7 +66,6 @@ if (typeof window !== 'undefined') {
 					let elementVisible = document.querySelectorAll('img.lazy')
 					for (const visible of elementVisible) {
 						deferAssets()
-						displayElement()
 					}
 				}
 			})

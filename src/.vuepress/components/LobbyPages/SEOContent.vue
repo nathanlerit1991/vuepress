@@ -1,6 +1,6 @@
 <template>
   <div class="g-seo-content">
-    <Content />
+    <Content class="txt-center" />
   </div>
 </template>
 <script>
