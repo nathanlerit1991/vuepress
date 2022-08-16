@@ -22,7 +22,6 @@ if (typeof window !== 'undefined') {
 		function deferAssets() {
 			let imgElem = document.querySelectorAll('img.lazy')
 			let iframeElem = document.querySelectorAll('iframe.lazy')
-			let anchorElem = document.querySelectorAll('a.lazy')
 			for ( let i = 0; i < imgElem.length; i++ ) {
 				if(imgElem[i].getAttribute('data-src')) {
 					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
@@ -35,28 +34,28 @@ if (typeof window !== 'undefined') {
 			}
 		}
 
-		//Check if element is visible using classname 'lazy'
-		function isInViewport() {
-			let el = document.querySelector('img.lazy')
-			const rect = el.getBoundingClientRect()
-			return (
-				rect.top >= 0 &&
-				rect.left >= 0 &&
-				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-				rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-			)
-		}
-
-		//Trigger deferAssets function once element is visible in the screen
-		if (typeof window !== 'undefined') {
-			window.addEventListener('scroll', function () {
-				if (isInViewport()) {
-					let elementVisible = document.querySelectorAll('img.lazy')
-					for (const visible of elementVisible) {
-						deferAssets()
-					}
-				}
-			})
-		}
+		// //Check if element is visible using classname 'lazy'
+		// function isInViewport() {
+		// 	let el = document.querySelector('img.lazy')
+		// 	const rect = el.getBoundingClientRect()
+		// 	return (
+		// 		rect.top >= 0 &&
+		// 		rect.left >= 0 &&
+		// 		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		// 		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		// 	)
+		// }
+		//
+		// //Trigger deferAssets function once element is visible in the screen
+		// if (typeof window !== 'undefined') {
+		// 	window.addEventListener('scroll', function () {
+		// 		if (isInViewport()) {
+		// 			let elementVisible = document.querySelectorAll('img.lazy')
+		// 			for (const visible of elementVisible) {
+		// 				deferAssets()
+		// 			}
+		// 		}
+		// 	})
+		// }
 	}
 }
