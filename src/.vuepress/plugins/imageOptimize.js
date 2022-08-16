@@ -1,17 +1,15 @@
 if (typeof window !== 'undefined') {
 	window.onload = function() {
 
-		//Check all img dimension then add the approriate dimension, Add loading lazy
+		//Check all img dimension then add the approriate dimension
 		let imgDimension = document.querySelectorAll('img')
 		imgDimension.forEach((img, i) => {
 			let imgWidth = img.width
 			let imgHeight = img.height
 
-			if (typeof img === 'object' && img !== null && 'setAttribute' in img) {
-				img.setAttribute('width', imgWidth)
-				img.setAttribute('height', imgHeight)
-				img.setAttribute('loading', 'lazy')
-			}
+			img.setAttribute('width', imgWidth)
+			img.setAttribute('height', imgHeight)
+			// img.setAttribute('loading', 'lazy')
 		})
 
 		//Replace all src to data-src onload
