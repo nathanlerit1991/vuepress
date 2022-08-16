@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-about" class="txt-lazy">
+		<section id="s-about">
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-games" class="txt-lazy">
+		<section id="s-games">
 			<div class="container">
 
 				<div class="row txt-center">
@@ -73,7 +73,7 @@
 			</div>
 		</section>
 
-		<section id="s-payment" class="txt-lazy">
+		<section id="s-payment">
 			<div class="container">
 				<div class="row">
 					<div>
@@ -92,7 +92,7 @@
 			</div>
     </section>
 
-		<section id="s-testimonials" class="txt-lazy">
+		<section id="s-testimonials">
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
@@ -110,7 +110,7 @@
 			</div>
     </section>
 
-		<section id="s-beginners-bonus" class="txt-lazy">
+		<section id="s-beginners-bonus">
 			<div class="container no-container">
 				<div class="row column-2">
 					<div>
@@ -150,7 +150,7 @@
 				</div>
 			</div>
     </section>
-		<section id="s-customer-support" class="txt-lazy">
+		<section id="s-customer-support">
 			<div class="container">
 				<div class="row">
 					<div id="text-wrapper">
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-testimonials2" class="txt-lazy">
+		<section id="s-testimonials2">
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-honourable-mentions" class="txt-lazy">
+		<section id="s-honourable-mentions">
 			<div class="container no-container">
 				<div class="row txt-center">
 					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
@@ -209,7 +209,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-other-info" class="txt-lazy">
+		<section id="s-other-info">
 			<div class="container no-container">
 				<div class="row">
 					<div>
@@ -230,11 +230,11 @@
 			</div>
 		</section>
 
-		<footer class="txt-lazy">
+		<footer>
 			<div class="container">
 				<div class="row">
 					<div>
-						<small class="txt-center d-block">{{ $page.frontmatter.footer_text }}</small>
+						<small class="d-block txt-center">{{ $page.frontmatter.footer_text }}</small>
 					</div>
 				</div>
 				<div class="row footer-icon">
