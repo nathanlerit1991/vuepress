@@ -33,23 +33,23 @@ if (typeof window !== 'undefined') {
 			}
 		}
 
-		function isElementInViewport () {
-			const el = document.querySelector('#s-welcome')
-	    const rect = el.getBoundingClientRect()
-	    return (rect.top>-1 && rect.bottom <= screen.height);
-		}
-		document.addEventListener("scroll", () => {
-		  if(isElementInViewport()){
-		   	deferAssets()
-		  }
-		})
-
-		// let lazyLoadTrigger = false
+		// function isElementInViewport () {
+		// 	const el = document.querySelector('#s-welcome')
+	  //   const rect = el.getBoundingClientRect()
+	  //   return (rect.top>-1 && rect.bottom <= screen.height);
+		// }
 		// document.addEventListener("scroll", () => {
-		//   let scrolled = document.scrollingElement.scrollTop;
-		//   if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+		//   if(isElementInViewport()){
 		//    	deferAssets()
 		//   }
-		// }, true)
+		// })
+
+		let lazyLoadTrigger = false
+		document.addEventListener("scroll", () => {
+		  let scrolled = document.scrollingElement.scrollTop;
+		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+		   	deferAssets()
+		  }
+		}, true)
 	}
 }
