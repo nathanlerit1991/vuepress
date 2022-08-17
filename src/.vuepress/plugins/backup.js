@@ -1,5 +1,6 @@
 if (typeof window !== 'undefined') {
 	window.onload = function() {
+
 		//Check all img dimension then add the approriate dimension
 		let imgDimension = document.querySelectorAll('img')
 		imgDimension.forEach((img, i) => {
@@ -33,9 +34,36 @@ if (typeof window !== 'undefined') {
 			}
 		}
 
+		// //Check if element is visible using classname 'lazy'
+		// function isInViewport() {
+		// 	let el = document.querySelector('img.lazy')
+		// 	const rect = el.getBoundingClientRect()
+		// 	return (
+		// 		rect.top >= 0 &&
+		// 		rect.left >= 0 &&
+		// 		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		// 		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+		// 	)
+		// }
+		//
+		// //Trigger deferAssets function once element is visible in the screen
+		// if (typeof window !== 'undefined') {
+		// 	window.addEventListener('scroll', function () {
+		// 		if (isInViewport()) {
+		// 			let elementVisible = document.querySelectorAll('img.lazy')
+		// 			for (const visible of elementVisible) {
+		// 				deferAssets()
+		// 			}
+		// 		}
+		// 	})
+		// }
+
+
 		let lazyLoadTrigger = false
-		document.addEventListener("scroll", () => {
+		// const aboveTheFold = document.getElementById("s-welcome");
+		document.addEventListener("scroll", (e) => {
 		  let scrolled = document.scrollingElement.scrollTop;
+		  // var position = content.offsetTop;
 		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
 		   	deferAssets()
 		  }
