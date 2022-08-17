@@ -126,10 +126,9 @@
 						<div class="guide">
 							<iframe
 								class="lazy"
-								loading="lazy"
 								width="100%"
 								height="auto"
-								:src="$page.frontmatter.beginners_guide.video_url"
+								:data-src="$page.frontmatter.beginners_guide.video_url"
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -217,7 +216,7 @@
 						<div v-html="$page.frontmatter.other_info.title" />
 						<ul>
 							<li v-for="(dataInfo, dataInfoindex) in $page.frontmatter.other_info.list_text_links" :key="dataInfoindex">
-								<a :href="dataInfo.textUrl">{{ dataInfo.text }}</a>
+								<a :href="dataInfo.text_url">{{ dataInfo.text }}</a>
 							</li>
 						</ul>
 						<div class="footer-twitter-button-pure">

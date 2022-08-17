@@ -12,7 +12,7 @@ if (typeof window !== 'undefined') {
 		})
 
 		//Replace all src to data-src onload
-		let removeSrc = document.querySelectorAll('.lazy')
+		let removeSrc = document.querySelectorAll('img.lazy')
 		for (const remove of removeSrc) {
 			remove.setAttribute('data-src', remove.src)
 			remove.src = ""
