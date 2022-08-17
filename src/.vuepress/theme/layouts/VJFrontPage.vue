@@ -126,9 +126,10 @@
 						<div class="guide">
 							<iframe
 								class="lazy"
+								loading="lazy"
 								width="100%"
 								height="auto"
-								:data-src="$page.frontmatter.beginners_guide.video_url"
+								:src="$page.frontmatter.beginners_guide.video_url"
 								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
