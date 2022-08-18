@@ -256,13 +256,19 @@
 
 <script>
 export default {
-	created () {
-		if (typeof window !== 'undefined') {
-			let head = document.head
-			let meta = document.createElement("meta")
-			meta.setAttribute('name', 'hakdog')
-			head.appendChild(meta)
+	mounted () {
+		const getDataSeries = async items => {
+			let seoData = await this.$page.frontmatter.seo
+			return seoData;
 		}
+		getDataSeries().then(res => {
+			let head = document.head
+			let meta = document.createElement('meta')
+			meta.name = "description"
+			meta.content = res.meta.description
+			head.appendChild(meta)
+			console.log('00000', res)
+		})
 	},
 	computed: {
     cssBackground () {
@@ -273,7 +279,7 @@ export default {
 				'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
       }
     }
-  }
+	}
 }
 </script>
 
