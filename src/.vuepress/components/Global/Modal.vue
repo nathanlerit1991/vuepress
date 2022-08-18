@@ -1,6 +1,6 @@
 <template>
   <div class="g-modal">
-    <iframe :src="iframeSrc"></iframe>
+    <iframe class="lazy" loading="lazy" :data-src="iframeSrc"></iframe>
   </div>
 </template>
 

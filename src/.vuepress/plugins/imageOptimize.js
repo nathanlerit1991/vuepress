@@ -23,12 +23,14 @@ if (typeof window !== 'undefined') {
 			let iframeElem = document.querySelectorAll('iframe.lazy')
 			for ( let i = 0; i < imgElem.length; i++ ) {
 				if(imgElem[i].getAttribute('data-src')) {
-					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'));
+					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'))
+					imgElem[i].removeAttribute('data-src')
 				}
 			}
 			for ( let i = 0; i < iframeElem.length; i++ ) {
 				if(iframeElem[i].getAttribute('data-src')) {
-					iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'));
+					iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'))
+					iframeElem[i].removeAttribute('data-src')
 				}
 			}
 		}
@@ -48,7 +50,7 @@ if (typeof window !== 'undefined') {
 		document.addEventListener("scroll", () => {
 		  let scrolled = document.scrollingElement.scrollTop;
 		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
-		   	deferAssets()
+				deferAssets()
 		  }
 		}, true)
 	}

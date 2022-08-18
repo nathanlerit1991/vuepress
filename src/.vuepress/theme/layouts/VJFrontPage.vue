@@ -125,11 +125,11 @@
 					<div>
 						<div class="guide">
 							<iframe
+								title="Verajohn YouTube video"
 								class="lazy"
 								width="100%"
 								height="auto"
 								:data-src="$page.frontmatter.beginners_guide.video_url"
-								title="YouTube video player"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
@@ -256,6 +256,12 @@
 
 <script>
 export default {
+	created () {
+		let head = document.head
+		let meta = document.createElement("meta")
+		meta.setAttribute('name', 'hakdog')
+		head.appendChild(meta)
+	},
 	computed: {
     cssBackground () {
 			const mainBg = this.$page.frontmatter.vjfp_bg
