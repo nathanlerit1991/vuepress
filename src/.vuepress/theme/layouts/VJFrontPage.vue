@@ -257,10 +257,12 @@
 <script>
 export default {
 	created () {
-		let head = document.head
-		let meta = document.createElement("meta")
-		meta.setAttribute('name', 'hakdog')
-		head.appendChild(meta)
+		if (typeof window !== 'undefined') {
+			let head = document.head
+			let meta = document.createElement("meta")
+			meta.setAttribute('name', 'hakdog')
+			head.appendChild(meta)
+		}
 	},
 	computed: {
     cssBackground () {
