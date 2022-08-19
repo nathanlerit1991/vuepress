@@ -7,7 +7,7 @@ field_ids:
 title: オンラインカジノベラジョンでプレイ! 無料版お試しも | Vera&John
 description: ベラジョンオンラインカジノは、日本国内で人気No.1のオンラインカジノ！スロットやテーブルゲームなどをオンラインで楽しめる時代が来ました！ベラジョンなら無料版のお試しプレイもご用意しています!今なら新規登録の方に入金不要ボーナス10ドルをプレゼント中。この機会を活かしてオンラインカジノデビューを飾りましょう。
 seo:
-  robots: ""
+  robots: "noindex"
 vjfp_bg: /marketing/img/vjfp-background.jpg
 sticky_nav: 既にご登録済みですか <a data-test-id="login-button"
   href="/login?utm_source=cro&utm_medium=landing_page&utm_campaign=maiden_voyage&utm_id=vj_fp_0001&utm_term=logcta_tpr">ログイン</a>
