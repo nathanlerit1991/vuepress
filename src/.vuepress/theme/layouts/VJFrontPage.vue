@@ -202,14 +202,14 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-seo-contents">
+		<section id="s-seo-contents" class="notVisible">
 			<div class="container">
 				<div class="row">
 					<Content class="txt-center txt-lazy" />
 				</div>
 			</div>
 		</section>
-		<!-- <section id="s-other-info">
+		<section id="s-other-info">
 			<div class="container no-container">
 				<div class="row">
 					<div>
@@ -228,9 +228,9 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 
-		<!-- <footer>
+		<footer>
 			<div class="container">
 				<div class="row">
 					<div>
@@ -250,7 +250,7 @@
 					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
 				</div>
 			</div>
-		</footer> -->
+		</footer>
 	</div>
 </template>
 

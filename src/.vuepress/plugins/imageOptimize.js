@@ -2,12 +2,17 @@ if (typeof window !== 'undefined') {
 	window.onload = function() {
 		//Check all img dimension then add the approriate dimension
 		let imgDimension = document.querySelectorAll('img')
-		imgDimension.forEach((img, i) => {
+		imgDimension.forEach((img) => {
 			let imgWidth = img.width
 			let imgHeight = img.height
 
 			img.setAttribute('width', imgWidth)
 			img.setAttribute('height', imgHeight)
+		})
+
+		let notVisible = document.querySelectorAll('.notVisible')
+		notVisible.forEach((visibility) => {
+			visibility.style.display = "none"
 		})
 
 		//Replace all src to data-src onload
@@ -51,6 +56,10 @@ if (typeof window !== 'undefined') {
 		  let scrolled = document.scrollingElement.scrollTop;
 		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
 				deferAssets()
+				let notVisible = document.querySelectorAll('.notVisible')
+				notVisible.forEach((visibility) => {
+					visibility.style.display = "block"
+				})
 		  }
 		}, true)
 	}
