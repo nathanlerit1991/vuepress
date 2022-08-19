@@ -73,7 +73,7 @@
 			</div>
 		</section>
 
-		<section id="s-payment">
+		<section id="s-payment" class="content-visibility">
 			<div class="container">
 				<div class="row">
 					<div>
@@ -92,7 +92,7 @@
 			</div>
     </section>
 
-		<section id="s-testimonials">
+		<section id="s-testimonials" class="content-visibility">
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
@@ -150,7 +150,7 @@
 				</div>
 			</div>
     </section>
-		<section id="s-customer-support">
+		<section id="s-customer-support" class="content-visibility">
 			<div class="container">
 				<div class="row">
 					<div id="text-wrapper">
@@ -159,7 +159,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-testimonials2">
+		<section id="s-testimonials2" class="content-visibility">
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
@@ -209,7 +209,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-other-info">
+		<section id="s-other-info" class="content-visibility">
 			<div class="container no-container">
 				<div class="row">
 					<div>
@@ -230,7 +230,7 @@
 			</div>
 		</section>
 
-		<footer>
+		<footer class="content-visibility">
 			<div class="container">
 				<div class="row">
 					<div>
