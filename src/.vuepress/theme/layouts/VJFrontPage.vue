@@ -202,13 +202,13 @@
 				</div>
 			</div>
 		</section>
-		<!-- <section id="s-seo-contents">
+		<section id="s-seo-contents">
 			<div class="container">
 				<div class="row">
 					<Content class="txt-center txt-lazy" />
 				</div>
 			</div>
-		</section> -->
+		</section>
 		<section id="s-other-info">
 			<div class="container no-container">
 				<div class="row">
