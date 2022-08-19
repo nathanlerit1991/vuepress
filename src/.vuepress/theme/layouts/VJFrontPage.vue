@@ -255,7 +255,7 @@
 </template>
 
 <script>
-// import '~styles/Vjfp/style.scss'
+import '~styles/Vjfp/style.scss'
 export default {
 	mounted () {
 		// var head2 = document.head
