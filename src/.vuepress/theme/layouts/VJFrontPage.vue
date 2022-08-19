@@ -255,15 +255,15 @@
 </template>
 
 <script>
-import '~styles/Vjfp/style.scss'
+// import '~styles/Vjfp/style.scss'
 export default {
 	mounted () {
-		// var head2 = document.head
-		// var link = document.createElement("link")
-		// link.type = "text/css"
-		// link.rel = "preload"
-		// link.href = "/assets/verajohn/Vjfp/20plus.png"
-		// head2.appendChild(link)
+		var head2 = document.head
+		var link = document.createElement("link")
+		link.type = "text/sass"
+		link.rel = "preload"
+		link.href = "/assets/Vjfp/style.scss"
+		head2.appendChild(link)
 
 		// const getMetaData = async items => {
 		// 	let seoData = await this.$page.frontmatter.seo
