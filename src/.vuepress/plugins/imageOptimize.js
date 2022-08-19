@@ -1,14 +1,14 @@
 if (typeof window !== 'undefined') {
 	window.onload = function() {
 		//Check all img dimension then add the approriate dimension
-		// let imgDimension = document.querySelectorAll('img')
-		// imgDimension.forEach((img, i) => {
-		// 	let imgWidth = img.width
-		// 	let imgHeight = img.height
+		let imgDimension = document.querySelectorAll('img')
+		imgDimension.forEach((img, i) => {
+			let imgWidth = img.width
+			let imgHeight = img.height
 
-		// 	img.setAttribute('width', imgWidth)
-		// 	img.setAttribute('height', imgHeight)
-		// })
+			img.setAttribute('width', imgWidth)
+			img.setAttribute('height', imgHeight)
+		})
 
 		//Replace all src to data-src onload
 		let removeSrc = document.querySelectorAll('img.lazy')
@@ -34,17 +34,6 @@ if (typeof window !== 'undefined') {
 				}
 			}
 		}
-		//
-		// function isElementInViewport () {
-		// 	const el = document.querySelector('#s-welcome')
-	  //   const rect = el.getBoundingClientRect()
-	  //   return (rect.top>-1 && rect.bottom <= screen.height);
-		// }
-		// document.addEventListener("scroll", () => {
-		//   if(isElementInViewport()){
-		//    	deferAssets()
-		//   }
-		// })
 
 		let lazyLoadTrigger = false
 		document.addEventListener("scroll", () => {
