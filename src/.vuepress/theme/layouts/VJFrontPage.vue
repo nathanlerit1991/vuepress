@@ -300,4 +300,7 @@ export default {
 
 <style lang="scss">
 	@import '~styles/Vjfp/style.scss';
+	#s-seo-contents p {
+		font-size: 0 !important;
+	}
 </style>
