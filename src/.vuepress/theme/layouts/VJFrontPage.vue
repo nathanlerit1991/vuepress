@@ -255,6 +255,7 @@
 </template>
 
 <script>
+import '~styles/Vjfp/style.scss'
 export default {
 	mounted () {
 		const getMetaData = async items => {
@@ -297,7 +298,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="scss">
-	@import '~styles/Vjfp/style.scss';
-</style>
