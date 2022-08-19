@@ -205,7 +205,7 @@
 		<section id="s-seo-contents" class="content-visibility">
 			<div class="container">
 				<div class="row">
-					<Content class="txt-center" />
+					<Content />
 				</div>
 			</div>
 		</section>
