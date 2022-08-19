@@ -268,7 +268,7 @@ export default {
 				//Robots
 				if(content === 'robots' && res[content].length <= 0) {
 					res[content] = 'noindex'
-					if(this.$page.frontmatter.title && res.description) {
+					if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
 						res[content] = 'index,follow'
 					}
 					else {
