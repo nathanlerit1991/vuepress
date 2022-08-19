@@ -257,17 +257,32 @@
 <script>
 export default {
 	mounted () {
-		const getDataSeries = async items => {
+		const getMetaData = async items => {
 			let seoData = await this.$page.frontmatter.seo
 			return seoData;
 		}
-		getDataSeries().then(res => {
+		getMetaData().then(res => {
 			let head = document.head
-			let meta = document.createElement('meta')
-			meta.name = "description"
-			meta.content = res.meta.description
-			head.appendChild(meta)
-			console.log('00000', res)
+			Object.keys(res).forEach((content)=>{
+				let meta = document.createElement('meta')
+				//Robots
+				if(content === 'robots' && res[content].length <= 0) {
+					res[content] = 'noindex'
+					if(this.$page.frontmatter.title && res.description) {
+						res[content] = 'index,follow'
+					}
+					else {
+						res[content] = 'noindex'
+					}
+				}
+
+				//Other meta, if exist
+				if(res[content]) {
+					meta.name = content
+					meta.content = res[content]
+					head.appendChild(meta)
+				}
+			})
 		})
 	},
 	computed: {
