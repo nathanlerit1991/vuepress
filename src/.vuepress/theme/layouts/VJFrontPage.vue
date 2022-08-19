@@ -230,7 +230,7 @@
 			</div>
 		</section>
 
-		<footer>
+		<!-- <footer>
 			<div class="container">
 				<div class="row">
 					<div>
@@ -250,7 +250,7 @@
 					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
 				</div>
 			</div>
-		</footer>
+		</footer> -->
 	</div>
 </template>
 
@@ -300,7 +300,4 @@ export default {
 
 <style lang="scss">
 	@import '~styles/Vjfp/style.scss';
-	#s-seo-contents p {
-		font-size: 0 !important;
-	}
 </style>
