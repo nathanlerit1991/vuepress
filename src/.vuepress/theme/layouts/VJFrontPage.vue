@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-games">
+		<section id="s-games" class="content-visibility">
 			<div class="container">
 
 				<div class="row txt-center">
@@ -110,7 +110,7 @@
 			</div>
     </section>
 
-		<section id="s-beginners-bonus">
+		<section id="s-beginners-bonus" class="content-visibility">
 			<div class="container no-container">
 				<div class="row column-2">
 					<div>
@@ -172,7 +172,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-honourable-mentions">
+		<section id="s-honourable-mentions" class="content-visibility">
 			<div class="container no-container">
 				<div class="row txt-center">
 					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
@@ -202,10 +202,10 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-seo-contents" class="notVisible">
+		<section id="s-seo-contents" class="content-visibility">
 			<div class="container">
 				<div class="row">
-					<Content class="txt-center txt-lazy" />
+					<Content class="txt-center" />
 				</div>
 			</div>
 		</section>
