@@ -256,7 +256,7 @@
 
 <script>
 export default {
-	created () {
+	mounted () {
 		const getMetaData = async items => {
 			let seoData = await this.$page.frontmatter.seo
 			return seoData;
