@@ -18,6 +18,17 @@
   }
 }
 
+@at-root .vjfp .no-container {
+  padding: 0 !important;
+  background: none !important;
+}
+.container .row .testimonial-wrapper {
+  padding: 0 8%;
+}
+@at-root body {
+  padding-top: 42px;
+}
+
 h1 {
   color: $HEADING_COLOR;
   font-size: 54px;
@@ -81,16 +92,6 @@ button {
     left: 50%;
     transform: translate(-50%, 0);
   }
-}
-@at-root .vjfp .no-container {
-  padding: 0 !important;
-  background: none !important;
-}
-.container .row .testimonial-wrapper {
-  padding: 0 8%;
-}
-@at-root body {
-  padding-top: 42px;
 }
 
 #s-sticky-nav + *~section {
