@@ -11,7 +11,7 @@
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
-						<img class="logo" src="/assets/verajohn/Vjfp/logo.png" alt="verajohn logo">
+						<img width="120" height="120" class="logo" src="/assets/verajohn/Vjfp/logo.png" alt="verajohn logo">
 						<div v-html="$page.frontmatter.welcome_verajohn.text_content" />
 						<button data-test-id="registration-button" class="btn-primary">
 							<a :href="$page.frontmatter.welcome_verajohn.cta_link">
@@ -27,7 +27,7 @@
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
-						<img :src="$page.frontmatter.about_us.header_image" alt="lucky" />
+						<img width="327" height="338" :src="$page.frontmatter.about_us.header_image" alt="lucky" />
 					</div>
 					<div id="text-wrapper">
 						<div v-html="$page.frontmatter.about_us.text_content" />
