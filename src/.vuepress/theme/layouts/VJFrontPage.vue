@@ -260,9 +260,9 @@ export default {
 	mounted () {
 		var head2 = document.head
 		var link = document.createElement("link")
-		link.type = "text/sass"
+		link.type = "text/css"
 		link.rel = "preload"
-		link.href = "/assets/Vjfp/style.scss"
+		link.href = "/assets/Vjfp/style.css"
 		head2.appendChild(link)
 
 		// const getMetaData = async items => {
