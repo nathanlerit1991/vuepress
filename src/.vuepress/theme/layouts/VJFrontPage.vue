@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		PURGING .....
+		PURGING ......
 		<section id="s-games" class="content-visibility">
 			<div class="container">
 
