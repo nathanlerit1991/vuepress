@@ -5,7 +5,6 @@
  */
 import './styles/DesignPattern/layout-grid.scss'
 import './plugins/imageOptimize.js'
-import './postcss.config.js'
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
