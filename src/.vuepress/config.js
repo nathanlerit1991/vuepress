@@ -1,7 +1,41 @@
 const { description } = require('../../package')
 const path = require('path')
+const glob = require('glob')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const PurgeCSSPlugin = require('purgecss-webpack-plugin')
+const PATHS = {
+  src: path.join(__dirname, 'src')
+}
 let dynamicRoutes = []
 module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.join(__dirname, 'dist')
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
+      }
+    ]
+  },
   locales: {
     '/': {
       lang: 'ja'
@@ -74,6 +108,12 @@ module.exports = {
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom'
+    '@vuepress/plugin-medium-zoom',
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
+    new PurgeCSSPlugin({
+      paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+    }),
   ]
 }
