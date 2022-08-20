@@ -77,7 +77,7 @@ module.exports = {
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
     purgecss({
-      content: ['./**/*.html', './**/*.css']
+      content: ['./**/*.html', './**/*.css', './dist/assets/css/*.css']
     })
   ]
 }
