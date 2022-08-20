@@ -35,6 +35,7 @@
 				</div>
 			</div>
 		</section>
+		PURGING .....
 		<section id="s-games" class="content-visibility">
 			<div class="container">
 
@@ -255,15 +256,15 @@
 </template>
 
 <script>
-// import '~styles/Vjfp/style.scss'
+import '~styles/Vjfp/style.scss'
 export default {
 	mounted () {
-		var head2 = document.head
-		var link = document.createElement("link")
-		link.type = "text/css"
-		link.rel = "preload"
-		link.href = "/assets/Vjfp/style.css"
-		head2.appendChild(link)
+		// var head2 = document.head
+		// var link = document.createElement("link")
+		// link.type = "text/css"
+		// link.rel = "preload"
+		// link.href = "/assets/Vjfp/style.css"
+		// head2.appendChild(link)
 
 		// const getMetaData = async items => {
 		// 	let seoData = await this.$page.frontmatter.seo
