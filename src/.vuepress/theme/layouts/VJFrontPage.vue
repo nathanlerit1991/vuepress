@@ -23,6 +23,7 @@
 				</div>
 			</div>
 		</section>
+		PURGE CSS
 		<section id="s-about">
 			<div class="container">
 				<div class="row">
