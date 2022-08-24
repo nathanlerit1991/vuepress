@@ -20,6 +20,13 @@
 			position: relative;
 		}
 	}
+	#s-games{
+		.game-list {
+			div:last-child {
+				border-top: solid 1px #0076aa;
+			}
+		}
+	}
 	#s-payment {
 		#payment-icons {
 			padding: calc(#{$BASE_PADDING} - 40px);
@@ -107,6 +114,14 @@
 			max-width: 75%;
 		}
 	}
+	#s-games{
+		.game-list {
+			div:last-child {
+				border-left: solid 1px #0076aa;
+				border-top: none;
+			}
+		}
+	}
 	#s-customer-support{
 		#text-wrapper {
 			-ms-flex: 0 0 30%;
@@ -117,7 +132,7 @@
 	#s-honourable-mentions {
 		.box {
 			padding: 0 $BASE_PADDING;
-		}   
+		}
 	}
 }
 

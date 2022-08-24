@@ -255,43 +255,43 @@
 </template>
 
 <script>
-// import '~styles/Vjfp/style.scss'
+import '~styles/Vjfp/style.scss'
 export default {
 	mounted () {
-		var head2 = document.head
-		var link = document.createElement("link")
-		link.type = "text/css"
-		link.rel = "preload"
-		link.href = "/assets/Vjfp/style.css"
-		head2.appendChild(link)
+		// var head2 = document.head
+		// var link = document.createElement("link")
+		// link.type = "text/css"
+		// link.rel = "preload"
+		// link.href = "/assets/Vjfp/style.css"
+		// head2.appendChild(link)
 
-		// const getMetaData = async items => {
-		// 	let seoData = await this.$page.frontmatter.seo
-		// 	return seoData;
-		// }
-		// getMetaData().then(res => {
-		// 	let head = document.head
-		// 	Object.keys(res).forEach((content)=>{
-		// 		let meta = document.createElement('meta')
-		// 		//Robots
-		// 		if(content === 'robots' && res[content].length <= 0) {
-		// 			res[content] = 'noindex'
-		// 			if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
-		// 				res[content] = 'index,follow'
-		// 			}
-		// 			else {
-		// 				res[content] = 'noindex'
-		// 			}
-		// 		}
+		const getMetaData = async items => {
+			let seoData = await this.$page.frontmatter.seo
+			return seoData;
+		}
+		getMetaData().then(res => {
+			let head = document.head
+			Object.keys(res).forEach((content)=>{
+				let meta = document.createElement('meta')
+				//Robots
+				if(content === 'robots' && res[content].length <= 0) {
+					res[content] = 'noindex'
+					if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
+						res[content] = 'index,follow'
+					}
+					else {
+						res[content] = 'noindex'
+					}
+				}
 
-		// 		//Other meta, if exist
-		// 		if(res[content]) {
-		// 			meta.name = content
-		// 			meta.content = res[content]
-		// 			head.appendChild(meta)
-		// 		}
-		// 	})
-		// })
+				//Other meta, if exist
+				if(res[content]) {
+					meta.name = content
+					meta.content = res[content]
+					head.appendChild(meta)
+				}
+			})
+		})
 	},
 	computed: {
     cssBackground () {
