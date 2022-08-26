@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 	<div class="vjfp" :style="cssBackground">
 		<section id="s-sticky-nav">
 			<div class="container">
@@ -252,7 +252,7 @@
 			</div>
 		</footer>
 	</div>
-</template>
+</template> -->
 
 <script>
 import '~styles/Vjfp/style.scss'
@@ -287,7 +287,7 @@ export default {
 
 
 
-		// 
+		//
 		// const getMetaData = async items => {
 		// 	let seoData = await this.$page.frontmatter.seo
 		// 	return seoData;
