@@ -1,8 +1,5 @@
 <template>
 	<div class="vjfp" :style="cssBackground">
-		<div>
-			<h1>Hello World</h1>
-		</div>
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -10,7 +7,7 @@
 				</div>
 			</div>
 		</section>
-		<!--	<section id="s-welcome">
+		<section id="s-welcome">
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
@@ -26,7 +23,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-about">
+		<!--	<section id="s-about">
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
