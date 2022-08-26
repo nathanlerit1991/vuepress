@@ -73,7 +73,7 @@
 			</div>
 		</section>
 
-		<section id="s-payment" class="content-visibility">
+		<!-- <section id="s-payment" class="content-visibility">
 			<div class="container">
 				<div class="row">
 					<div>
@@ -90,7 +90,7 @@
 					</div>
 				</div>
 			</div>
-    </section>
+    </section> -->
 
 		<!--<section id="s-testimonials" class="content-visibility">
 			<div class="container">
