@@ -1,0 +1,4 @@
+Plain text with BG,CSS,JS - https://www.webpagetest.org/result/220826_AiDcV9_BA3/ ---- 97
+NAV with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDcXT_B2T/ ---- 97
+Welcome with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDc4R_B4X/ --- 93
+About with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDcJ5_B6N/ --- 87
