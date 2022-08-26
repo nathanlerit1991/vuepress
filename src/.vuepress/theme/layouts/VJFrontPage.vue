@@ -3,14 +3,14 @@
 		<div>
 			<h1>Hello World</h1>
 		</div>
-	<!--	<section id="s-sticky-nav">
+		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
 					<small v-html="$page.frontmatter.sticky_nav" />
 				</div>
 			</div>
 		</section>
-		<section id="s-welcome">
+		<!--	<section id="s-welcome">
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
