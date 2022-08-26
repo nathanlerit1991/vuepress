@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</section>
-		<!--	<section id="s-about">
+		<section id="s-about">
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-games" class="content-visibility">
+		<!--	<section id="s-games" class="content-visibility">
 			<div class="container">
 
 				<div class="row txt-center">
