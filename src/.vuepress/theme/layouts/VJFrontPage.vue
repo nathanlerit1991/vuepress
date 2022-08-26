@@ -1,9 +1,9 @@
 <template>
-	<div>
-		<h1>Hello World</h1>
-	</div>
-	<!--<div class="vjfp" :style="cssBackground">
-		<section id="s-sticky-nav">
+	<div class="vjfp" :style="cssBackground">
+		<div>
+			<h1>Hello World</h1>
+		</div>
+	<!--	<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
 					<small v-html="$page.frontmatter.sticky_nav" />
@@ -93,9 +93,9 @@
 					</div>
 				</div>
 			</div>
-    </section> -->
+    </section>
 
-		<!--<section id="s-testimonials" class="content-visibility">
+		<section id="s-testimonials" class="content-visibility">
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
