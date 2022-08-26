@@ -1,5 +1,5 @@
 <template>
-	<!-- <div class="vjfp" :style="cssBackground">
+	<div class="vjfp" :style="cssBackground">
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="s-about">
+		<!--<section id="s-about">
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
@@ -250,10 +250,7 @@
 					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
 				</div>
 			</div>
-		</footer>
-	</div> -->
-	<div>
-		<h1>Hello world</h1>
+		</footer> -->
 	</div>
 </template>
 
