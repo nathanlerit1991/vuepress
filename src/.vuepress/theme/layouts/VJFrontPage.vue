@@ -1,5 +1,5 @@
-<!-- <template>
-	<div class="vjfp" :style="cssBackground">
+<template>
+	<!-- <div class="vjfp" :style="cssBackground">
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -251,8 +251,9 @@
 				</div>
 			</div>
 		</footer>
-	</div>
-</template> -->
+	</div> -->
+	<div/>
+</template>
 
 <script>
 import '~styles/Vjfp/style.scss'
@@ -316,17 +317,17 @@ export default {
 		// 	})
 		// })
 	},
-	computed: {
-    cssBackground () {
-			const mainBg = this.$page.frontmatter.vjfp_bg
-			const mainBgMobile = this.$page.frontmatter.welcome_verajohn.mobile_bg_image
-			const customerSupportBackgroundImage = this.$page.frontmatter.customer_support.bg_image
-      return {
-				'--main-bg': `url('${mainBg}')`,
-				'--main-bg-mobile': `url('${mainBgMobile}')`,
-				'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
-      }
-    }
-	}
+	// computed: {
+  //   cssBackground () {
+	// 		const mainBg = this.$page.frontmatter.vjfp_bg
+	// 		const mainBgMobile = this.$page.frontmatter.welcome_verajohn.mobile_bg_image
+	// 		const customerSupportBackgroundImage = this.$page.frontmatter.customer_support.bg_image
+  //     return {
+	// 			'--main-bg': `url('${mainBg}')`,
+	// 			'--main-bg-mobile': `url('${mainBgMobile}')`,
+	// 			'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
+  //     }
+  //   }
+	// }
 }
 </script>
