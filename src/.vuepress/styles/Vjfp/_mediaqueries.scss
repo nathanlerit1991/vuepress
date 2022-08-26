@@ -1,12 +1,16 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 280px) {
 	@at-root .vjfp {
-    background: #0081b8;
+		background: #00a1e5;
 	}
 	#s-sticky-nav + *~section {
 		> .container{
 			padding: calc(#{$BASE_PADDING - 30px});
 		}
+	}
+	#s-welcome {
+		background: var(--main-bg-mobile) no-repeat top #0081b8;
+    background-size: cover;
 	}
 	#s-about {
 		.row {
@@ -51,6 +55,9 @@
     background: var(--main-bg) no-repeat top #00a1e5;
     background-size: contain;
 	}
+	#s-welcome {
+		background: none;
+	}
 	#s-about {
 		.row {
 			flex-direction: inherit;
@@ -89,6 +96,9 @@
 			transform: translateY(-55px);
 			left: -120px;
 			min-width: 50%;
+			img {
+				min-width: 327px;
+			}
 		}
 		#text-wrapper {
 			flex: 0 0 60%;
