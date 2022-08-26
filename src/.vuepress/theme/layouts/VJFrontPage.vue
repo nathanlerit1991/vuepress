@@ -35,7 +35,7 @@
 				</div>
 			</div>
 		</section>
-		<!--<section id="s-games" class="content-visibility">
+		<section id="s-games" class="content-visibility">
 			<div class="container">
 
 				<div class="row txt-center">
@@ -73,7 +73,7 @@
 			</div>
 		</section>
 
-		<section id="s-payment" class="content-visibility">
+		<!--<section id="s-payment" class="content-visibility">
 			<div class="container">
 				<div class="row">
 					<div>
