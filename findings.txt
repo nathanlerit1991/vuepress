@@ -3,3 +3,4 @@ NAV with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDcXT_B2T/ ---- 
 Welcome with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDc4R_B4X/ --- 93
 About with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDcJ5_B6N/ --- 87
   Re-run -> Remove image - https://www.webpagetest.org/result/220826_AiDcEV_BFT/ --- 87
+  Re-run -> Remove image and text - https://www.webpagetest.org/result/220826_AiDc1Y_BG9/ --- 88

@@ -26,12 +26,12 @@
 		<section id="s-about">
 			<div class="container">
 				<div class="row">
-					<div id="image-wrapper">
-						<!-- <img width="327" height="338" :src="$page.frontmatter.about_us.header_image" alt="lucky" /> -->
+					<!-- <div id="image-wrapper">
+						<img width="327" height="338" :src="$page.frontmatter.about_us.header_image" alt="lucky" />
 					</div>
 					<div id="text-wrapper">
-						<!-- <div v-html="$page.frontmatter.about_us.text_content" /> -->
-					</div>
+						<div v-html="$page.frontmatter.about_us.text_content" />
+					</div> -->
 				</div>
 			</div>
 		</section>
