@@ -202,6 +202,13 @@
 				</div>
 			</div>
 		</section>
+		<section id="s-seo-contents" class="content-visibility">
+			<div class="container">
+				<div class="row">
+					<Content class="txt-center" />
+				</div>
+			</div>
+		</section>
 		<section id="s-other-info" class="content-visibility">
 			<div class="container no-container">
 				<div class="row">
