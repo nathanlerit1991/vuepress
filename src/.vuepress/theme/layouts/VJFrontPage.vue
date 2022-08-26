@@ -1,5 +1,8 @@
 <template>
-	<div class="vjfp" :style="cssBackground">
+	<div>
+		<h1>Hello World</h1>
+	</div>
+	<!--<div class="vjfp" :style="cssBackground">
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -73,7 +76,7 @@
 			</div>
 		</section>
 
-		<!-- <section id="s-payment" class="content-visibility">
+		<section id="s-payment" class="content-visibility">
 			<div class="container">
 				<div class="row">
 					<div>
