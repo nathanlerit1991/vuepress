@@ -252,7 +252,9 @@
 			</div>
 		</footer>
 	</div> -->
-	<div/>
+	<div>
+		<h1>Hello world</h1>
+	</div>
 </template>
 
 <script>
