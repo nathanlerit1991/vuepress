@@ -35,6 +35,43 @@
 				</div>
 			</div>
 		</section>
+		<section id="s-games" class="content-visibility">
+			<div class="container">
+
+				<div class="row txt-center">
+					<div v-html="$page.frontmatter.our_games.text_content" />
+				</div>
+
+				<div :class="'row column-' + $page.frontmatter.our_games.top_games.length" class="game-list">
+					<div v-for="(games, gamesIndex) in $page.frontmatter.our_games.top_games" :key="gamesIndex">
+						<h3>{{ games.title }}</h3>
+						<p>{{ games.description }}</p>
+						<ol>
+							<li v-for="(listGames, listGamesIndex) in games.list_top_games" :key="listGamesIndex">
+								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modal = true, modalData = listGames.url, gameTitle = listGames.name">
+									<img class="lazy" :src="listGames.image" alt="verajohn games" />
+									{{ listGames.name }}
+								</span>
+								<p v-else>
+									<img class="lazy" :src="listGames.image" alt="verajohn games" />
+									{{ listGames.name }}
+								</p>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<div class="row h-center">
+					<button data-test-id="registration-button" class="btn-primary">
+						<a :href="$page.frontmatter.our_games.cta_link">
+							{{ $page.frontmatter.our_games.cta_text }}
+						</a>
+					</button>
+				</div>
+				<div class="row h-center">
+					<small v-html="$page.frontmatter.our_games.text_hyperlink" />
+				</div>
+			</div>
+		</section>
 
 		<section id="s-payment" class="content-visibility">
 			<div class="container">
@@ -162,13 +199,6 @@
 				</div>
 				<div class="row h-center">
 					<small class="small" v-html="$page.frontmatter.honourable_mentions.text_hyperlink" />
-				</div>
-			</div>
-		</section>
-		<section id="s-seo-contents" class="content-visibility">
-			<div class="container">
-				<div class="row">
-					<Content class="txt-center" />
 				</div>
 			</div>
 		</section>
