@@ -318,7 +318,6 @@ section#s-customer-support {
 }
 
 #s-other-info {
-  padding: $BASE_PADDING !important;
   background: #f8f8f8;
   text-align: center;
 
@@ -350,7 +349,7 @@ section#s-customer-support {
     background-color: #1b95e0;
     color: #fff;
     font-weight: 500;
-    height: 28px;
+    height: auto;
     border-radius: 4px;
     padding: 1px 10px 1px 9px;
     margin-bottom: 5px;

@@ -226,20 +226,18 @@
 
 		<section id="s-other-info" class="content-visibility">
 			<div class="container no-container">
-				<div class="row">
-					<div>
-						<div v-html="$page.frontmatter.other_info.title" />
-						<ul>
-							<li v-for="(dataInfo, dataInfoindex) in $page.frontmatter.other_info.list_text_links" :key="dataInfoindex">
-								<a :href="dataInfo.text_url">{{ dataInfo.text }}</a>
-							</li>
-						</ul>
-						<div class="footer-twitter-button-pure">
-							<a :href="$page.frontmatter.twitter_link">
-								<img class="lazy" src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
-								<span>{{ $page.frontmatter.twitter_title }}</span>
-							</a>
-						</div>
+				<div>
+					<div v-html="$page.frontmatter.other_info.title" />
+					<ul>
+						<li v-for="(dataInfo, dataInfoindex) in $page.frontmatter.other_info.list_text_links" :key="dataInfoindex">
+							<a :href="dataInfo.text_url">{{ dataInfo.text }}</a>
+						</li>
+					</ul>
+					<div class="footer-twitter-button-pure">
+						<a :href="$page.frontmatter.twitter_link">
+							<img class="lazy" src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
+							<span>{{ $page.frontmatter.twitter_title }}</span>
+						</a>
 					</div>
 				</div>
 			</div>
