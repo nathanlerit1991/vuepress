@@ -19,37 +19,22 @@ if (typeof window !== 'undefined') {
 
 		//Replace all image and iframes data-src to src
 		function deferAssets() {
-			let imgElem = document.querySelectorAll('img.lazy')
-			let iframeElem = document.querySelectorAll('iframe.lazy')
-			for ( let i = 0; i < imgElem.length; i++ ) {
-				if(imgElem[i].getAttribute('data-src')) {
-					imgElem[i].setAttribute('src',imgElem[i].getAttribute('data-src'))
-					imgElem[i].removeAttribute('data-src')
-				}
-			}
-			for ( let i = 0; i < iframeElem.length; i++ ) {
-				if(iframeElem[i].getAttribute('data-src')) {
-					iframeElem[i].setAttribute('src',iframeElem[i].getAttribute('data-src'))
-					iframeElem[i].removeAttribute('data-src')
+			let lazyElem = document.querySelectorAll('.lazy')
+			for ( let i = 0; i < lazyElem.length; i++ ) {
+				if(lazyElem[i].getAttribute('data-src')) {
+					lazyElem[i].setAttribute('src',lazyElem[i].getAttribute('data-src'))
+					lazyElem[i].removeAttribute('data-src')
 				}
 			}
 		}
 
 		let lazyLoadTrigger = false
 		document.addEventListener("scroll", () => {
-			let scrolled = document.scrollingElement.scrollTop
-			if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
-				// deferAssets()
-				// console.log('xxx', scrolled)
-			}
+		  let scrolled = document.scrollingElement.scrollTop;
+		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+				deferAssets()
+				lazyLoadTrigger = true
+		  }
 		})
-		// let lazyLoadTrigger = false
-		// document.addEventListener("scroll", () => {
-		//   let scrolled = document.scrollingElement.scrollTop;
-		//   if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
-		// 		deferAssets()
-		// 		lazyLoadTrigger = true
-		//   }
-		// }, { passive: true })
 	}
 }
