@@ -1,5 +1,12 @@
 <template>
 	<div class="vjfp" :style="cssBackground">
+
+		<Modal 
+			v-if="isModal" 
+			:data="this.modalData" 
+			@closeBtn="closeModal" 
+		/>
+
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
@@ -7,6 +14,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="s-welcome">
 			<div class="container">
 				<div class="row">
@@ -23,6 +31,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="s-about">
 			<div class="container">
 				<div class="row">
@@ -35,7 +44,8 @@
 				</div>
 			</div>
 		</section>
-			<section id="s-games" class="content-visibility">
+
+		<section id="s-games" class="content-visibility">
 			<div class="container">
 
 				<div class="row txt-center">
@@ -48,7 +58,7 @@
 						<p>{{ games.description }}</p>
 						<ol>
 							<li v-for="(listGames, listGamesIndex) in games.list_top_games" :key="listGamesIndex">
-								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modal = true, modalData = listGames.url, gameTitle = listGames.name">
+								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modalFn(modalData = listGames.url, gameTitle = listGames.name)">
 									<img class="lazy" :src="listGames.image" alt="verajohn games" />
 									{{ listGames.name }}
 								</span>
@@ -150,6 +160,7 @@
 				</div>
 			</div>
     </section>
+
 		<section id="s-customer-support" class="content-visibility">
 			<div class="container">
 				<div class="row">
@@ -159,6 +170,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="s-testimonials2" class="content-visibility">
 			<div class="container">
 				<div class="row txt-center">
@@ -172,6 +184,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="s-honourable-mentions" class="content-visibility">
 			<div class="container no-container">
 				<div class="row txt-center">
@@ -202,6 +215,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="s-seo-contents" class="content-visibility">
 			<div class="container">
 				<div class="row">
@@ -209,6 +223,7 @@
 				</div>
 			</div>
 		</section>
+
 		<section id="s-other-info" class="content-visibility">
 			<div class="container no-container">
 				<div class="row">
@@ -251,12 +266,23 @@
 				</div>
 			</div>
 		</footer>
+
 	</div>
 </template>
 
 <script>
 import '~styles/Vjfp/style.scss'
+import  Modal from '~components/Global/Modal.vue'
 export default {
+	components: {
+		Modal
+	},
+	data () {
+		return {
+			isModal: false,
+			modalData: {},
+		}
+	},
 	mounted () {
 		// var head2 = document.head
 		// var link = document.createElement("link")
@@ -315,6 +341,18 @@ export default {
 		// 		}
 		// 	})
 		// })
+	},
+	methods: {
+		closeModal(closeFromModal){
+			this.isModal = closeFromModal
+		},
+		modalFn(modalUrl, modalTitle) {
+			this.isModal = !this.isModal
+			this.modalData = {
+				url: modalUrl,
+				title: modalTitle
+			}
+		}
 	},
 	computed: {
     cssBackground () {
