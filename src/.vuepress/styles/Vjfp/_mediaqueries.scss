@@ -3,7 +3,7 @@
 	@at-root .vjfp {
 		background: #00a1e5;
 	}
-	#s-sticky-nav + *~section {
+	section {
 		> .container{
 			padding: calc(#{$BASE_PADDING - 30px});
 		}
@@ -110,7 +110,7 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-	#s-sticky-nav + *~section {
+	section {
 		> .container{
 			padding: $BASE_PADDING;
 		}
