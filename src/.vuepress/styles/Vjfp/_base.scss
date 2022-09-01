@@ -22,9 +22,7 @@
   padding: 0;
   background: none;
 }
-.container .row .testimonial-wrapper {
-  padding: 0 8%;
-}
+
 @at-root body {
   padding-top: 42px;
 }
@@ -100,6 +98,10 @@ section {
     background: $CONTAINER_BG;
     border-radius: $CONTAINER_BORDER_RADIUS;
   }
+}
+
+.container .testimonial-wrapper {
+  padding: 0 8%;
 }
 
 #s-sticky-nav,
