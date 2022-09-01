@@ -289,7 +289,7 @@ export default {
 		// link.href = "/assets/Vjfp/style.css"
 		// head2.appendChild(link)
 
-		
+
 		// //FIRST CONTENTFUL PAINT
 		// new PerformanceObserver((entryList) => {
 		//   for (const entry of entryList.getEntriesByName('first-contentful-paint')) {
@@ -309,22 +309,20 @@ export default {
 		// });
 
 
+		let head = document.head
 
 		//FAVICON
-		var head2 = document.head
 		var link = document.createElement("link")
 		link.rel = "shortcut icon"
 		link.href = "/assets/verajohn/vj_favicon.ico"
-		head2.appendChild(link)
-
+		head.appendChild(link)
 
 		//META DATA
 		const getMetaData = async items => {
 			let seoData = await this.$page.frontmatter.seo
-			return seoData;
+			return seoData
 		}
 		getMetaData().then(res => {
-			let head = document.head
 			Object.keys(res).forEach((content)=>{
 				let meta = document.createElement('meta')
 				//Robots
