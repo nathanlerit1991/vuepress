@@ -255,7 +255,7 @@ section {
   }
 }
 
-section#s-customer-support {
+#s-customer-support {
   .container {
     background-image: linear-gradient(to left,transparent, $CONTAINER_BG),var(--customer-support-background-image);
     background-repeat: no-repeat;
