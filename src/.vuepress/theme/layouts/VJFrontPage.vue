@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- <section id="s-about">
+		<section id="s-about">
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
@@ -34,8 +34,8 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
-		<!--	<section id="s-games" class="content-visibility">
+		</section>
+			<section id="s-games" class="content-visibility">
 			<div class="container">
 
 				<div class="row txt-center">
@@ -250,7 +250,7 @@
 					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
 				</div>
 			</div>
-		</footer> -->
+		</footer>
 	</div>
 </template>
 
