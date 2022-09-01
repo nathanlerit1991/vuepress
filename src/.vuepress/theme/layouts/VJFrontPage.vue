@@ -289,7 +289,7 @@ export default {
 		// link.href = "/assets/Vjfp/style.css"
 		// head2.appendChild(link)
 
-		//
+		
 		// //FIRST CONTENTFUL PAINT
 		// new PerformanceObserver((entryList) => {
 		//   for (const entry of entryList.getEntriesByName('first-contentful-paint')) {
@@ -310,35 +310,42 @@ export default {
 
 
 
+		//FAVICON
+		var head2 = document.head
+		var link = document.createElement("link")
+		link.rel = "shortcut icon"
+		link.href = "/assets/verajohn/vj_favicon.ico"
+		head2.appendChild(link)
 
-		//
-		// const getMetaData = async items => {
-		// 	let seoData = await this.$page.frontmatter.seo
-		// 	return seoData;
-		// }
-		// getMetaData().then(res => {
-		// 	let head = document.head
-		// 	Object.keys(res).forEach((content)=>{
-		// 		let meta = document.createElement('meta')
-		// 		//Robots
-		// 		if(content === 'robots' && res[content].length <= 0) {
-		// 			res[content] = 'noindex'
-		// 			if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
-		// 				res[content] = 'index,follow'
-		// 			}
-		// 			else {
-		// 				res[content] = 'noindex'
-		// 			}
-		// 		}
-		//
-		// 		//Other meta, if exist
-		// 		if(res[content]) {
-		// 			meta.name = content
-		// 			meta.content = res[content]
-		// 			head.appendChild(meta)
-		// 		}
-		// 	})
-		// })
+
+		//META DATA
+		const getMetaData = async items => {
+			let seoData = await this.$page.frontmatter.seo
+			return seoData;
+		}
+		getMetaData().then(res => {
+			let head = document.head
+			Object.keys(res).forEach((content)=>{
+				let meta = document.createElement('meta')
+				//Robots
+				if(content === 'robots' && res[content].length <= 0) {
+					res[content] = 'noindex'
+					if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
+						res[content] = 'index,follow'
+					}
+					else {
+						res[content] = 'noindex'
+					}
+				}
+		
+				//Other meta, if exist
+				if(res[content]) {
+					meta.name = content
+					meta.content = res[content]
+					head.appendChild(meta)
+				}
+			})
+		})
 	},
 	methods: {
 		closeModal(closeFromModal){
