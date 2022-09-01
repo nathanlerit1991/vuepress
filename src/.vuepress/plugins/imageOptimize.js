@@ -37,10 +37,19 @@ if (typeof window !== 'undefined') {
 
 		let lazyLoadTrigger = false
 		document.addEventListener("scroll", () => {
-		  let scrolled = document.scrollingElement.scrollTop;
-		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
-				deferAssets()
-		  }
-		}, true)
+			let scrolled = document.scrollingElement.scrollTop
+			if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+				// deferAssets()
+				// console.log('xxx', scrolled)
+			}
+		})
+		// let lazyLoadTrigger = false
+		// document.addEventListener("scroll", () => {
+		//   let scrolled = document.scrollingElement.scrollTop;
+		//   if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+		// 		deferAssets()
+		// 		lazyLoadTrigger = true
+		//   }
+		// }, { passive: true })
 	}
 }
