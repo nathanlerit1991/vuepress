@@ -30,17 +30,9 @@
 			padding: calc(#{$BASE_PADDING - 30px});
 		}
 	}
-	@-webkit-keyframes bgMobile {
-		100% {  
-			background: var(--main-bg-mobile) no-repeat top #0081b8;
-			background-size: cover;
-		}      
-	}
 	#s-welcome {
-		background:#0081b8;
-		-webkit-animation: bgMobile .1s;
-		animation-fill-mode: forwards;
-		animation-direction: alternate;
+		background: var(--main-bg-mobile) no-repeat top #0081b8;
+    background-size: cover;
 	}
 	#s-about {
 		.row {
@@ -81,22 +73,13 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 576px) {
-	@-webkit-keyframes bgDesktop {
-		100% {  
-			background: var(--main-bg) no-repeat top #00a1e5; 
-			background-size: contain; 
-		}    
-	}
 	@at-root .vjfp {
-		background: #00a1e5;
-		-webkit-animation: bgDesktop .1s;
-		animation-fill-mode: forwards;
-		animation-direction: alternate;
+    background: var(--main-bg) no-repeat top #00a1e5;
+    background-size: contain;
 		min-height: 3000px;
 	}
 	#s-welcome {
 		background: none;
-		-webkit-animation: none;
 	}
 	#s-about {
 		.row {
