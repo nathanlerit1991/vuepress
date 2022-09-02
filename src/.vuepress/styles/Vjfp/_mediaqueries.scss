@@ -73,9 +73,16 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 576px) {
+	@-webkit-keyframes faceBG {
+		100% {  
+			background: var(--main-bg) no-repeat top #00a1e5; 
+			background-size: contain; }      
+	}
 	@at-root .vjfp {
-    background: var(--main-bg) no-repeat top #00a1e5;
-    background-size: contain;
+		background: #00a1e5;
+		-webkit-animation: faceBG .1s;
+		animation-fill-mode: forwards;
+		animation-direction: alternate;
 		min-height: 3000px;
 	}
 	#s-welcome {
