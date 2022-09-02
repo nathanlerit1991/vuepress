@@ -29,26 +29,17 @@
 
 h1 {
   color: $HEADING_COLOR;
-  font-size: 54px;
-  line-height: 64.8px;
   margin: 0;
 }
 h2 {
   color: $HEADING_COLOR;
-  font-size: 30px;
-  line-height: 36px;
   margin: 0;
 }
 h3 {
   color: $HEADING_COLOR;
-  font-size: 20px;
-  line-height: 24px;
   margin: 0;
 }
-p {
-  font-size: 16px;
-  line-height: 20px;
-}
+
 a {
   color: $TEXT_LINK_COLOR;
   text-decoration: none;
@@ -60,8 +51,6 @@ p {
   color: $TEXT_BASE_COLOR;
 }
 em {
-  font-size: 24px;
-  line-height: 34px;
   font-style: normal;
 }
 

@@ -3,6 +3,28 @@
 	@at-root .vjfp {
 		background: #00a1e5;
 	}
+	
+	h1 {
+		font-size: 30px;
+		line-height: 37.5px
+	}
+	h2 {
+		font-size: 25px;
+		line-height: 31.25px;
+	}
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	em {
+		font-size: 16px;
+		line-height: 20px;
+	}
+
 	section {
 		> .container{
 			padding: calc(#{$BASE_PADDING - 30px});
@@ -38,8 +60,8 @@
 	}
 	#s-honourable-mentions {
 		h3 {
-			font-size: 30px;
-			line-height: 24px;
+			font-size: 25px;
+			line-height: 31.25px;
 		}
 	}
 	#s-honourable-mentions {
@@ -83,10 +105,11 @@
 		}
 	}
 	#s-honourable-mentions {
+		padding: 0 $BASE_PADDING;
 		h3 {
 			font-size: 30px;
 			line-height: 36px;
-		}    padding: 0 $BASE_PADDING;
+		}
 	}
 }
 
@@ -110,6 +133,27 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	h1 {
+		font-size: 54px;
+		line-height: 64.8px;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+	h3 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	em {
+		font-size: 24px;
+		line-height: 34px;
+	}
+
 	section {
 		> .container{
 			padding: $BASE_PADDING;
