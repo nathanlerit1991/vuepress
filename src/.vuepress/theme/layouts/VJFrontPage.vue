@@ -1,9 +1,7 @@
 <template>
 	<div class="vjfp" 
 		:style="
-		`--main-bg: url(${$page.frontmatter.vjfp_bg});` +
-		`--main-bg-mobile: url(${$page.frontmatter.welcome_verajohn.mobile_bg_image});` +
-		`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image})`
+		`--main-bg: url(${$page.frontmatter.vjfp_bg});`
 		">
 
 
