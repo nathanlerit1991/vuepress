@@ -32,8 +32,15 @@
 	}
 	#s-welcome {
 		// background: var(--main-bg-mobile) no-repeat top #0081b8;
-		background:  #0081b8;
-		background-size: cover;
+		// background:  #0081b8;
+		// background-size: cover;
+		.mobile-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: auto;
+		}
 	}
 	#s-about {
 		.row {
@@ -81,6 +88,9 @@
 	}
 	#s-welcome {
 		background: none;
+		.mobile-bg {
+			display: none;
+		}
 	}
 	#s-about {
 		.row {
