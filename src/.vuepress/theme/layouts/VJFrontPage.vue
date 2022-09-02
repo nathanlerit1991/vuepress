@@ -21,7 +21,7 @@
 			</div>
 		</section>
 
-		<section id="s-welcome">
+		<section id="s-welcome" class="o-hidden">
 			<img class="mobile-bg" :src="$page.frontmatter.welcome_verajohn.mobile_bg_image" alt="verajohn mobile background image" />
 			<div class="container">
 				<div class="row">
