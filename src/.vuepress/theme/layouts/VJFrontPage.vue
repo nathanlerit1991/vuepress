@@ -1,9 +1,9 @@
 <template>
-	<div class="vjfp" 
+	<div class="vjfp"
 		:style="
-		`--main-bg: url(${$page.frontmatter.vjfp_bg});` +
-		`--main-bg-mobile: url(${$page.frontmatter.welcome_verajohn.mobile_bg_image});`
-		">
+		`--main-bg: url(${$page.frontmatter.vjfp_bg});`
+		"
+		>
 
 
 		<Modal 
@@ -19,7 +19,7 @@
 				</div>
 			</div>
 		</section>
-
+		{{ lazyBackground }}
 		<section id="s-welcome">
 			<div class="container">
 				<div class="row">
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 		</section>
-
+		
 		<section id="s-about">
 			<div class="container">
 				<div class="row">
@@ -49,7 +49,7 @@
 				</div>
 			</div>
 		</section>
-
+	
 		<section id="s-games" class="content-visibility">
 			<div class="container">
 
@@ -284,6 +284,7 @@ export default {
 		return {
 			isModal: false,
 			modalData: {},
+			isBg: true
 		}
 	},
 	mounted () {
@@ -364,12 +365,8 @@ export default {
 	}
 	// computed: {
   //   lazyBackground () {
-	// 		const mainBg = this.$page.frontmatter.vjfp_bg
-	// 		const mainBgMobile = this.$page.frontmatter.welcome_verajohn.mobile_bg_image
 	// 		const customerSupportBackgroundImage = this.$page.frontmatter.customer_support.bg_image
   //     return {
-	// 			'--main-bg': `url('${mainBg}')`,
-	// 			'--main-bg-mobile': `url('${mainBgMobile}')`,
 	// 			'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
   //     }
   //   }
