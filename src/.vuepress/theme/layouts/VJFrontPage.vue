@@ -20,7 +20,7 @@
 				</div>
 			</div>
 		</section>
-		{{ lazyBackground }}
+
 		<section id="s-welcome">
 			<div class="container">
 				<div class="row">

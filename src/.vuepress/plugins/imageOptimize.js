@@ -28,6 +28,7 @@ if (typeof window !== 'undefined') {
 			}
 		}
 
+		//Trigger deferAssets() when scroll - function will trigger once
 		let lazyLoadTrigger = false
 		document.addEventListener("scroll", () => {
 		  let scrolled = document.scrollingElement.scrollTop;
@@ -36,5 +37,18 @@ if (typeof window !== 'undefined') {
 				lazyLoadTrigger = true
 		  }
 		})
+
+
+		// const element = document.querySelector('.lazy');
+		// const rect = element.getBoundingClientRect();
+
+		// const isInViewport = rect.top >= 0 &&
+		// rect.left >= 0 &&
+		// rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		// rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+		// if (isInViewport) {
+		// 	deferAssets()
+		// }
 	}
 }
