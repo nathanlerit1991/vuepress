@@ -19,7 +19,7 @@ welcome_verajohn:
   cta_text: 今すぐ登録
   cta_link: /ja/registration-cc?utm_source=cro&utm_medium=landing_page&utm_campaign=maiden_voyage&utm_id=vj_fp_0001&utm_term=regcta_wel
   desktop_bg_image: /marketing/img/welcome-floating-elements.svg
-  mobile_bg_image: /marketing/img/vj-frontpage-background-mobile.jpg
+  mobile_bg_image: /marketing/img/vj-frontpage-background-mobile.jpeg
 about_us:
   header_image: /marketing/img/lucky-wave.png
   text_content: <h2>ベラジョンからみなさまへ</h2><p>老舗オンラインカジノとして、初心者様から、ベラジョンを長～くご愛顧いただいているベラファミメンバー様まで、多くのプレイヤーに愛されて11年を迎えることができました!
