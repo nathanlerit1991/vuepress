@@ -1,11 +1,8 @@
 <template>
-	<div class="vjfp"
-		:style="
-		`--main-bg: url(${$page.frontmatter.vjfp_bg});` +
-		`--main-bg-mobile: url(${$page.frontmatter.welcome_verajohn.mobile_bg_image});`
-		"
-		>
-
+	<div class="vjfp" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
+		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
+		<img class="desktop-bg" :src="$page.frontmatter.vjfp_bg" alt="verajohn desktop background image" />
+		<img class="mobile-bg" :src="$page.frontmatter.welcome_verajohn.mobile_bg_image" alt="verajohn mobile background image" />
 
 		<Modal 
 			v-if="isModal" 
@@ -22,7 +19,6 @@
 		</section>
 
 		<section id="s-welcome" class="o-hidden">
-			<img class="mobile-bg" :src="$page.frontmatter.welcome_verajohn.mobile_bg_image" alt="verajohn mobile background image" />
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
@@ -366,13 +362,5 @@ export default {
 			}
 		}
 	}
-	// computed: {
-  //   lazyBackground () {
-	// 		const customerSupportBackgroundImage = this.$page.frontmatter.customer_support.bg_image
-  //     return {
-	// 			'--customer-support-background-image': `url('${customerSupportBackgroundImage}')`
-  //     }
-  //   }
-	// }
 }
 </script>

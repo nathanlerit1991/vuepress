@@ -1,9 +1,5 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 280px) {
-	@at-root .vjfp {
-		background: #00a1e5;
-	}
-	
 	h1 {
 		font-size: 30px;
 		line-height: 37.5px
@@ -30,17 +26,15 @@
 			padding: calc(#{$BASE_PADDING - 30px});
 		}
 	}
-	#s-welcome {
-		// background: var(--main-bg-mobile) no-repeat top #0081b8;
-		// background:  #0081b8;
-		// background-size: cover;
-		.mobile-bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: auto;
-		}
+	.desktop-bg {
+		display: none;
+	}
+	.mobile-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
 	}
 	#s-about {
 		.row {
@@ -81,16 +75,16 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 576px) {
-	@at-root .vjfp {
-    background: var(--main-bg) no-repeat top #00a1e5;
-    background-size: contain;
-		min-height: 3000px;
+	.desktop-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		display: block;
 	}
-	#s-welcome {
-		background: none;
-		.mobile-bg {
-			display: none;
-		}
+	.mobile-bg {
+		display: none;
 	}
 	#s-about {
 		.row {

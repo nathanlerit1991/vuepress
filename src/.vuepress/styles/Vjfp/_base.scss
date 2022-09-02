@@ -26,6 +26,9 @@
 @at-root body {
   padding-top: 42px;
 }
+@at-root .vjfp {
+  background: #00a1e5;
+}
 
 h1 {
   color: $HEADING_COLOR;
@@ -83,6 +86,8 @@ button {
 
 section {
   padding: 15px;
+  position: relative;
+  z-index: 1;
   > .container{
     background: $CONTAINER_BG;
     border-radius: $CONTAINER_BORDER_RADIUS;
