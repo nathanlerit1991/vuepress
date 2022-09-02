@@ -18,7 +18,7 @@
 			</div>
 		</section>
 
-		<section id="s-welcome" class="o-hidden">
+		<section id="s-welcome">
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
