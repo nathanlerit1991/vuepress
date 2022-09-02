@@ -30,38 +30,9 @@
 			padding: calc(#{$BASE_PADDING - 30px});
 		}
 	}
-	// @keyframes bgDefer {
-	// 	0% {
-	// 		opacity: 0;
-	// 	}
-	// 	20% {
-	// 		background: var(--main-bg-mobile) no-repeat top #0081b8;
-	// 		background-size: cover;
-	// 		opacity: .2;
-	// 	}
-	// 	50% {
-	// 		background: var(--main-bg-mobile) no-repeat top #0081b8;
-	// 		background-size: cover;
-	// 		opacity: .5;
-	// 	}
-	// 	80% {
-	// 		background: var(--main-bg-mobile) no-repeat top #0081b8;
-	// 		background-size: cover;
-	// 		opacity: .8;
-	// 	}
-	// 	100% {
-	// 		background: var(--main-bg-mobile) no-repeat top #0081b8;
-	// 		background-size: cover;
-	// 		opacity: 1;
-	// 	}
-	// }
 	#s-welcome {
 		background: var(--main-bg-mobile) no-repeat top #0081b8;
 		background-size: cover;
-		// animation-name: bgDefer;
-		// animation-duration: .3s;
-		// animation-fill-mode: forwards;
-		// background: #0081b8;
 	}
 	#s-about {
 		.row {
