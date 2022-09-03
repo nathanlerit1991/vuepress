@@ -4,7 +4,7 @@
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(max-width: 576px)">
 			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 577px)">
-			<img :src="$page.frontmatter.vjfp_bg" alt="">
+			<img :src="$page.frontmatter.vjfp_bg" alt="verajohn background image">
 		</picture>
 
 		<Modal
