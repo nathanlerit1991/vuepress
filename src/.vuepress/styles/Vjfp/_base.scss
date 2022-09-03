@@ -76,6 +76,21 @@ button {
   }
 }
 
+.above-fold-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+	height: auto;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .image-bg {
   overflow: hidden;
   img {
@@ -84,6 +99,7 @@ button {
     transform: translate(-50%, 0);
   }
 }
+
 
 section {
   padding: 15px;
