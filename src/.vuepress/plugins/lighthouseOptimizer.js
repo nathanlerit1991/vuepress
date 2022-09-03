@@ -38,17 +38,24 @@ if (typeof window !== 'undefined') {
 		  }
 		})
 
+		//Background images above the fold using <img> tag
+		function breakPointFn() {
+			let viewportHeight = window.innerHeight
+			let viewportWidth = window.innerWidth
 
-		// const element = document.querySelector('.lazy');
-		// const rect = element.getBoundingClientRect();
+			const desktopElem = document.querySelector('.desktop-bg')
+			const mobileElem = document.querySelector('.mobile-bg')
 
-		// const isInViewport = rect.top >= 0 &&
-		// rect.left >= 0 &&
-		// rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-		// rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+			if (viewportWidth < 576) {
+				desktopElem.remove()
+			}
+			else {
+				mobileElem.remove()
+			}
 
-		// if (isInViewport) {
-		// 	deferAssets()
-		// }
+			// console.log('height', viewportHeight)
+			// console.log('width', viewportWidth)
+		}
+		breakPointFn()
 	}
 }

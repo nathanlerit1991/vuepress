@@ -1,6 +1,7 @@
 <template>
 	<div class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
+		<img class="desktop-bg" :src="$page.frontmatter.vjfp_bg" alt="verajohn desktop background image" />
 		<img class="mobile-bg" :src="$page.frontmatter.welcome_verajohn.mobile_bg_image" alt="verajohn mobile background image" />
 
 		<Modal
