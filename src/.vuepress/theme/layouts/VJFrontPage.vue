@@ -1,12 +1,12 @@
 <template>
-	<div class="vjfp" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
+	<div class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<img class="mobile-bg" :src="$page.frontmatter.welcome_verajohn.mobile_bg_image" alt="verajohn mobile background image" />
 
-		<Modal 
-			v-if="isModal" 
-			:data="this.modalData" 
-			@closeBtn="closeModal" 
+		<Modal
+			v-if="isModal"
+			:data="this.modalData"
+			@closeBtn="closeModal"
 		/>
 
 		<section id="s-sticky-nav">
@@ -33,7 +33,7 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<section id="s-about">
 			<div class="container">
 				<div class="row">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		</section>
-	
+
 		<section id="s-games" class="content-visibility">
 			<div class="container">
 
@@ -339,7 +339,7 @@ export default {
 						res[content] = 'noindex'
 					}
 				}
-		
+
 				//Other meta, if exist
 				if(res[content]) {
 					meta.name = content
