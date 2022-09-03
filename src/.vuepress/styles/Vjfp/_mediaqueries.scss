@@ -20,7 +20,12 @@
 		font-size: 16px;
 		line-height: 20px;
 	}
-
+	.above-fold-bg {
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
 	section {
 		> .container{
 			padding: calc(#{$BASE_PADDING - 30px});
@@ -65,6 +70,12 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 576px) {
+	.above-fold-bg {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 	#s-about {
 		.row {
 			flex-direction: inherit;

@@ -37,23 +37,5 @@ if (typeof window !== 'undefined') {
 				lazyLoadTrigger = true
 		  }
 		})
-
-		//Background images above the fold using <img> tag
-		// function breakPointFn() {
-		// 	let viewportWidth = window.innerWidth
-
-		// 	const desktopElem = document.querySelector('.desktop-bg')
-		// 	const mobileElem = document.querySelector('.mobile-bg')
-
-		// 	if (viewportWidth < 576) {
-		// 		mobileElem.setAttribute('src',mobileElem.getAttribute('data-src'))
-		// 		mobileElem.removeAttribute('data-src')
-		// 	}
-		// 	else {
-		// 		desktopElem.setAttribute('src',desktopElem.getAttribute('data-src'))
-		// 		desktopElem.removeAttribute('data-src')
-		// 	}
-		// }
-		// breakPointFn()
 	}
 }
