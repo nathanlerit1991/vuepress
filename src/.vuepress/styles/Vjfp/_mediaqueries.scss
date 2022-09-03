@@ -27,7 +27,7 @@
 		}
 	}
 	.desktop-bg {
-		visibility: hidden;
+		content-visibility: hidden;
 	}
 	.mobile-bg {
 		position: absolute;
@@ -36,7 +36,7 @@
 		transform: translate(-50%, 0);
 		width: auto;
 		height: auto;
-		visibility: visible;
+		content-visibility: visible;
 	}
 	#s-about {
 		.row {
@@ -83,10 +83,10 @@
 		left: 0;
 		width: 100%;
 		height: auto;
-		visibility: visible;
+		content-visibility: visible;
 	}
 	.mobile-bg {
-		visibility: hidden;
+		content-visibility: hidden;
 	}
 	#s-about {
 		.row {
