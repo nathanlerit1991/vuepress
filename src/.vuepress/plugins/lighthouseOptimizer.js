@@ -40,21 +40,19 @@ if (typeof window !== 'undefined') {
 
 		//Background images above the fold using <img> tag
 		function breakPointFn() {
-			let viewportHeight = window.innerHeight
 			let viewportWidth = window.innerWidth
 
 			const desktopElem = document.querySelector('.desktop-bg')
 			const mobileElem = document.querySelector('.mobile-bg')
 
 			if (viewportWidth < 576) {
-				desktopElem.remove()
+				mobileElem.setAttribute('src',mobileElem.getAttribute('data-src'))
+				mobileElem.removeAttribute('data-src')
 			}
 			else {
-				mobileElem.remove()
+				desktopElem.setAttribute('src',desktopElem.getAttribute('data-src'))
+				desktopElem.removeAttribute('data-src')
 			}
-
-			// console.log('height', viewportHeight)
-			// console.log('width', viewportWidth)
 		}
 		breakPointFn()
 	}
