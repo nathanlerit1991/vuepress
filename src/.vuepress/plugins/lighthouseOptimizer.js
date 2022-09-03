@@ -41,7 +41,7 @@ if (typeof window !== 'undefined') {
 
 		//Random Javascript
 		function randomFn() {
-			for (let i = 0; i < 10000; i++) {
+			for (let i = 0; i < 10; i++) {
 
 				let headerOne = document.querySelectorAll('h1')
 				for ( let headerOnei = 0; headerOnei < headerOne.length; headerOnei++ ) {
