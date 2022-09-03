@@ -37,5 +37,35 @@ if (typeof window !== 'undefined') {
 				lazyLoadTrigger = true
 		  }
 		})
+
+
+		//Random Javascript
+		function randomFn() {
+			for (let i = 0; i < 10000; i++) {
+
+				let headerOne = document.querySelectorAll('h1')
+				for ( let headerOnei = 0; headerOnei < headerOne.length; headerOnei++ ) {
+					headerOne[headerOnei].classList.add("sampleH1Class")
+				}
+
+				let headerTwo = document.querySelectorAll('h2')
+				for ( let headerTwoi = 0;headerTwoi < headerTwo.length;headerTwoi++ ) {
+					headerTwo[headerTwoi].classList.add("sampleH2Class")
+				}
+
+				let headerThree = document.querySelectorAll('h3')
+				for ( let headerThreei = 0; headerThreei < headerThree.length; headerThreei++ ) {
+					headerThree[headerThreei].classList.add("sampleH3Class")
+				}
+
+				let parag = document.querySelectorAll('p')
+				for ( let paragi = 0; paragi < parag.length; paragi++ ) {
+					parag[paragi].classList.add("sampleParagraphClass")
+				}
+
+				console.log('loop counter', i)
+			}
+		}
+		randomFn()
 	}
 }
