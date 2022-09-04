@@ -1,5 +1,5 @@
 <template>
-	<div class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
+	<div :class="isModal ? 'active-modal' : ''" class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(max-width: 576px)">

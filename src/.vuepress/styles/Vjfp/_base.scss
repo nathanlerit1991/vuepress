@@ -94,6 +94,11 @@ button {
   }
 }
 
+&.active-modal {
+  height: calc(100vh - 42px);
+  overflow: hidden;
+}
+
 
 section {
   padding: 15px;

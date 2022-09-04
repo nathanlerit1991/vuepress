@@ -3,7 +3,9 @@
     <div class="modal-wrapper">
       <div class="modal-header d-flex">
         <p class="h-left">{{ data.title }}</p>
-        <span class="h-right close" @click="closeFn()">×</span>
+        <div class="h-right">
+          <span class="h-right close" @click="closeFn()">×</span>
+        </div>
       </div>
       <div class="modal-body">
         <iframe class="lazy" loading="lazy" :src="data.url"></iframe>
@@ -53,11 +55,8 @@ export default {
   .modal-wrapper {
     width: 100%;
     height: 100%;
-    max-width: 90%;
-    max-height: calc(100% - 50px);
     margin: auto;
     display: block;
-    border-radius: 8px;
     overflow: hidden;
   }
 
@@ -68,13 +67,26 @@ export default {
   }
   .modal-body {
     height: 100%;
-    max-height: calc(100% - 50px);
+    max-height: calc(100% - 40px);
     background: #000;
   }
 
   iframe {
     width: 100%;
     height: 100%;
+    border: none;
+  }
+}
+@media only screen and (min-width : 280px) {
+  .modal-wrapper {
+    border-bottom: solid 30px #00a1e5;
+  }
+}
+@media only screen and (min-width : 1200px) {
+  .modal-wrapper {
+    max-width: 90%;
+    max-height: calc(100% - 50px);
+    border-radius: 8px;
     border: none;
   }
 }
