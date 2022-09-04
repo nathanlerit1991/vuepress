@@ -1,7 +1,6 @@
 <template>
 	<div :class="isModal ? 'active-modal' : ''" class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
-		<div id="content" class="cms-editable">
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(max-width: 576px)">
 			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 577px)">
@@ -272,7 +271,7 @@
 				</div>
 			</div>
 		</footer>
-		</div>
+
 	</div>
 </template>
 
