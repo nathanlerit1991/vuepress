@@ -1,10 +1,10 @@
 <template>
-	<div class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
+	<div v-if="this.mdData" class="vjfp o-hidden" :style="`--customer-support-background-image: url(${mdData.customer_support.bg_image});`">
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
-			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(max-width: 576px)">
-			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 577px)">
-			<img :src="$page.frontmatter.vjfp_bg" alt="verajohn background image">
+			<source :srcset="mdData.welcome_verajohn.mobile_bg_image" media="(max-width: 576px)">
+			<source :srcset="mdData.vjfp_bg" media="(min-width: 577px)">
+			<img :src="mdData.vjfp_bg" alt="verajohn background image">
 		</picture>
 
 		<Modal
@@ -16,7 +16,7 @@
 		<section id="s-sticky-nav">
 			<div class="container">
 				<div class="row">
-					<small v-html="$page.frontmatter.sticky_nav" />
+					<small v-html="mdData.sticky_nav" />
 				</div>
 			</div>
 		</section>
@@ -26,13 +26,13 @@
 				<div class="row">
 					<div id="welcome_wrapper">
 						<img width="120" height="120" class="logo" src="/assets/verajohn/Vjfp/logo.png" alt="verajohn logo">
-						<div v-html="$page.frontmatter.welcome_verajohn.text_content" />
+						<div v-html="mdData.welcome_verajohn.text_content" />
 						<button data-test-id="registration-button" class="btn-primary">
-							<a :href="$page.frontmatter.welcome_verajohn.cta_link">
-								{{ $page.frontmatter.welcome_verajohn.cta_text }}
+							<a :href="mdData.welcome_verajohn.cta_link">
+								{{ mdData.welcome_verajohn.cta_text }}
 							</a>
 						</button>
-						<small v-html="$page.frontmatter.welcome_verajohn.text_hyperlink" />
+						<small v-html="mdData.welcome_verajohn.text_hyperlink" />
 					</div>
 				</div>
 			</div>
@@ -42,10 +42,10 @@
 			<div class="container">
 				<div class="row">
 					<div id="image-wrapper">
-						<img width="327" height="338" :src="$page.frontmatter.about_us.header_image" alt="lucky" />
+						<img width="327" height="338" :src="mdData.about_us.header_image" alt="lucky" />
 					</div>
 					<div id="text-wrapper">
-						<div v-html="$page.frontmatter.about_us.text_content" />
+						<div v-html="mdData.about_us.text_content" />
 					</div>
 				</div>
 			</div>
@@ -55,11 +55,11 @@
 			<div class="container">
 
 				<div class="row txt-center">
-					<div v-html="$page.frontmatter.our_games.text_content" />
+					<div v-html="mdData.our_games.text_content" />
 				</div>
 
-				<div :class="'row column-' + $page.frontmatter.our_games.top_games.length" class="game-list">
-					<div v-for="(games, gamesIndex) in $page.frontmatter.our_games.top_games" :key="gamesIndex">
+				<div :class="'row column-' + mdData.our_games.top_games.length" class="game-list">
+					<div v-for="(games, gamesIndex) in mdData.our_games.top_games" :key="gamesIndex">
 						<h3>{{ games.title }}</h3>
 						<p>{{ games.description }}</p>
 						<ol>
@@ -78,13 +78,13 @@
 				</div>
 				<div class="row h-center">
 					<button data-test-id="registration-button" class="btn-primary">
-						<a :href="$page.frontmatter.our_games.cta_link">
-							{{ $page.frontmatter.our_games.cta_text }}
+						<a :href="mdData.our_games.cta_link">
+							{{ mdData.our_games.cta_text }}
 						</a>
 					</button>
 				</div>
 				<div class="row h-center">
-					<small v-html="$page.frontmatter.our_games.text_hyperlink" />
+					<small v-html="mdData.our_games.text_hyperlink" />
 				</div>
 			</div>
 		</section>
@@ -93,11 +93,11 @@
 			<div class="container">
 				<div class="row">
 					<div>
-						<div class="txt-center" v-html="$page.frontmatter.our_payment_methods.text_content" />
+						<div class="txt-center" v-html="mdData.our_payment_methods.text_content" />
 						<div id="payment-icons">
 							<img
 								class="lazy"
-								v-for="(paymentIcons, paymentIconsindex) in $page.frontmatter.our_payment_methods.payment_method_icons"
+								v-for="(paymentIcons, paymentIconsindex) in mdData.our_payment_methods.payment_method_icons"
 								:key="paymentIconsindex"
 								alt="verajohn payment providers"
 								:src="paymentIcons.image"
@@ -112,15 +112,15 @@
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
-						<h2> {{ $page.frontmatter.first_customers_quote.title }}</h2>
+						<h2> {{ mdData.first_customers_quote.title }}</h2>
 						<div class="profile-pic">
 							<img
 								class="lazy"
-								:src="$page.frontmatter.first_customers_quote.profile_image"
+								:src="mdData.first_customers_quote.profile_image"
 								alt="verajohn profile"
 							>
 						</div>
-						<p v-html="$page.frontmatter.first_customers_quote.text_content" />
+						<p v-html="mdData.first_customers_quote.text_content" />
 					</div>
 				</div>
 			</div>
@@ -132,9 +132,9 @@
 					<div>
 						<div class="bonus">
 							<div class="image-wrapper image-bg">
-								<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
+								<img class="lazy" :src="mdData.beginners_bonus.bg_image" alt="beginners bonus" />
 							</div>
-							<div class="bonus-description" v-html="$page.frontmatter.beginners_bonus.text_content" />
+							<div class="bonus-description" v-html="mdData.beginners_bonus.text_content" />
 						</div>
 					</div>
 
@@ -145,25 +145,25 @@
 								class="lazy"
 								width="100%"
 								height="auto"
-								:data-src="$page.frontmatter.beginners_guide.video_url"
+								:data-src="mdData.beginners_guide.video_url"
 								loading="lazy"
 								frameborder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
 								/>
-							<div class="bonus-description" v-html="$page.frontmatter.beginners_guide.text_content" />
+							<div class="bonus-description" v-html="mdData.beginners_guide.text_content" />
 						</div>
 					</div>
 				</div>
 				<div class="row h-center">
 					<button data-test-id="registration-button" class="btn-primary">
-						<a :href="$page.frontmatter.beginners_guide.cta_link">
-							{{ $page.frontmatter.beginners_guide.cta_text }}
+						<a :href="mdData.beginners_guide.cta_link">
+							{{ mdData.beginners_guide.cta_text }}
 						</a>
 					</button>
 				</div>
 				<div class="row h-center">
-					<small v-html="$page.frontmatter.beginners_guide.text_hyperlink" />
+					<small v-html="mdData.beginners_guide.text_hyperlink" />
 				</div>
 			</div>
     </section>
@@ -172,7 +172,7 @@
 			<div class="container">
 				<div class="row">
 					<div id="text-wrapper">
-						<div v-html="$page.frontmatter.customer_support.text_content" />
+						<div v-html="mdData.customer_support.text_content" />
 					</div>
 				</div>
 			</div>
@@ -182,11 +182,11 @@
 			<div class="container">
 				<div class="row txt-center">
 					<div class="testimonial-wrapper">
-						<h2> {{ $page.frontmatter.second_customers_quote.title }}</h2>
+						<h2> {{ mdData.second_customers_quote.title }}</h2>
 						<div class="profile-pic">
-							<img class="lazy" :src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
+							<img class="lazy" :src="mdData.second_customers_quote.profile_image" alt="verajohn profile">
 						</div>
-						<p v-html="$page.frontmatter.second_customers_quote.text_content" />
+						<p v-html="mdData.second_customers_quote.text_content" />
 					</div>
 				</div>
 			</div>
@@ -195,11 +195,11 @@
 		<section id="s-honourable-mentions" class="content-visibility">
 			<div class="container no-container">
 				<div class="row txt-center">
-					<div v-html="$page.frontmatter.honourable_mentions.text_content" />
+					<div v-html="mdData.honourable_mentions.text_content" />
 				</div>
 
 				<div class="row column-2 honourable-pods">
-					<div v-for="(honourableMentionsTile, honourableMentionsTileindex) in $page.frontmatter.honourable_mentions.list_of_tiles"
+					<div v-for="(honourableMentionsTile, honourableMentionsTileindex) in mdData.honourable_mentions.list_of_tiles"
 							:key="honourableMentionsTileindex">
 						<div class="box txt-center">
 							<div class="image-bg">
@@ -212,13 +212,13 @@
 
 				<div class="row h-center">
 					<button data-test-id="registration-button" class="btn-primary">
-						<a :href="$page.frontmatter.honourable_mentions.cta_link">
-							{{ $page.frontmatter.honourable_mentions.cta_text }}
+						<a :href="mdData.honourable_mentions.cta_link">
+							{{ mdData.honourable_mentions.cta_text }}
 						</a>
 					</button>
 				</div>
 				<div class="row h-center">
-					<small class="small" v-html="$page.frontmatter.honourable_mentions.text_hyperlink" />
+					<small class="small" v-html="mdData.honourable_mentions.text_hyperlink" />
 				</div>
 			</div>
 		</section>
@@ -234,16 +234,16 @@
 		<section id="s-other-info" class="content-visibility">
 			<div class="container no-container">
 				<div>
-					<div v-html="$page.frontmatter.other_info.title" />
+					<div v-html="mdData.other_info.title" />
 					<ul>
-						<li v-for="(dataInfo, dataInfoindex) in $page.frontmatter.other_info.list_text_links" :key="dataInfoindex">
+						<li v-for="(dataInfo, dataInfoindex) in mdData.other_info.list_text_links" :key="dataInfoindex">
 							<a :href="dataInfo.text_url">{{ dataInfo.text }}</a>
 						</li>
 					</ul>
 					<div class="footer-twitter-button-pure">
-						<a :href="$page.frontmatter.twitter_link">
+						<a :href="mdData.twitter_link">
 							<img class="lazy" src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
-							<span>{{ $page.frontmatter.twitter_title }}</span>
+							<span>{{ mdData.twitter_title }}</span>
 						</a>
 					</div>
 				</div>
@@ -254,7 +254,7 @@
 			<div class="container">
 				<div class="row">
 					<div>
-						<small class="d-block txt-center">{{ $page.frontmatter.footer_text }}</small>
+						<small class="d-block txt-center">{{ mdData.footer_text }}</small>
 					</div>
 				</div>
 				<div class="row footer-icon">
@@ -286,10 +286,18 @@ export default {
 		return {
 			isModal: false,
 			modalData: {},
-			isBg: true
+			isBg: true,
+			mdData: ''
 		}
 	},
 	mounted () {
+		this.$site.pages.forEach((item, i) => {
+			if(item.frontmatter.slug === 'verajohn-frontpage-ja') {
+				this.mdData = item.frontmatter
+			}
+		})
+
+
 		// var head2 = document.head
 		// var link = document.createElement("link")
 		// link.type = "text/css"
@@ -327,7 +335,7 @@ export default {
 
 		//META DATA
 		const getMetaData = async items => {
-			let seoData = await this.$page.frontmatter.seo
+			let seoData = await this.mdData.seo
 			return seoData
 		}
 		getMetaData().then(res => {
@@ -336,7 +344,7 @@ export default {
 				//Robots
 				if(content === 'robots' && res[content].length <= 0) {
 					res[content] = 'noindex'
-					if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
+					if(this.mdData.title && this.mdData.description) {
 						res[content] = 'index,follow'
 					}
 					else {
