@@ -137,7 +137,7 @@ other_info:
       text_url: /ja/about#about-terms-conditions-layer?utm_source=cro&utm_medium=landing_page&utm_campaign=maiden_voyage&utm_id=vj_fp_0001&utm_term=btmlnk_tos
     - text: FAQ
       text_url: https://verajohn-jp.custhelp.com/app/contact_us
-twitter_title: "@Japan_VeraJohnさんをフォロー"
+twitter_title: "Japan_VeraJohnさんをフォロー"
 twitter_link: https://twitter.com/Japan_VeraJohn
 footer_text: "当ウェブサイトの運営は、Breckenridge Curacao B.V.（登録住所: 39 Scharlooweg,
   Willemstad, Curaçao）です。Breckenridge Curaçao B.V.はキュラソー州知事により発行されたMaster Gaming
@@ -424,6 +424,62 @@ footer_text: "当ウェブサイトの運営は、Breckenridge Curacao B.V.（�
 
 <h3>オンラインカジノは儲かるの?</h3>
 <p>ベラジョン オンラインカジノはエンターテイメントをユーザーの皆様にお届けるするという目的で運営されています。そのため、毎回必ず勝利し、儲かるということではありません。</p>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "オンラインカジノはどんなサービス?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "オンラインカジノは、インターネット上で楽しめるカジノゲームを提供しているサービスです。インターネット環境さえあれば、場所や時間を選ばず、楽しめるという点が大きな特徴です。また、勝利金はリアルマネーで出金できます。"
+      }
+    }, {
+      "@type": "Question",
+      "name": "ベラジョン オンラインカジノは合法?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ベラジョン オンラインカジノは、キュラソー政府により発行されたライセンスを所持しています。そのため、コンプライアンスに遵守して運営されているので、安全にお楽しみいただけます。"
+      }
+}, {
+      "@type": "Question",
+      "name": "ベラジョンカジノの安全性は?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ベラジョンカジノは安全性の高いオンラインサイトです。国際的なオンラインカジノ運営ライセンスに基づき、ランダムナンバージェネレーター(RNG)などのシステムにて、安全性に優れたゲームを提供しています。"
+      }
+    }, {
+      "@type": "Question",
+      "name": "ベラジョン オンライン カジノは何歳から遊べるの?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ベラジョン オンラインカジノは20歳からご登録が可能です。"
+      }
+    }, {
+      "@type": "Question",
+      "name": "ベラジョン オンラインカジノはいつから始まったサービス?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ベラジョン オンラインカジノは、2011年から運営されているオンラインカジノです。"
+      }
+}, {
+      "@type": "Question",
+      "name": "ベラジョンカジノでは無料版 (デモモード) が利用できる?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ベラジョンカジノには無料版 (デモモード) がばっちり搭載済みです♪ゲームのルールが心配な方や、まずはいろいろなゲームを試してみたい方は、ぜひ無料版 (デモモード)を利用してみてください。※ライブカジノや一部ビデオゲームには、無料版 (デモモード) がないゲームもあります。"
+      }
+    }, {
+      "@type": "Question",
+      "name": "オンラインカジノは儲かるの?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text":"ベラジョン オンラインカジノはエンターテイメントをユーザーの皆様にお届けるするという目的で運営されています。そのため、毎回必ず勝利し、儲かるということではありません。"}
+      }]
+  }
+</script>
+
 
 <a href="https://www.verajohn.com/ja" >オンラインカジノ・ベラジョン</a>
 

@@ -18,5 +18,7 @@
     "sass-loader": "^10.1.1",
     "vuepress": "^1.5.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vuepress-plugin-jsonld-playground": "^1.1.0"
+  }
 }
