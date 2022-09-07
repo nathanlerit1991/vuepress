@@ -2,8 +2,8 @@
 	<div :class="isModal ? 'active-modal' : ''" class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
-			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(max-width: 576px)">
-			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 577px)">
+			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 576px)">
+			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(min-width: 280px)">
 			<img :src="$page.frontmatter.vjfp_bg" alt="verajohn background image">
 		</picture>
 
@@ -320,7 +320,7 @@ export default {
 		let head = document.head
 
 		//FAVICON
-		var link = document.createElement("link")
+		let link = document.createElement("link")
 		link.rel = "shortcut icon"
 		link.href = "/assets/verajohn/vj_favicon.ico"
 		head.appendChild(link)
@@ -333,6 +333,7 @@ export default {
 		getMetaData().then(res => {
 			Object.keys(res).forEach((content)=>{
 				let meta = document.createElement('meta')
+
 				//Robots
 				if(content === 'robots' && res[content].length <= 0) {
 					res[content] = 'noindex'
@@ -345,10 +346,24 @@ export default {
 				}
 
 				//Other meta, if exist
-				if(res[content]) {
+				if(content === 'robots') {
 					meta.name = content
 					meta.content = res[content]
 					head.appendChild(meta)
+				}
+				if(content === 'keywords') {
+					meta.name = content
+					meta.content = res[content]
+					head.appendChild(meta)
+				}
+				if(content === 'alternate_links') {
+					res[content].forEach(links => {
+						let alternateLink = document.createElement("link")
+						alternateLink.rel = "alternate"
+						alternateLink.href = links.href
+						alternateLink.hreflang = links.language
+						head.appendChild(alternateLink)
+					})
 				}
 			})
 		})
