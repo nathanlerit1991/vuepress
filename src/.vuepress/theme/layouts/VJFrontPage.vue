@@ -1,12 +1,18 @@
 <template>
 	<div :class="isModal ? 'active-modal' : ''" class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-123456');</script>
+			<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-KCLSQC8');</script> -->
 		<!-- End Google Tag Manager -->
+		
+		<!-- Google Tag Manager (noscript) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCLSQC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
@@ -327,10 +333,16 @@ export default {
 
 		let head = document.head
 
+		let gtmHead = document.getElementsByTagName("head")[0]
+		let script = document.createElement('script')
+		script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+		gtmHead.insertBefore(script, gtmHead.firstChild)
+
+
 		//FAVICON
-		let link = document.createElement("link")
-		link.rel = "shortcut icon"
-		link.href = "/assets/verajohn/vj_favicon.ico"
+		let link = document.createElement('link')
+		link.rel = 'shortcut icon'
+		link.href = '/assets/verajohn/vj_favicon.ico'
 		head.appendChild(link)
 
 		//META DATA
