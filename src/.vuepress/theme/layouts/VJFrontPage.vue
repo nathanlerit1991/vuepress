@@ -10,7 +10,7 @@
 		
 		<!-- Google Tag Manager (noscript) -->
 		<noscript>
-			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCLSQC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			<iframe loading="lazy" src="https://www.googletagmanager.com/ns.html?id=GTM-KCLSQC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
 		</noscript>
 		<!-- End Google Tag Manager (noscript) -->
 		
@@ -336,6 +336,7 @@ export default {
 		let gtmHead = document.getElementsByTagName("head")[0]
 		let script = document.createElement('script')
 		script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+		script.defer = true
 		gtmHead.insertBefore(script, gtmHead.firstChild)
 
 
