@@ -9,9 +9,9 @@
 		<!-- End Google Tag Manager -->
 		
 		<!-- Google Tag Manager (noscript) -->
-		<noscript>
+		<!-- <noscript>
 			<iframe loading="lazy" src="https://www.googletagmanager.com/ns.html?id=GTM-KCLSQC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-		</noscript>
+		</noscript> -->
 		<!-- End Google Tag Manager (noscript) -->
 		
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
@@ -333,12 +333,12 @@ export default {
 
 		let head = document.head
 
-		//GTM
-		let gtmHead = document.getElementsByTagName("head")[0]
-		let script = document.createElement('script')
-		script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
-		script.defer = true
-		gtmHead.insertBefore(script, gtmHead.firstChild)
+		// //GTM
+		// let gtmHead = document.getElementsByTagName("head")[0]
+		// let script = document.createElement('script')
+		// script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+		// script.defer = true
+		// gtmHead.insertBefore(script, gtmHead.firstChild)
 
 		//FAVICON
 		let link = document.createElement('link')

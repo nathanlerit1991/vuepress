@@ -1,20 +1,20 @@
 if (typeof window !== 'undefined') {
 	window.onload = function() {
-		//GTM fix
-		let gtmImg = document.querySelectorAll('#gtmContainerTags img')
-		for (const remove of gtmImg) {
-			remove.setAttribute('data-src', remove.src)
-			remove.src = ""
-			remove.classList.add('content-visibility')
-		}
+		// //GTM fix
+		// let gtmImg = document.querySelectorAll('#gtmContainerTags img')
+		// for (const remove of gtmImg) {
+		// 	remove.setAttribute('data-src', remove.src)
+		// 	remove.src = ""
+		// 	remove.classList.add('content-visibility')
+		// }
 
-		let gtmIframe = document.querySelectorAll('#gtmContainerTags iframe')
-		for (const remove of gtmIframe) {
-			remove.setAttribute('data-src', remove.src)
-			remove.src = ""
-			remove.loading = "lazy"
-			remove.classList.add('content-visibility')
-		}
+		// let gtmIframe = document.querySelectorAll('#gtmContainerTags iframe')
+		// for (const remove of gtmIframe) {
+		// 	remove.setAttribute('data-src', remove.src)
+		// 	remove.src = ""
+		// 	remove.loading = "lazy"
+		// 	remove.classList.add('content-visibility')
+		// }
 		
 		//Check all img dimension then add the approriate dimension
 		let imgDimension = document.querySelectorAll('img')
