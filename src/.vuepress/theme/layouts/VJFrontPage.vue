@@ -341,16 +341,16 @@ export default {
 		// gtmHead.insertBefore(script, gtmHead.firstChild)
 
 
-		window.onload = function() {
-			setTimeout(() => {
-				//GTM
-				let gtmHead = document.getElementsByTagName("head")[0]
-				let script = document.createElement('script')
-				script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
-				script.defer = true
-				gtmHead.insertBefore(script, gtmHead.firstChild)
-			}, 1500)
-		};
+
+		setTimeout(() => {
+			//GTM
+			let gtmHead = document.getElementsByTagName("head")[0]
+			let script = document.createElement('script')
+			script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+			script.defer = true
+			gtmHead.insertBefore(script, gtmHead.firstChild)
+		}, 1500)
+
 
 
 
