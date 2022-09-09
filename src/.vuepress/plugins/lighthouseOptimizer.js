@@ -9,7 +9,7 @@ if (typeof window !== 'undefined') {
 		}
 
 		let gtmIframe = document.querySelectorAll('#gtmContainerTags iframe')
-		for (const remove of gtmImg) {
+		for (const remove of gtmIframe) {
 			remove.setAttribute('data-src', remove.src)
 			remove.src = ""
 			remove.loading = "lazy"
