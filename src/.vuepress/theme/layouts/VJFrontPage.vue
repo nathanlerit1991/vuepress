@@ -1,5 +1,5 @@
 <template>
-	<div :class="isModal ? 'active-modal' : ''" class="vjfp o-hidden" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
+	<div class="vjfp" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- Google Tag Manager -->
 			<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -9,9 +9,9 @@
 		<!-- End Google Tag Manager -->
 
 		<!-- Google Tag Manager (noscript) -->
-		<noscript>
+		<!-- <noscript>
 			<iframe loading="lazy" src="https://www.googletagmanager.com/ns.html?id=GTM-KCLSQC8" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-		</noscript>
+		</noscript> -->
 		<!-- End Google Tag Manager (noscript) -->
 
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
@@ -342,14 +342,14 @@ export default {
 
 
 
-		setTimeout(() => {
-			//GTM
-			let gtmHead = document.getElementsByTagName("head")[0]
-			let script = document.createElement('script')
-			script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
-			script.defer = true
-			gtmHead.insertBefore(script, gtmHead.firstChild)
-		}, 1500)
+		// setTimeout(() => {
+		// 	//GTM
+		// 	let gtmHead = document.getElementsByTagName("head")[0]
+		// 	let script = document.createElement('script')
+		// 	script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+		// 	script.defer = true
+		// 	gtmHead.insertBefore(script, gtmHead.firstChild)
+		// }, 1500)
 
 
 

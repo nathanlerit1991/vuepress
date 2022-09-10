@@ -82,7 +82,8 @@ button {
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
-	height: auto;
+  height: auto;
+  overflow: hidden;
 }
 
 .image-bg {
@@ -96,7 +97,6 @@ button {
 
 &.active-modal {
   height: calc(100vh - 42px);
-  overflow: hidden;
 }
 
 
