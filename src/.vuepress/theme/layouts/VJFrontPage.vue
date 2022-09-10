@@ -1,5 +1,5 @@
 <template>
-	<div class="vjfp" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
+	<div id="page-content" class="vjfp" :style="`--customer-support-background-image: url(${$page.frontmatter.customer_support.bg_image});`">
 		<!-- Google Tag Manager -->
 			<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
