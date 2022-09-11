@@ -5,20 +5,20 @@
   font-display: optional;
 }
 
-@at-root html:lang(ja) .vjfp {
+@at-root html:lang(ja) #vjfp {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
     font-family: $FONT_FAMILY_JP;
     font-display: optional;
   }
 }
-@at-root html:lang(en) .vjfp {
+@at-root html:lang(en) #vjfp {
   h1,h2,h3,h4,h5,h6,p,span,li,a,small{
     font-family: $FONT_FAMILY_EN;
     font-display: optional;
   }
 }
 
-@at-root .vjfp section div.no-container {
+@at-root #vjfp section div.no-container {
   padding: 0;
   background: none;
 }
@@ -26,7 +26,7 @@
 @at-root body {
   padding-top: 42px;
 }
-@at-root .vjfp {
+@at-root #vjfp {
   position: relative;
   background: #00a1e5;
 }
