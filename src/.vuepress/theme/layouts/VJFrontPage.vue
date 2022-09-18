@@ -65,7 +65,7 @@
 			</div>
 		</section>
 
-		<div id="below-the-fold"  class="content-visibility">
+		<div id="below-the-fold" class="content-visibility">
 			<section id="s-games">
 				<div class="container">
 
