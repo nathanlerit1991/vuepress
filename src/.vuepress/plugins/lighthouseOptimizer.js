@@ -17,14 +17,14 @@ if (typeof window !== 'undefined') {
 		// }
 
 		//Check all img dimension then add the approriate dimension
-		// let imgDimension = document.querySelectorAll('img')
-		// imgDimension.forEach((img, i) => {
-		// 	let imgWidth = img.width
-		// 	let imgHeight = img.height
-		//
-		// 	img.setAttribute('width', imgWidth)
-		// 	img.setAttribute('height', imgHeight)
-		// })
+		let imgDimension = document.querySelectorAll('img')
+		imgDimension.forEach((img, i) => {
+			let imgWidth = img.width
+			let imgHeight = img.height
+
+			img.setAttribute('width', imgWidth)
+			img.setAttribute('height', imgHeight)
+		})
 
 		//Replace all src to data-src onload
 		let removeSrc = document.querySelectorAll('img.lazy')
