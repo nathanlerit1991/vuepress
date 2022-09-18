@@ -27,7 +27,7 @@ if (typeof window !== 'undefined') {
 		})
 
 		//Replace all src to data-src onload
-		let removeSrc = document.querySelectorAll('img.lazy')
+		let removeSrc = document.querySelectorAll('#below-the-fold img.lazy')
 		for (const remove of removeSrc) {
 			remove.setAttribute('data-src', remove.src)
 			remove.src = ""
@@ -35,7 +35,7 @@ if (typeof window !== 'undefined') {
 
 		//Replace all image and iframes data-src to src
 		function deferAssets() {
-			let lazyElem = document.querySelectorAll('.lazy')
+			let lazyElem = document.querySelectorAll('#below-the-fold .lazy')
 			for ( let i = 0; i < lazyElem.length; i++ ) {
 				if(lazyElem[i].getAttribute('data-src')) {
 					lazyElem[i].setAttribute('src',lazyElem[i].getAttribute('data-src'))
