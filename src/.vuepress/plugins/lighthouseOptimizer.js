@@ -53,5 +53,23 @@ if (typeof window !== 'undefined') {
 				lazyLoadTrigger = true
 		  }
 		})
+
+		//FOR LARGER RESOLUTION SCREEN: Check if element is already visible using classname 'lazy'
+		function isInViewport() {
+			let el = document.querySelector('.lazy')
+			const rect = el.getBoundingClientRect()
+			return (
+				rect.top >= 0 &&
+				rect.left >= 0 &&
+				rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+				rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+			)
+		}
+		if (isInViewport()) {
+			let elementVisible = document.querySelectorAll('.lazy')
+			for (const visible of elementVisible) {
+				deferAssets()
+			}
+		}
 	}
 }
