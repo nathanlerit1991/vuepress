@@ -45,16 +45,16 @@ if (typeof window !== 'undefined') {
 		}
 
 		//Trigger deferAssets() when scroll - function will trigger once
-		let lazyLoadTrigger = false
-		document.addEventListener("scroll", () => {
-		  let scrolled = document.scrollingElement.scrollTop;
-		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
-				deferAssets()
-				lazyLoadTrigger = true
-		  }
-		})
+		// let lazyLoadTrigger = false
+		// document.addEventListener("scroll", () => {
+		//   let scrolled = document.scrollingElement.scrollTop;
+		//   if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+		// 		deferAssets()
+		// 		lazyLoadTrigger = true
+		//   }
+		// })
 
-		//FOR LARGER RESOLUTION SCREEN: Check if element is already visible using classname 'lazy'
+
 		function isInViewport() {
 			let el = document.querySelector('.lazy')
 			const rect = el.getBoundingClientRect()
@@ -65,6 +65,20 @@ if (typeof window !== 'undefined') {
 				rect.right <= (window.innerWidth || document.documentElement.clientWidth)
 			)
 		}
+
+		//Trigger deferAssets() when scroll - function will trigger once
+		let lazyLoadTrigger = false
+		window.addEventListener('scroll', function () {
+			if (isInViewport() && lazyLoadTrigger === false) {
+				let elementVisible = document.querySelectorAll('.lazy')
+				for (const visible of elementVisible) {
+					deferAssets()
+					lazyLoadTrigger = true
+				}
+			}
+		})
+
+		//FOR LARGER RESOLUTION SCREEN: Trigger deferAssets if element is already visible using classname 'lazy'
 		if (isInViewport()) {
 			let elementVisible = document.querySelectorAll('.lazy')
 			for (const visible of elementVisible) {
