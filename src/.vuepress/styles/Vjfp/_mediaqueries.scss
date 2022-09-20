@@ -124,6 +124,14 @@
 			max-width: 60%;
 		}
 	}
+	#s-games{
+		.game-list {
+			div:last-child {
+				border-left: solid 1px #0076aa;
+				border-top: none;
+			}
+		}
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -162,14 +170,6 @@
 		#text-wrapper {
 			flex: 0 0 75%;
 			max-width: 75%;
-		}
-	}
-	#s-games{
-		.game-list {
-			div:last-child {
-				border-left: solid 1px #0076aa;
-				border-top: none;
-			}
 		}
 	}
 	#s-customer-support{
