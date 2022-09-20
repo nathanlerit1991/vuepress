@@ -20,12 +20,14 @@ if (typeof window !== 'undefined') {
 		//Replace all image and iframes data-src to src
 		function deferAssets() {
 			let lazyElem = document.querySelectorAll('.lazy')
+			let lazyStyle = document.querySelector('.lazy-background')
 			for ( let i = 0; i < lazyElem.length; i++ ) {
 				if(lazyElem[i].getAttribute('data-src')) {
 					lazyElem[i].setAttribute('src',lazyElem[i].getAttribute('data-src'))
 					lazyElem[i].removeAttribute('data-src')
 				}
 			}
+			lazyStyle.setAttribute('style',lazyStyle.getAttribute('data-style'))
 		}
 
 		//Trigger deferAssets() when scroll - function will trigger once
