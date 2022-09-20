@@ -66,7 +66,7 @@
 		</section>
 
 		<div class="content-visibility">
-			<section id="s-games" class="content-visibility">
+			<section id="s-games">
 				<div class="container">
 
 					<div class="row txt-center">
@@ -104,7 +104,7 @@
 				</div>
 			</section>
 
-			<section id="s-payment" class="content-visibility">
+			<section id="s-payment">
 				<div class="container">
 					<div class="row">
 						<div>
@@ -123,7 +123,7 @@
 				</div>
 	    </section>
 
-			<section id="s-testimonials" class="content-visibility">
+			<section id="s-testimonials">
 				<div class="container">
 					<div class="row txt-center">
 						<div class="testimonial-wrapper">
@@ -141,7 +141,7 @@
 				</div>
 	    </section>
 
-			<section id="s-beginners-bonus" class="content-visibility">
+			<section id="s-beginners-bonus">
 				<div class="container no-container">
 					<div class="row column-2">
 						<div>
@@ -183,7 +183,7 @@
 				</div>
 	    </section>
 
-			<section id="s-customer-support" class="content-visibility">
+			<section id="s-customer-support">
 				<div class="container">
 					<div class="row">
 						<div id="text-wrapper">
@@ -193,7 +193,7 @@
 				</div>
 			</section>
 
-			<section id="s-testimonials2" class="content-visibility">
+			<section id="s-testimonials2">
 				<div class="container">
 					<div class="row txt-center">
 						<div class="testimonial-wrapper">
@@ -207,7 +207,7 @@
 				</div>
 			</section>
 
-			<section id="s-honourable-mentions" class="content-visibility">
+			<section id="s-honourable-mentions">
 				<div class="container no-container">
 					<div class="row txt-center">
 						<div v-html="$page.frontmatter.honourable_mentions.text_content" />
@@ -238,7 +238,7 @@
 				</div>
 			</section>
 
-			<section id="s-seo-contents" class="content-visibility">
+			<section id="s-seo-contents">
 				<div class="container">
 					<div class="row">
 						<Content class="txt-center" />
@@ -246,7 +246,7 @@
 				</div>
 			</section>
 
-			<section id="s-other-info" class="content-visibility">
+			<section id="s-other-info">
 				<div class="container no-container">
 					<div>
 						<div v-html="$page.frontmatter.other_info.title" />
@@ -265,7 +265,7 @@
 				</div>
 			</section>
 
-			<footer class="content-visibility">
+			<footer>
 				<div class="container">
 					<div class="row">
 						<div>
@@ -300,8 +300,7 @@ export default {
 	data () {
 		return {
 			isModal: false,
-			modalData: {},
-			isBg: true
+			modalData: {}
 		}
 	},
 	mounted () {
