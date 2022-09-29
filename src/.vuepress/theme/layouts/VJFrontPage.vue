@@ -25,7 +25,9 @@
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
-						<a href="http://docs.google.com/gview?embedded=true&url=https://www.africau.edu/images/default/sample.pdf" target="_blank">Sample PDF</a>
+						<a href="http://docs.google.com/gview?embedded=true&url=https://www.africau.edu/images/default/sample.pdf" target="_blank">Sample External PDF</a>
+						<a href="http://docs.google.com/gview?embedded=true&url=https://thunderous-melomakarona-8ed143.netlify.app/verajohn/vjfp/verajohn-frontpage-ja.html" target="_blank">Sample External Link</a>
+						
 						<img width="120" height="120" class="logo" src="/assets/verajohn/Vjfp/logo.png" alt="verajohn logo">
 						<div v-html="$page.frontmatter.welcome_verajohn.text_content" />
 						<button data-test-id="registration-button" class="btn-primary">
