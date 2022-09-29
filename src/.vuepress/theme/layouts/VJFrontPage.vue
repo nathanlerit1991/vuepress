@@ -25,6 +25,7 @@
 			<div class="container">
 				<div class="row">
 					<div id="welcome_wrapper">
+						<a href="https://www.africau.edu/images/default/sample.pdf" target="_blank">Sample PDF</a>
 						<img width="120" height="120" class="logo" src="/assets/verajohn/Vjfp/logo.png" alt="verajohn logo">
 						<div v-html="$page.frontmatter.welcome_verajohn.text_content" />
 						<button data-test-id="registration-button" class="btn-primary">
