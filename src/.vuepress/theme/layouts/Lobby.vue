@@ -161,6 +161,6 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '~styles/Branding/Verajohn/style.scss';
-  @import '~styles/LobbyPages/Verajohn/style.scss';
+  // @import '~styles/Branding/Verajohn/style.scss';
+  // @import '~styles/LobbyPages/Verajohn/style.scss';
 </style>
