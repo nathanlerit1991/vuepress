@@ -289,6 +289,12 @@ export default {
 	},
 	mounted () {
 		let head = document.head
+		
+		//GTM
+		// let gtmHead = document.getElementsByTagName("head")[0]
+		// let script = document.createElement('script')
+		// script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+		// gtmHead.insertBefore(script, gtmHead.firstChild)
 
 		//FAVICON
 		let link = document.createElement('link')
