@@ -292,7 +292,7 @@ export default {
 		//STYLE
 		let preStyle = document.getElementsByTagName("head")[0]
 		let preStyleElem = document.createElement('link')
-		preStyleElem.rel = 'preload'
+		preStyleElem.rel = 'prefetch'
 		preStyleElem.href = '/css/index.css'
 		preStyleElem.as = 'style'
 		preStyle.insertBefore(preStyleElem, preStyle.firstChild)
