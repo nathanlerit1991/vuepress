@@ -1,6 +1,7 @@
 <template>
 	<div id="vjfp" class="lazy-background" :data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`">
 		<MetaData />
+		<Gtm/>
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 576px)">
@@ -277,10 +278,12 @@
 
 <script>
 import '~styles/Vjfp/style.scss'
+import  Gtm from '~components/Global/Gtm.vue'
 import  MetaData from '~components/Global/MetaData.vue'
 import  Modal from '~components/Global/Modal.vue'
 export default {
 	components: {
+		Gtm,
 		MetaData,
 		Modal
 	},
@@ -289,13 +292,6 @@ export default {
 			isModal: false,
 			modalData: {}
 		}
-	},
-	mounted () {
-		let head = document.head
-		let gtmHead = document.getElementsByTagName("head")[0]
-		let script = document.createElement('script')
-		script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
-		gtmHead.insertBefore(script, gtmHead.firstChild)
 	},
 	methods: {
 		closeModal(closeFromModal){
