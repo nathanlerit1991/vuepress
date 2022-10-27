@@ -7,7 +7,7 @@ export default {
     //GTM
     let gtmHead = document.getElementsByTagName("head")[0]
     let gtmScript = document.createElement('script')
-    gtmScript.innerHTML = function handleScriptLoaded() {
+    gtmScript.innerHTML = function GtmScriptLoaded() {
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -17,7 +17,6 @@ export default {
     gtmHead.insertBefore(gtmScript, gtmHead.firstChild)
 
     //GO
-		let head = document.head
 		let goHead = document.getElementsByTagName("head")[0]
 		let goScript = document.createElement('script')
 		goScript.src = 'https://www.googleoptimize.com/optimize.js?id=OPT-K6FTGKG'
@@ -32,7 +31,7 @@ export default {
 		gaHead2.insertBefore(gaScript2, gaHead2.firstChild)
 
     let gaScript = document.createElement('script')
-    gaScript.innerHTML = function handleScriptLoaded() {
+    gaScript.innerHTML = function GaScriptLoaded() {
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
