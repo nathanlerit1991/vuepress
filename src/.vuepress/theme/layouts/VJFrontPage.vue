@@ -275,7 +275,7 @@
 </template>
 
 <script>
-import '~css/index.css'
+// import '~css/index.css'
 import  Modal from '~components/Global/Modal.vue'
 export default {
 	components: {
@@ -295,6 +295,12 @@ export default {
 		link.rel = 'shortcut icon'
 		link.href = '/assets/verajohn/vj_favicon.ico'
 		head.appendChild(link)
+
+		//STYLE
+		let style = document.createElement('link')
+		style.rel = 'stylesheet'
+		style.href = '/css/index.css'
+		head.appendChild(style)
 
 		//META DATA
 		const getMetaData = async items => {
