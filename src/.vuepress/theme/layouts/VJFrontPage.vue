@@ -275,6 +275,7 @@
 </template>
 
 <script>
+import '~styles/Vjfp/style.scss'
 import  Modal from '~components/Global/Modal.vue'
 export default {
 	components: {
@@ -288,19 +289,6 @@ export default {
 	},
 	mounted () {
 		let head = document.head
-
-		//STYLE
-		let preStyle = document.getElementsByTagName("head")[0]
-		let preStyleElem = document.createElement('link')
-		preStyleElem.rel = 'prefetch'
-		preStyleElem.href = '/css/index.css'
-		preStyleElem.as = 'style'
-		preStyle.insertBefore(preStyleElem, preStyle.firstChild)
-
-		let styleElem = document.createElement('link')
-		styleElem.rel = 'stylesheet'
-		styleElem.href = '/css/index.css'
-		head.appendChild(styleElem)
 
 		//FAVICON
 		let link = document.createElement('link')
