@@ -275,7 +275,7 @@
 </template>
 
 <script>
-import '~css/index.css'
+// import '~css/index.css'
 import  Modal from '~components/Global/Modal.vue'
 export default {
 	components: {
