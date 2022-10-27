@@ -290,11 +290,17 @@ export default {
 		let head = document.head
 
 		//STYLE
-		let style = document.getElementsByTagName("head")[0]
+		let preStyle = document.getElementsByTagName("head")[0]
+		let preStyleElem = document.createElement('link')
+		preStyleElem.rel = 'preload'
+		preStyleElem.href = '/css/index.css'
+		preStyleElem.as = 'style'
+		preStyle.insertBefore(preStyleElem, preStyle.firstChild)
+
 		let styleElem = document.createElement('link')
 		styleElem.rel = 'stylesheet'
 		styleElem.href = '/css/index.css'
-		style.insertBefore(styleElem, style.firstChild)
+		head.appendChild(styleElem)
 
 		//FAVICON
 		let link = document.createElement('link')
