@@ -297,10 +297,11 @@ export default {
 		head.appendChild(link)
 
 		//STYLE
+		let firsthead = document.getElementsByTagName("head")[0]
 		let style = document.createElement('link')
 		style.rel = 'stylesheet'
 		style.href = '/css/index.css'
-		head.appendChild(style)
+		firsthead.appendChild(style, firsthead.firstChild)
 
 		//META DATA
 		const getMetaData = async items => {
