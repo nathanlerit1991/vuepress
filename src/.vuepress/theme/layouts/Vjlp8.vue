@@ -34,7 +34,7 @@
 </template>
 
 <script>
-// import '~styles/Marketing/Vjlp8/style.scss'
+import '~styles/Marketing/Vjlp8/style.scss'
 export default {
 	data () {
 		return {
