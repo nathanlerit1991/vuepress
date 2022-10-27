@@ -293,6 +293,13 @@ export default {
 			modalData: {}
 		}
 	},
+	mounted () {
+		let head = document.head
+		let gtmHead = document.getElementsByTagName("head")[0]
+		let script = document.createElement('script')
+		script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-KCLSQC8'
+		gtmHead.insertBefore(script, gtmHead.firstChild)
+	},
 	methods: {
 		closeModal(closeFromModal){
 			this.isModal = closeFromModal
