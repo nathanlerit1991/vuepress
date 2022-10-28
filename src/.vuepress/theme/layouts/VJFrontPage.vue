@@ -1,8 +1,8 @@
 <template>
 	<div id="vjfp" class="lazy-background" :data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`">
 		<link v-if="$page.frontmatter.layout === 'VJFrontPage'" href="/css/index.css" rel="stylesheet"/>
-		<MetaData />
-		<Gtm />
+		<!-- <MetaData />
+		<Gtm /> -->
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 576px)">
