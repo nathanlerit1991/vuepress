@@ -8,26 +8,41 @@
 		</picture>
 
     <section id="hero">
-      <img src="/assets/verajohn/logo.png" class="m-auto logo"/>
-      <div v-html="$page.frontmatter.tracking_pixel" />
+      <div class="container">
+        <div class="row">
+          <div>
+            <div id="login">
+              <div class="btn-login">
+                <a rel="noopener" :href="$page.frontmatter.promo_banner.promo_login_button_redirect_url">
+                  <i class="material-icons">exit_to_app</i>
+                  <span class="d-block">{{ $page.frontmatter.promo_banner.promo_login_button }}</span>
+                </a>
+              </div>
+            </div>
 
-      <div id="banner-images" class="m-auto">
-        <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_logo" alt="verajohn image"/>
-        <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_image" alt="verajohn image"/>
-      </div>
+            <img src="/assets/verajohn/logo.png" class="m-auto logo"/>
+            <div v-html="$page.frontmatter.tracking_pixel" />
 
-      <div id="banner-text" class="txt-center">
-        <h1>{{ $page.frontmatter.promo_banner.promo_large_subtitle }}</h1>
-        <p v-if="$page.frontmatter.promo_banner.promo_small_subtitle" v-html="bannerDesc" />
-      </div>
+            <div id="banner-images" class="m-auto">
+              <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_logo" alt="verajohn image"/>
+              <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_image" alt="verajohn image"/>
+            </div>
 
-      <div id="banner-terms" class="txt-center">
-        <button class="btn-register m-auto" :class="$page.frontmatter.styles === 'version2' ? 'animated pulse infinite' : ''">
-          <a :href="$page.frontmatter.promo_banner.promo_join_button_redirect_url">
-            {{ $page.frontmatter.promo_banner.promo_join_button }}
-          </a>
-        </button>
-        <small v-html="bannerTerms"/>
+            <div id="banner-text" class="txt-center">
+              <h1>{{ $page.frontmatter.promo_banner.promo_large_subtitle }}</h1>
+              <p v-if="$page.frontmatter.promo_banner.promo_small_subtitle" v-html="bannerDesc" />
+            </div>
+
+            <div id="banner-terms" class="txt-center">
+              <button class="btn-register m-auto" :class="$page.frontmatter.styles === 'version2' ? 'animated pulse infinite' : ''">
+                <a :href="$page.frontmatter.promo_banner.promo_join_button_redirect_url">
+                  {{ $page.frontmatter.promo_banner.promo_join_button }}
+                </a>
+              </button>
+              <small v-html="bannerTerms"/>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>

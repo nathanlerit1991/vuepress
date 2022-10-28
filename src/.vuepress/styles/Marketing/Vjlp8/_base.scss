@@ -1,3 +1,7 @@
+.material-icons {
+  font-family: "Material Icons";
+  font-style: normal;
+}
 
 button {
   background: $BTN_BG;
@@ -30,7 +34,6 @@ section {
   position: relative;
 }
 
-
 .above-fold-bg {
   position: absolute;
   top: 0;
@@ -47,6 +50,22 @@ section {
 
 #hero {
   overflow: hidden;
+  padding: 0;
+
+  #login {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: center;
+    a {
+      color: $TEXT_COLOR;
+      text-decoration: none;
+    }
+    i {
+      font-size: $ICON_SIZE;
+    }
+  }
+
   .logo {
     max-width: 80px;
   }
