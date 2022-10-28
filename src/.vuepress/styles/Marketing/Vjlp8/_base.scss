@@ -8,7 +8,6 @@ button {
   padding: $BTN_PADDING;
   border-radius: $BTN_BORDER_RADIUS;
   border: none;
-
   a {
     color: inherit;
     text-decoration: none;
@@ -68,11 +67,18 @@ section {
 
   .logo {
     max-width: 80px;
+    margin: 30px auto 25px;
   }
   #banner-images {
     max-width: 450px;
     img {
       width: 100%;
+    }
+  }
+  #banner-terms {
+    margin: 100px auto 45px;
+    button {
+      margin-bottom: 50px;
     }
   }
 }

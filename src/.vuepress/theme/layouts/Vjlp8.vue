@@ -20,7 +20,7 @@
               </div>
             </div>
 
-            <img src="/assets/verajohn/logo.png" class="m-auto logo"/>
+            <img src="/assets/verajohn/logo.png" class="d-block logo"/>
             <div v-html="$page.frontmatter.tracking_pixel" />
 
             <div id="banner-images" class="m-auto">
