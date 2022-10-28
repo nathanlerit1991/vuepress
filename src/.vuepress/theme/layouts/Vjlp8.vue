@@ -34,7 +34,6 @@
 </template>
 
 <script>
-import '~styles/Marketing/Vjlp8/style.scss'
 export default {
 	data () {
 		return {
@@ -80,3 +79,4 @@ export default {
   }
 }
 </script>
+<style src="~styles/Marketing/Vjlp8/style.scss" lang="scss"/>

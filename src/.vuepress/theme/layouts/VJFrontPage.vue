@@ -277,7 +277,6 @@
 </template>
 
 <script>
-import '~styles/Vjfp/style.scss'
 import  Gtm from '~components/Global/Gtm.vue'
 import  MetaData from '~components/Global/MetaData.vue'
 import  Modal from '~components/Global/Modal.vue'
@@ -307,3 +306,4 @@ export default {
 	}
 }
 </script>
+<style src="~styles/Vjfp/style.scss" lang="scss"/>
