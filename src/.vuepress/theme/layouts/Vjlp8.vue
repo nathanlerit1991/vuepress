@@ -45,6 +45,46 @@
         </div>
       </div>
     </section>
+
+    <section 
+      id="details"  
+      class="txt-center separator content-visibility"
+      v-for="(sections, sections_index) in $page.frontmatter.section" :key="sections_index">
+      <div class="container">
+        <div class="row">
+          <div>
+            <h2>{{ sections.title }}</h2>
+            <img class="m-auto" alt="alt img" :src="sections.image">
+              <button class="btn-register">
+                <a rel="noopener" :href="sections.join_button_redirect_url">
+                {{ sections.join_button }}
+                </a>
+              </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="payment" class="separator content-visibility">
+      <div class="container">
+        <img class="desktop" src="/assets/verajohn/payment_large_jp.svg" alt="payment verajohn desktop">
+        <img class="mobile" src="/assets/verajohn/payment_jp.svg" alt="payment verajohn mobile">
+      </div>
+    </section>
+
+     <section id="terms" class="separator content-visibility">
+      <div v-html="$page.frontmatter.body_script" />
+      <div class="container">
+        <div class="row">
+          <div>
+            <Content />
+            <ul>
+              <li>通常の<a rel="noopener" href="https://verajohn.com/about/terms-and-conditions">利用規約</a>と<a rel="noopener" href="https://verajohn.com/about/promotions-terms-and-conditions">キャンペーン一般利用規約</a>が適用されます。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
