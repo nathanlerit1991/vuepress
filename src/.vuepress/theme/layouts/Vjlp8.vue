@@ -1,13 +1,13 @@
 <template>
   <div id="vjlp8-main" :class="$page.frontmatter.styles">
-    <!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
-		<picture class="above-fold-bg">
-			<source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" media="(min-width: 576px)">
-			<source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_mobile" media="(min-width: 280px)">
-			<img :src="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" alt="verajohn background image">
-		</picture>
-
+    <!-- <MetaData /> -->
     <section id="hero">
+      <!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
+      <picture class="above-fold-bg">
+        <source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" media="(min-width: 576px)">
+        <source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_mobile" media="(min-width: 280px)">
+        <img :src="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" alt="verajohn background image">
+      </picture>
       <div class="container">
         <div class="row">
           <div>
@@ -54,7 +54,7 @@
         <div class="row">
           <div>
             <h2>{{ sections.title }}</h2>
-            <img class="m-auto" alt="alt img" :src="sections.image">
+            <img class="lazy" alt="alt img" :src="sections.image">
               <button class="btn-register">
                 <a rel="noopener" :href="sections.join_button_redirect_url">
                 {{ sections.join_button }}
@@ -67,8 +67,11 @@
 
     <section id="payment" class="separator content-visibility">
       <div class="container">
-        <img class="desktop" src="/assets/verajohn/payment_large_jp.svg" alt="payment verajohn desktop">
-        <img class="mobile" src="/assets/verajohn/payment_jp.svg" alt="payment verajohn mobile">
+        <picture>
+          <source srcset="/assets/verajohn/payment_large_jp.svg" media="(min-width: 576px)">
+          <source srcset="/assets/verajohn/payment_jp.svg" media="(min-width: 280px)">
+          <img class="lazy" src="/assets/verajohn/payment_large_jp.svg" alt="payment verajohn desktop">
+        </picture>
       </div>
     </section>
 
@@ -89,7 +92,11 @@
 </template>
 
 <script>
+import MetaData from '~components/Global/MetaData.vue'
 export default {
+  components: {
+    MetaData
+  },
 	data () {
 		return {
 		}
