@@ -14,6 +14,9 @@ button {
     color: $BTN_COLOR;
     text-decoration: none;
     font-size: $BTN_TEXT_SIZE;
+    &:hover {
+      color: $BTN_COLOR;
+    }
   }
 }
 
@@ -78,6 +81,7 @@ section {
     a {
       color: $TEXT_COLOR;
       text-decoration: none;
+      border: none;
     }
     i {
       font-size: $ICON_SIZE;
