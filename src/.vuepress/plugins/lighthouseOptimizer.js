@@ -42,7 +42,7 @@ if (typeof window !== 'undefined') { //Removed Error in Deployment
 		//   }
 		// })
 
-
+		//Check if class name 'lazy' is visible
 		function isInViewport() {
 			let el = document.querySelector('.lazy')
 			const rect = el.getBoundingClientRect()
