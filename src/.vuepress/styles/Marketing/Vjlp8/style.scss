@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Material Icons';
-  src: url("/fonts/material-icons.woff2") format("woff2");
+	src: url("/fonts/material-icons.woff2") format("woff2");
+	font-display: optional;
 }
 #vjlp8-main {
 	@import 'variables';
