@@ -9,7 +9,7 @@ description: ベラジョンオンラインカジノは、日本国内で人気N
 seo:
   robots: "noindex"
   keywords: "this, is, a, sample, keywords, for, verajohn, frontpage"
-  alternate_links: 
+  alternate_links:
     - href: www.google.com
       language: ja
     - href: www.youtube.com
@@ -77,12 +77,12 @@ our_games:
 our_payment_methods:
   text_content: <h2>豊富な決済方法</h2><p>安心安全、メジャーな決済方法でスピーディな入出金</p>
   payment_method_icons:
-    - image: /marketing/img/vjfp/mastercard.png
-    - image: /marketing/img/vjfp/jcb.png
-    - image: /marketing/img/vjfp/americanexpress.png
-    - image: /marketing/img/vjfp/arrowpayment.png
-    - image: /marketing/img/vjfp/bitcoin.png
-    - image: /marketing/img/vjfp/ecoPayz.png
+    - image: /marketing/img/mastercard.png
+    - image: /marketing/img/jcb.png
+    - image: /marketing/img/americanexpress.png
+    - image: /marketing/img/arrowpayment.png
+    - image: /marketing/img/bitcoin.png
+    - image: /marketing/img/ecoPayz.png
     - image: /marketing/img/logo-jetonwallet-132x28.svg
 first_customers_quote:
   title: ベラファミの声

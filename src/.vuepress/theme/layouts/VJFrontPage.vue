@@ -5,9 +5,9 @@
 		<!-- <TrackingScript /> -->
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
-			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 576px)">
-			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image" media="(min-width: 280px)">
-			<img :src="$page.frontmatter.vjfp_bg" alt="verajohn background image">
+			<source :srcset="$page.frontmatter.vjfp_bg + '.webp'" media="(min-width: 576px)">
+			<source :srcset="$page.frontmatter.welcome_verajohn.mobile_bg_image + '.webp'" media="(min-width: 280px)">
+			<img :src="$page.frontmatter.vjfp_bg + '.webp'" alt="verajohn background image">
 		</picture>
 
 		<Modal
@@ -68,11 +68,11 @@
 						<ol>
 							<li v-for="(listGames, listGamesIndex) in games.list_top_games" :key="listGamesIndex">
 								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modalFn(modalData = listGames.url, gameTitle = listGames.name)">
-									<img class="lazy" :src="listGames.image" alt="verajohn games" />
+									<img class="lazy" :src="listGames.image + '.webp'" alt="verajohn games" />
 									{{ listGames.name }}
 								</span>
 								<p v-else>
-									<img class="lazy" :src="listGames.image" alt="verajohn games" />
+									<img class="lazy" :src="listGames.image + '.webp'" alt="verajohn games" />
 									{{ listGames.name }}
 								</p>
 							</li>
@@ -103,7 +103,7 @@
 								v-for="(paymentIcons, paymentIconsindex) in $page.frontmatter.our_payment_methods.payment_method_icons"
 								:key="paymentIconsindex"
 								alt="verajohn payment providers"
-								:src="paymentIcons.image"
+								:src="paymentIcons.image + '.webp'"
 							>
 						</div>
 					</div>
@@ -308,4 +308,3 @@ export default {
 	}
 }
 </script>
-

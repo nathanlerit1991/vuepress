@@ -10,7 +10,7 @@
   "repository": "/base-vuepress",
   "scripts": {
     "dev": "vuepress dev src",
-    "build": "vuepress build src"
+    "build": "webpconvert src/marketing/img src/.vuepress/public/marketing/img/* && vuepress build src"
   },
   "license": "MIT",
   "devDependencies": {
