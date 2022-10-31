@@ -27,7 +27,9 @@ if (typeof window !== 'undefined') { //Removed Error in Deployment
 					lazyElem[i].removeAttribute('data-src')
 				}
 			}
-			lazyStyle.setAttribute('style',lazyStyle.getAttribute('data-style'))
+			if(lazyStyle){
+				lazyStyle.setAttribute('style',lazyStyle.getAttribute('data-style'))
+			}
 		}
 
 		//Trigger deferAssets() when scroll - function will trigger once
@@ -40,7 +42,7 @@ if (typeof window !== 'undefined') { //Removed Error in Deployment
 		//   }
 		// })
 
-
+		//Check if class name 'lazy' is visible
 		function isInViewport() {
 			let el = document.querySelector('.lazy')
 			const rect = el.getBoundingClientRect()

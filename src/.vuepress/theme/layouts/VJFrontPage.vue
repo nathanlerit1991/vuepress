@@ -1,5 +1,8 @@
 <template>
 	<div id="vjfp" class="lazy-background" :data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`">
+		<!-- <link v-if="$page.frontmatter.layout === 'VJFrontPage'" href="/css/index.css" rel="stylesheet"/> -->
+		<MetaData />
+		<!-- <TrackingScript /> -->
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 576px)">
@@ -276,9 +279,13 @@
 
 <script>
 import '~styles/Vjfp/style.scss'
-import  Modal from '~components/Global/Modal.vue'
+import TrackingScript from '~components/Global/TrackingScript.vue'
+import MetaData from '~components/Global/MetaData.vue'
+import Modal from '~components/Global/Modal.vue'
 export default {
 	components: {
+		TrackingScript,
+		MetaData,
 		Modal
 	},
 	data () {
@@ -286,58 +293,6 @@ export default {
 			isModal: false,
 			modalData: {}
 		}
-	},
-	mounted () {
-		let head = document.head
-
-		//FAVICON
-		let link = document.createElement('link')
-		link.rel = 'shortcut icon'
-		link.href = '/assets/verajohn/vj_favicon.ico'
-		head.appendChild(link)
-
-		//META DATA
-		const getMetaData = async items => {
-			let seoData = await this.$page.frontmatter.seo
-			return seoData
-		}
-		getMetaData().then(res => {
-			Object.keys(res).forEach((content)=>{
-				let meta = document.createElement('meta')
-
-				//Robots
-				if(content === 'robots' && res[content].length <= 0) {
-					res[content] = 'noindex'
-					if(this.$page.frontmatter.title && this.$page.frontmatter.description) {
-						res[content] = 'index,follow'
-					}
-					else {
-						res[content] = 'noindex'
-					}
-				}
-
-				//Other meta, if exist
-				if(content === 'robots') {
-					meta.name = content
-					meta.content = res[content]
-					head.appendChild(meta)
-				}
-				if(content === 'keywords') {
-					meta.name = content
-					meta.content = res[content]
-					head.appendChild(meta)
-				}
-				if(content === 'alternate_links') {
-					res[content].forEach(links => {
-						let alternateLink = document.createElement("link")
-						alternateLink.rel = "alternate"
-						alternateLink.href = links.href
-						alternateLink.hreflang = links.language
-						head.appendChild(alternateLink)
-					})
-				}
-			})
-		})
 	},
 	methods: {
 		closeModal(closeFromModal){
@@ -353,3 +308,4 @@ export default {
 	}
 }
 </script>
+

@@ -159,8 +159,5 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-  @import '~styles/Branding/Verajohn/style.scss';
-  @import '~styles/LobbyPages/Verajohn/style.scss';
-</style>
+<style src="~styles/Branding/Verajohn/style.scss" lang="scss"/>
+<style src="~styles/LobbyPages/Verajohn/style.scss" lang="scss"/>
