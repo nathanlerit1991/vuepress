@@ -20,13 +20,13 @@
               </div>
             </div>
 
-            <img src="/assets/verajohn/logo.png" class="d-block logo" alt="verajohn logo"/>
+            <!-- <img src="/assets/verajohn/logo.png" class="d-block logo" alt="verajohn logo"/>
             <div v-html="$page.frontmatter.tracking_pixel" />
 
             <div id="banner-images" class="m-auto">
               <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_logo" alt="verajohn image"/>
               <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_image" alt="verajohn image"/>
-            </div>
+            </div> -->
 
             <div id="banner-text" class="txt-center">
               <h1>{{ $page.frontmatter.promo_banner.promo_large_subtitle }}</h1>
