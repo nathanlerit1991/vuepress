@@ -3,11 +3,11 @@
     <!-- <MetaData /> -->
     <section id="hero">
       <!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
-      <!-- <picture class="above-fold-bg">
+      <picture class="above-fold-bg">
         <source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" media="(min-width: 576px)">
         <source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_mobile" media="(min-width: 280px)">
         <img :src="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" alt="verajohn background image">
-      </picture> -->
+      </picture>
       <div class="container">
         <div class="row">
           <div>
