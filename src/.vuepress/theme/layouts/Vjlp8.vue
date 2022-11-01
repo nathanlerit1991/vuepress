@@ -46,8 +46,8 @@
       </div>
     </section>
 
-    <section 
-      id="details"  
+    <section
+      id="details"
       class="txt-center separator content-visibility"
       v-for="(sections, sections_index) in $page.frontmatter.section" :key="sections_index">
       <div class="container">

@@ -29,8 +29,8 @@ h3 {
   font-size: $SUBTITLE_SIZE;
 }
 
-p, 
-small, 
+p,
+small,
 ul li {
   color: $TEXT_COLOR;
   font-size: $TEXT_SIZE;
@@ -65,6 +65,10 @@ section {
     height: auto;
     width: auto;
     object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
