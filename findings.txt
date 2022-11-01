@@ -4,3 +4,7 @@ Welcome with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDc4R_B4X/ -
 About with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDcJ5_B6N/ --- 87
   Re-run -> Remove image - https://www.webpagetest.org/result/220826_AiDcEV_BFT/ --- 87
   Re-run -> Remove image and text - https://www.webpagetest.org/result/220826_AiDc1Y_BG9/ --- 88
+
+No errors and low scores
+  https://www.webpagetest.org/result/221101_BiDcX8_7EA/
+  https://www.webpagetest.org/result/221101_BiDc7F_4J0/
