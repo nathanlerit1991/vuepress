@@ -54,7 +54,7 @@
         <div class="row">
           <div>
             <h2>{{ sections.title }}</h2>
-            <img class="lazy" alt="alt img" :src="sections.image">
+            <img class="lazy m-auto" alt="alt img" :src="sections.image">
               <button class="btn-register">
                 <a rel="noopener" :href="sections.join_button_redirect_url">
                 {{ sections.join_button }}
