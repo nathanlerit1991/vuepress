@@ -48,7 +48,7 @@
 
     <section
       id="details"
-      class="txt-center separator content-visibility"
+      class="txt-center divider content-visibility"
       v-for="(sections, sections_index) in $page.frontmatter.section" :key="sections_index">
       <div class="container">
         <div class="row">
@@ -65,7 +65,7 @@
       </div>
     </section>
 
-    <section id="payment" class="separator content-visibility">
+    <section id="payment" class="divider content-visibility">
       <div class="container">
         <picture>
           <source srcset="/assets/verajohn/payment_large_jp.svg" media="(min-width: 576px)">
@@ -75,7 +75,7 @@
       </div>
     </section>
 
-     <section id="terms" class="separator content-visibility">
+     <section id="terms" class="divider content-visibility">
       <div v-html="$page.frontmatter.body_script" />
       <div class="container">
         <div class="row">

@@ -7,9 +7,3 @@
     <Content />
   </div>
 </template>
-
-<style scoped>
-.theme-container {
-  background: red;
-}
-</style>
