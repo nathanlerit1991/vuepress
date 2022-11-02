@@ -1,11 +1,8 @@
 <template>
 	<div id="vjfp" class="lazy-background" :data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`">
-		<!-- <link v-if="$page.frontmatter.layout === 'VJFrontPage'" href="/css/index.css" rel="stylesheet"/> -->
+		<link href="/css/Vjfp/style.css" rel="stylesheet"/>
 		<!-- <MetaData /> -->
 		<!-- <TrackingScript /> -->
-		<ClientOnly>
-			<Style v-if="$page.frontmatter.layout === 'VJFrontPage'" :template="'Vjfp'"/>
-		</ClientOnly>
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
 		<picture class="above-fold-bg">
 			<source :srcset="$page.frontmatter.vjfp_bg" media="(min-width: 576px)">
@@ -284,13 +281,11 @@
 import TrackingScript from '~components/Global/TrackingScript.vue'
 import MetaData from '~components/Global/MetaData.vue'
 import Modal from '~components/Global/Modal.vue'
-import Style from '~components/Global/Style.vue'
 export default {
 	components: {
 		TrackingScript,
 		MetaData,
-		Modal,
-		Style
+		Modal
 	},
 	data () {
 		return {
@@ -298,19 +293,6 @@ export default {
 			modalData: {}
 		}
 	},
-	// beforeMount () {
-	// 	const getPage = async items => {
-	// 		let pageData = await this.$page.frontmatter.layout
-	// 		return pageData
-	// 	}
-	// 	getPage().then(res => {
-  //     Object.keys(res).forEach((content)=>{
-	// 			if(res === 'VJFrontPage') {
-	// 				import('~styles/' + this.template +'/style.scss')
-	// 			}
-	// 		})
-	// 	})
-	// },
 	methods: {
 		closeModal(closeFromModal){
 			this.isModal = closeFromModal

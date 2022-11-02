@@ -8,3 +8,6 @@ About with BG,CSS,JS - https://www.webpagetest.org/result/220826_BiDcJ5_B6N/ ---
 No errors and low scores
   https://www.webpagetest.org/result/221101_BiDcX8_7EA/
   https://www.webpagetest.org/result/221101_BiDc7F_4J0/
+
+  Run Sass
+  sass --watch src/.vuepress/styles/Vjfp/style.scss src/.vuepress/public/css/Vjfp/style.css
