@@ -19,7 +19,7 @@ export default {
 		}
 		getPage().then(res => {
       Object.keys(res).forEach((content)=>{
-				if(res === 'VJFrontPage') {
+				if(res === 'xxxxxxxx') {
 					import('~styles/' + this.template +'/style.scss')
 				}
 			})
