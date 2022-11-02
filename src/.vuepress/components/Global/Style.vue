@@ -8,12 +8,22 @@ export default {
 	},
   props: {
     template: {
-      type: Object,
+      type: String,
       required: true
     }
   },
-	beforeMount () {
-		import('~styles/' + this.template +'/style.scss')
-	}
+  beforeMount () {
+		const getPage = async items => {
+			let pageData = await this.$page.frontmatter.layout
+			return pageData
+		}
+		getPage().then(res => {
+      Object.keys(res).forEach((content)=>{
+				if(res === 'VJFrontPage') {
+					import('~styles/' + this.template +'/style.scss')
+				}
+			})
+		})
+	},
 }
 </script>
