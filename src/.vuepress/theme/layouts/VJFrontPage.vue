@@ -278,7 +278,6 @@
 </template>
 
 <script>
-import '~styles/Vjfp/style.scss'
 import TrackingScript from '~components/Global/TrackingScript.vue'
 import MetaData from '~components/Global/MetaData.vue'
 import Modal from '~components/Global/Modal.vue'
@@ -291,8 +290,22 @@ export default {
 	data () {
 		return {
 			isModal: false,
-			modalData: {}
+			modalData: {},
+			dynamicComponent: null
 		}
+	},
+	beforeMount () {
+		const getPage = async items => {
+			let pageData = await this.$page.frontmatter.layout
+			return pageData
+		}
+		getPage().then(res => {
+      Object.keys(res).forEach((content)=>{
+				if(res === 'VJFrontPage') {
+					import('~styles/Vjfp/style.scss')
+				}
+			})
+		})
 	},
 	methods: {
 		closeModal(closeFromModal){
@@ -308,4 +321,3 @@ export default {
 	}
 }
 </script>
-
