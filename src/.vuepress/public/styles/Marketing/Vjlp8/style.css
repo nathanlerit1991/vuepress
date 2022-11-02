@@ -1,0 +1,132 @@
+@font-face {
+  font-family: "Material Icons";
+  src: url("/fonts/material-icons.woff2") format("woff2");
+  font-display: swap;
+}
+#vjlp8-main {
+  /* Custom, iPhone Retina */
+  /* Extra Small Devices, Phones */
+  /* Small Devices, Tablets */
+  /* Medium Devices, Desktops */
+  /* Large Devices, Wide Screens */
+}
+#vjlp8-main .material-icons {
+  font-family: "Material Icons";
+  font-style: normal;
+}
+#vjlp8-main button {
+  background: #FEE63D;
+  padding: 10px;
+  border-radius: 100px;
+  border: none;
+  width: 100%;
+  max-width: 280px;
+}
+#vjlp8-main button a {
+  color: #704B1F;
+  text-decoration: none;
+  font-size: 21px;
+}
+#vjlp8-main button a:hover {
+  color: #704B1F;
+}
+#vjlp8-main h1 {
+  color: #FEE63D;
+  font-size: 24px;
+}
+#vjlp8-main h3 {
+  color: #FEE63D;
+  font-size: 16px;
+}
+#vjlp8-main p,
+#vjlp8-main small,
+#vjlp8-main ul li {
+  color: #fff;
+  font-size: 16px;
+}
+#vjlp8-main a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px dashed #FEE63D;
+}
+#vjlp8-main a:hover {
+  color: #fee63d;
+}
+#vjlp8-main .highlight {
+  color: #FEE63D;
+  font-size: 16px;
+}
+#vjlp8-main section {
+  padding: 40px 0;
+  position: relative;
+}
+#vjlp8-main .above-fold-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#vjlp8-main .above-fold-bg img {
+  height: auto;
+  width: auto;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#vjlp8-main #hero {
+  overflow: hidden;
+  padding: 0;
+  min-height: 690px;
+}
+#vjlp8-main #hero #login {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+}
+#vjlp8-main #hero #login a {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+}
+#vjlp8-main #hero #login i {
+  font-size: 32px;
+}
+#vjlp8-main #hero .logo {
+  max-width: 80px;
+  margin: 30px auto 25px;
+}
+#vjlp8-main #hero #banner-images {
+  max-width: 450px;
+}
+#vjlp8-main #hero #banner-images img {
+  width: 100%;
+  height: auto;
+}
+#vjlp8-main #hero #banner-terms {
+  margin: 100px auto 45px;
+}
+#vjlp8-main #hero #banner-terms button {
+  margin-bottom: 50px;
+}
+#vjlp8-main #details {
+  background: linear-gradient(180deg, #004fb8, #00afff 50%);
+}
+#vjlp8-main #details img {
+  width: auto;
+  height: auto;
+}
+#vjlp8-main #payment,
+#vjlp8-main #terms {
+  background: #0093d4;
+}
+#vjlp8-main #payment img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

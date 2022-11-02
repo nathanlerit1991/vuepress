@@ -1,5 +1,6 @@
 <template>
   <div id="vjlp8-main" :class="$page.frontmatter.styles">
+    <link href="/styles/Marketing/Vjlp8/style.css" rel="stylesheet"/>
     <!-- <MetaData /> -->
     <section id="hero">
       <!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
@@ -141,4 +142,4 @@ export default {
   }
 }
 </script>
-<style src="~styles/Marketing/Vjlp8/style.scss" lang="scss"/>
+<!--<style src="~styles/Marketing/Vjlp8/style.scss" lang="scss"/>-->

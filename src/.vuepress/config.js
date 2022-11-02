@@ -13,7 +13,7 @@ module.exports = {
         '~components': path.resolve(__dirname, 'components'),
         'assets': path.resolve(__dirname,"assets"),
         '~styles': path.resolve(__dirname, 'styles'),
-        '~css': path.resolve(__dirname, 'css')
+        '~public': path.resolve(__dirname, 'public')
       }
     }
   },
