@@ -20,7 +20,7 @@ export default {
 		getPage().then(res => {
       Object.keys(res).forEach((content)=>{
 				if(res === 'xxxxxxxx') {
-					import('~styles/' + this.template +'/style.scss')
+					// import('~styles/' + this.template +'/style.scss')
 				}
 			})
 		})
