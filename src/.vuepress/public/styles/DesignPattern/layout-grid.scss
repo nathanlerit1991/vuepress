@@ -120,6 +120,16 @@ a{
   }
 }
 
+//FONT FAMILY
+@font-face {
+  font-family: 'Material Icons';
+	src: url("/fonts/material-icons.woff2") format("woff2");
+	font-display: swap;
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-style: normal;
+}
 
 .h-left {
   display: flex;

@@ -1,18 +1,9 @@
-@font-face {
-  font-family: "Material Icons";
-  src: url("/fonts/material-icons.woff2") format("woff2");
-  font-display: swap;
-}
 #vjlp8-main {
   /* Custom, iPhone Retina */
   /* Extra Small Devices, Phones */
   /* Small Devices, Tablets */
   /* Medium Devices, Desktops */
   /* Large Devices, Wide Screens */
-}
-#vjlp8-main .material-icons {
-  font-family: "Material Icons";
-  font-style: normal;
 }
 #vjlp8-main button {
   background: #FEE63D;
