@@ -2,7 +2,7 @@
   <div id="vjlp8-main" :class="$page.frontmatter.styles">
     <!-- <link href="/styles/Marketing/Vjlp8/style.css" rel="stylesheet"/> -->
     <!-- <MetaData /> -->
-    <section id="hero">
+    <section id="hero" class="content-visibility">
       <!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
       <picture class="above-fold-bg">
         <source :srcset="$page.frontmatter.promo_banner.promo_images.promo_bg_desktop" media="(min-width: 576px)">
