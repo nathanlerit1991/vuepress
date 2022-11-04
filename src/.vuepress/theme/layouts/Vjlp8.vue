@@ -1,5 +1,4 @@
 <template>
-  <ClientOnly>
   <div id="vjlp8-main" :class="$page.frontmatter.styles">
     <!-- <link href="/styles/Marketing/Vjlp8/style.css" rel="stylesheet"/> -->
     <!-- <MetaData /> -->
@@ -91,7 +90,6 @@
       </div>
     </section>
   </div>
-</ClientOnly>
 </template>
 
 <script>
