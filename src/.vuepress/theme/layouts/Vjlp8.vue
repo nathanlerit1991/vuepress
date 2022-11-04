@@ -1,6 +1,7 @@
 <template>
+  <ClientOnly>
   <div id="vjlp8-main" :class="$page.frontmatter.styles">
-    <link href="/styles/Marketing/Vjlp8/style.css" rel="stylesheet"/>
+    <!-- <link href="/styles/Marketing/Vjlp8/style.css" rel="stylesheet"/> -->
     <!-- <MetaData /> -->
     <section id="hero">
       <!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
@@ -90,9 +91,11 @@
       </div>
     </section>
   </div>
+</ClientOnly>
 </template>
 
 <script>
+import '~public/styles/Marketing/Vjlp8/style.css'
 import MetaData from '~components/Global/MetaData.vue'
 export default {
   components: {

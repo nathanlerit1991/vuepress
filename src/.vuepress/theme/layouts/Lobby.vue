@@ -1,6 +1,6 @@
 <template>
   <div class="lobby">
-    <link href="/styles/LobbyPages/Verajohn/style.css" rel="stylesheet"/>
+    <!-- <link href="/styles/LobbyPages/Verajohn/style.css" rel="stylesheet"/> -->
     <header>
      <nav id="s-nav-bar-main">
         <div id="nav-home" class="h-left">
@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import '~public/styles/Branding/Verajohn/style.scss'
+import '~public/styles/LobbyPages/Verajohn/style.scss'
 import Button from "~components/LobbyPages/Button";
 import NavMainTitleLogo from "~components/LobbyPages/NavMainTitleLogo";
 import Games from "~components/LobbyPages/Games";
@@ -161,4 +163,4 @@ export default {
 };
 </script>
 <!--<style src="~styles/LobbyPages/Verajohn/style.scss" lang="scss"/>-->
-<style src="~public/styles/Branding/Verajohn/style.scss" lang="scss"/>
+<!--<style src="~public/styles/Branding/Verajohn/style.scss" lang="scss"/>-->
