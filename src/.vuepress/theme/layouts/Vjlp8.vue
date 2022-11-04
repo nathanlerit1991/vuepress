@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import '~public/styles/Marketing/Vjlp8/style.css'
+import '~public/styles/Marketing/Vjlp8/style.scss'
 import MetaData from '~components/Global/MetaData.vue'
 export default {
   components: {

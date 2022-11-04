@@ -278,7 +278,7 @@
 </template>
 
 <script>
-import '~public/styles/Vjfp/style.css'
+import '~public/styles/Vjfp/style.scss'
 import TrackingScript from '~components/Global/TrackingScript.vue'
 import MetaData from '~components/Global/MetaData.vue'
 import Modal from '~components/Global/Modal.vue'
