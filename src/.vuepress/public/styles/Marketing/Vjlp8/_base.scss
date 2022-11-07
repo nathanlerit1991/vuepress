@@ -49,7 +49,8 @@ a {
   font-size: $TEXT_SIZE;
 }
 
-section {
+section,
+footer {
   padding: $PADDING 0;
   position: relative;
 }
@@ -128,12 +129,20 @@ section {
     height: auto;
   }
 }
+#payment {
+  border-top: $SEPARATOR;
+  border-bottom: $SEPARATOR;
+}
 #payment,
-#terms {
+#terms,
+footer {
   background: $BODY_BG;
 }
 #payment {
   img {
     width: 100%;
   }
+}
+footer {
+  border-top: $SEPARATOR;
 }

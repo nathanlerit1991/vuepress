@@ -69,9 +69,9 @@
     <section id="payment" class="divider content-visibility">
       <div class="container">
         <picture>
-          <source srcset="/assets/verajohn/payment_large_jp.svg" media="(min-width: 576px)">
-          <source srcset="/assets/verajohn/payment_jp.svg" media="(min-width: 280px)">
-          <img class="lazy" src="/assets/verajohn/payment_large_jp.svg" alt="payment verajohn desktop">
+          <source srcset="/assets/verajohn/payment_vj_jp_payments_icon.svg" media="(min-width: 576px)">
+          <source srcset="/assets/verajohn/payment_vj_jp_payments_icon_mobile.svg" media="(min-width: 280px)">
+          <img class="lazy" src="/assets/verajohn/payment_vj_jp_payments_icon.svg" alt="payment verajohn desktop">
         </picture>
       </div>
     </section>
@@ -89,15 +89,22 @@
         </div>
       </div>
     </section>
+    <Footer
+      :promo-language-code="$page.frontmatter.promo_locale.promo_language_code"
+      :promo-country-code="$page.frontmatter.promo_locale.promo_country_code"
+      :landing-page-type="'verajohn'"
+    />
   </div>
 </template>
 
 <script>
 import '~public/styles/Marketing/Vjlp8/style.scss'
 import MetaData from '~components/Global/MetaData.vue'
+import Footer from '~components/Marketing/Footer.vue'
 export default {
   components: {
-    MetaData
+    MetaData,
+    Footer
   },
 	data () {
 		return {
