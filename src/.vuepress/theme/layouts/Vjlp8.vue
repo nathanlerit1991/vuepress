@@ -24,10 +24,10 @@
             <img src="/assets/verajohn/logo.png" class="d-block logo" alt="verajohn logo" width="80" height="80"/>
             <div v-html="$page.frontmatter.tracking_pixel" />
 
-            <!-- <div id="banner-images" class="m-auto">
+            <div id="banner-images" class="m-auto">
               <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_logo" alt="verajohn image" width="450" height="181"/>
               <img :src="$page.frontmatter.promo_banner.promo_images.promo_game_image" alt="verajohn image" width="450" height="64"/>
-            </div> -->
+            </div>
 
             <div id="banner-text" class="txt-center">
               <h1>{{ $page.frontmatter.promo_banner.promo_large_subtitle }}</h1>
