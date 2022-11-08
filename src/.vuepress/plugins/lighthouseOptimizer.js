@@ -36,7 +36,7 @@ if (typeof window !== 'undefined') { //Removed Error in Deployment
 		let lazyLoadTrigger = false
 		document.addEventListener("scroll", () => {
 		  let scrolled = document.scrollingElement.scrollTop;
-		  if(scrolled > screen.height / 3 && lazyLoadTrigger === false){
+		  if(scrolled > screen.height / 10 && lazyLoadTrigger === false){
 				deferAssets()
 				lazyLoadTrigger = true
 		  }
