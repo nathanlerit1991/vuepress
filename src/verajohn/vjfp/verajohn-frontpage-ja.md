@@ -1,5 +1,5 @@
 ---
-layout: 'VJFrontPage'
+layout: 'vjfp'
 slug: verajohn-frontpage-ja
 locale: ja
 field_ids:

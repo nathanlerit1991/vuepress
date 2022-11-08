@@ -76,7 +76,7 @@
       </div>
     </section>
 
-     <section id="terms" class="divider content-visibility">
+    <section id="terms" class="divider content-visibility">
       <div v-html="$page.frontmatter.body_script" />
       <div class="container">
         <div class="row">

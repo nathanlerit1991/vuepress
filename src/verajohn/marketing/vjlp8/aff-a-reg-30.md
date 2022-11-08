@@ -1,5 +1,5 @@
 ---
-layout: 'Vjlp8'
+layout: 'vjlp8'
 slug: aff-A-reg-30
 promo_locale:
   promo_country_code: jp
