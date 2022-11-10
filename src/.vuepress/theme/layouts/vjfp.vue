@@ -1,6 +1,6 @@
 <template>
 	<div id="vjfp" class="lazy-background" :data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`">
-		<!-- <link href="/styles/Vjfp/style.css" rel="stylesheet"/> -->
+		<link href="/styles/Vjfp/style.css" rel="stylesheet"/>
 		<!-- <MetaData /> -->
 		<!-- <TrackingScript /> -->
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
@@ -294,16 +294,7 @@ export default {
 			modalData: {}
 		}
 	},
-	mounted () {
-		this.setCookie('neru', 'pogi', 12)
-	},
 	methods: {
-		setCookie(cname, cvalue, exdays) {
-		  const d = new Date()
-		  d.setTime(d.getTime() + (exdays*24*60*60*1000))
-		  let expires = "expires="+ d.toUTCString()
-		  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
-		},
 		closeModal(closeFromModal){
 			this.isModal = closeFromModal
 		},
@@ -317,4 +308,3 @@ export default {
 	}
 }
 </script>
-<style lang="scss" src="~public/styles/Vjfp/style.scss">
