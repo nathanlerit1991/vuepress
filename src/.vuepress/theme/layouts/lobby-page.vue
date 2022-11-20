@@ -68,7 +68,7 @@
             <License :brand="brandName" :regulatory-images="license" />
           </div>
         </footer>
-      </main>
+      </main> 
     <FooterSticky
       :brand="brandName"
       :sign-in-data="signInBtnData"
