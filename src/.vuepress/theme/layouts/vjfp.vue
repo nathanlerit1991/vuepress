@@ -296,7 +296,7 @@ export default {
 		return {
 			isModal: false,
 			modalData: {}
-		}
+		} 
 	},
 	methods: {
 		closeModal(closeFromModal){
