@@ -2,6 +2,11 @@ const { description } = require('../../package')
 const path = require('path')
 let dynamicRoutes = []
 module.exports = {
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+  },
   locales: {
     '/': {
       lang: 'ja'
