@@ -1,6 +1,10 @@
 <template>
-	<div id="vjfp" class="lazy-background" :data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`">
-		<link href="/styles/Vjfp/style.css" rel="stylesheet"/>
+	<div
+		v-if="$page.frontmatter.layout === 'vjfp'"
+		id="vjfp" class="lazy-background"
+		:data-style="`--customer-support-background-image: url('${$page.frontmatter.customer_support.bg_image}');`"
+	>
+		<!-- <link href="/styles/Vjfp/style.css" rel="stylesheet"/> -->
 		<!-- <MetaData /> -->
 		<!-- <TrackingScript /> -->
 		<!-- BACKGROUND IMAGES ABOVE THE FOLD / REDUCE LCP -->
@@ -278,7 +282,7 @@
 </template>
 
 <script>
-// import '~public/styles/Vjfp/style.scss'
+import '~public/styles/Vjfp/style.scss'
 import TrackingScript from '~components/Global/TrackingScript.vue'
 import MetaData from '~components/Global/MetaData.vue'
 import Modal from '~components/Global/Modal.vue'
