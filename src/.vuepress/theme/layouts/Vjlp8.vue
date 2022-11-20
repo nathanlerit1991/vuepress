@@ -1,5 +1,5 @@
 <template>
-  <div id="vjlp8-main" :class="$page.frontmatter.styles">
+  <div v-if="$page.frontmatter.layout === 'vjlp8'" id="vjlp8-main" :class="$page.frontmatter.styles">
     <!-- <link href="/styles/Marketing/Vjlp8/style.css" rel="stylesheet"/> -->
     <!-- <MetaData /> -->
     <section id="hero" class="content-visibility">

@@ -1,5 +1,5 @@
 <template>
-  <div class="lobby">
+  <div v-if="$page.frontmatter.layout === 'lobby-page'" class="lobby">
     <!-- <link href="/styles/LobbyPages/Verajohn/style.css" rel="stylesheet"/> -->
     <header>
      <nav id="s-nav-bar-main">
