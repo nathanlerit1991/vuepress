@@ -5,7 +5,7 @@
     </div>
 
     <div v-for="(data, data_index) in 100" :key="data_index">
-      <img :src="'/assets/sample/' + (data_index + 6) + '.png'" loading="lazy"/>
+      <img :data-src="'/assets/sample/' + (data_index + 6) + '.png'"/>
     </div>
   </div>
 </template>
