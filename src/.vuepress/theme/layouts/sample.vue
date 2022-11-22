@@ -7,14 +7,14 @@
 
     <div v-for="(data, data_index) in 100" :key="data_index">
       <img class="lazy sample-img" :data-src="'/assets/sample/' + (data_index + 6) + '.png'"/>
-      <p>The quick brown fox jumops over the ehad of the lazy dog</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
-      <p>asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">The quick brown fox jumops over the ehad of the lazy dog</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
+      <p class="content-visibility">asdas dsa das dnsa dasghkd hahsdhahsdhahsd hjashdhjash  dhash dhashd hashd has hdhash dhash dhash dahs hdsah hdjash jdhasjkhd jkashj dhasjhd jkash</p>
     </div>
   </div>
 </template>
@@ -27,5 +27,8 @@
   width: 100%;
   max-width: 250px;
   height: auto;
+}
+.content-visibility {
+  content-visibility: auto;
 }
 </style>
