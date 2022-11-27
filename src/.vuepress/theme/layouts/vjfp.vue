@@ -72,11 +72,11 @@
 						<ol>
 							<li v-for="(listGames, listGamesIndex) in games.list_top_games" :key="listGamesIndex">
 								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modalFn(modalData = listGames.url, gameTitle = listGames.name)">
-									<img class="lazy" :src="listGames.image" alt="verajohn games" />
+									<img class="lazy" :data-src="listGames.image" alt="verajohn games" />
 									{{ listGames.name }}
 								</span>
 								<p v-else>
-									<img class="lazy" :src="listGames.image" alt="verajohn games" />
+									<img class="lazy" :data-src="listGames.image" alt="verajohn games" />
 									{{ listGames.name }}
 								</p>
 							</li>
@@ -107,7 +107,7 @@
 								v-for="(paymentIcons, paymentIconsindex) in $page.frontmatter.our_payment_methods.payment_method_icons"
 								:key="paymentIconsindex"
 								alt="verajohn payment providers"
-								:src="paymentIcons.image"
+								:data-src="paymentIcons.image"
 							>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
 						<div class="profile-pic">
 							<img
 								class="lazy"
-								:src="$page.frontmatter.first_customers_quote.profile_image"
+								:data-src="$page.frontmatter.first_customers_quote.profile_image"
 								alt="verajohn profile"
 							>
 						</div>
@@ -139,7 +139,7 @@
 					<div>
 						<div class="bonus">
 							<div class="image-wrapper image-bg">
-								<img class="lazy" :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
+								<img class="lazy" :data-src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
 							</div>
 							<div class="bonus-description" v-html="$page.frontmatter.beginners_bonus.text_content" />
 						</div>
@@ -191,7 +191,7 @@
 					<div class="testimonial-wrapper">
 						<h2> {{ $page.frontmatter.second_customers_quote.title }}</h2>
 						<div class="profile-pic">
-							<img class="lazy" :src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
+							<img class="lazy" :data-src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
 						</div>
 						<p v-html="$page.frontmatter.second_customers_quote.text_content" />
 					</div>
@@ -210,7 +210,7 @@
 							:key="honourableMentionsTileindex">
 						<div class="box txt-center">
 							<div class="image-bg">
-								<img class="lazy" :src="honourableMentionsTile.bg_image" alt="verajohn honourable">
+								<img class="lazy" :data-src="honourableMentionsTile.bg_image" alt="verajohn honourable">
 							</div>
 							<div v-html="honourableMentionsTile.text_content" />
 						</div>
@@ -249,7 +249,7 @@
 					</ul>
 					<div class="footer-twitter-button-pure">
 						<a :href="$page.frontmatter.twitter_link">
-							<img class="lazy" src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
+							<img class="lazy" data-src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
 							<span>{{ $page.frontmatter.twitter_title }}</span>
 						</a>
 					</div>
@@ -272,9 +272,9 @@
 						rel="noopener"
 						href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
 					>
-						<img loading="lazy" class="lazy curacao-regulator" src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
+						<img loading="lazy" class="lazy curacao-regulator" data-src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
 					</a>
-					<img class="lazy" src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
+					<img class="lazy" data-src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
 				</div>
 			</div>
 		</footer>
