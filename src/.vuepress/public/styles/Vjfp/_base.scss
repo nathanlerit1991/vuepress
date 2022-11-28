@@ -229,6 +229,7 @@ section {
 
     img {
       width: 130px;
+      height: auto;
     }
   }
 }
@@ -247,6 +248,8 @@ section {
       overflow: hidden;
       img {
         min-width: 250px;
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -283,6 +286,7 @@ section {
     height: 100%;
     img {
       width: 100%;
+      height: auto;
       min-width: 600px;
     }
   }
