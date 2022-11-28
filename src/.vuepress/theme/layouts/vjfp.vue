@@ -73,10 +73,16 @@
 							<li v-for="(listGames, listGamesIndex) in games.list_top_games" :key="listGamesIndex">
 								<span v-if="typeof listGames.url !== 'undefined' && listGames.url !== ''" @click="modalFn(modalData = listGames.url, gameTitle = listGames.name)">
 									<img class="lazy" :data-src="listGames.image" alt="verajohn games" />
+									<noscript>
+										<img :src="listGames.image" alt="verajohn games" />
+									</noscript>
 									{{ listGames.name }}
 								</span>
 								<p v-else>
 									<img class="lazy" :data-src="listGames.image" alt="verajohn games" />
+									<noscript>
+										<img :src="listGames.image" alt="verajohn games" />
+									</noscript>
 									{{ listGames.name }}
 								</p>
 							</li>
@@ -109,6 +115,14 @@
 								alt="verajohn payment providers"
 								:data-src="paymentIcons.image"
 							>
+							<noscript>
+								<img
+									v-for="(paymentIcons, paymentIconsindex) in $page.frontmatter.our_payment_methods.payment_method_icons"
+									:key="paymentIconsindex"
+									alt="verajohn payment providers"
+									:src="paymentIcons.image"
+								>
+							</noscript>
 						</div>
 					</div>
 				</div>
@@ -126,6 +140,12 @@
 								:data-src="$page.frontmatter.first_customers_quote.profile_image"
 								alt="verajohn profile"
 							>
+							<noscript>
+								<img
+									:src="$page.frontmatter.first_customers_quote.profile_image"
+									alt="verajohn profile"
+								>
+							</noscript>
 						</div>
 						<p v-html="$page.frontmatter.first_customers_quote.text_content" />
 					</div>
@@ -140,6 +160,9 @@
 						<div class="bonus">
 							<div class="image-wrapper image-bg">
 								<img class="lazy" :data-src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
+								<noscript>
+									<img :src="$page.frontmatter.beginners_bonus.bg_image" alt="beginners bonus" />
+								</noscript>
 							</div>
 							<div class="bonus-description" v-html="$page.frontmatter.beginners_bonus.text_content" />
 						</div>
@@ -158,6 +181,18 @@
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 								allowfullscreen
 								/>
+								<noscript>
+									<iframe
+										title="Verajohn YouTube video"
+										width="100%"
+										height="auto"
+										:src="$page.frontmatter.beginners_guide.video_url"
+										loading="lazy"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen
+									/>
+								</noscript>
 							<div class="bonus-description" v-html="$page.frontmatter.beginners_guide.text_content" />
 						</div>
 					</div>
@@ -191,7 +226,10 @@
 					<div class="testimonial-wrapper">
 						<h2> {{ $page.frontmatter.second_customers_quote.title }}</h2>
 						<div class="profile-pic">
-							<img class="lazy" :data-src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile">
+							<img class="lazy" :data-src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile"/>
+							<noscript>
+								<img :src="$page.frontmatter.second_customers_quote.profile_image" alt="verajohn profile"></img>
+							</noscript>
 						</div>
 						<p v-html="$page.frontmatter.second_customers_quote.text_content" />
 					</div>
@@ -210,7 +248,10 @@
 							:key="honourableMentionsTileindex">
 						<div class="box txt-center">
 							<div class="image-bg">
-								<img class="lazy" :data-src="honourableMentionsTile.bg_image" alt="verajohn honourable">
+								<img class="lazy" :data-src="honourableMentionsTile.bg_image" alt="verajohn honourable"/>
+								<noscript>
+									<img :src="honourableMentionsTile.bg_image" alt="verajohn honourable"/>
+								</noscript>
 							</div>
 							<div v-html="honourableMentionsTile.text_content" />
 						</div>
@@ -250,6 +291,9 @@
 					<div class="footer-twitter-button-pure">
 						<a :href="$page.frontmatter.twitter_link">
 							<img class="lazy" data-src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
+							<noscript>
+								<img src="/assets/verajohn/Vjfp/twitter.svg" alt="twitter"/>
+							</noscript>
 							<span>{{ $page.frontmatter.twitter_title }}</span>
 						</a>
 					</div>
@@ -273,8 +317,14 @@
 						href="https://verification.curacao-egaming.com/validateview.aspx?domain=verajohn.com"
 					>
 						<img loading="lazy" class="lazy curacao-regulator" data-src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator">
+						<noscript>
+							<img class="curacao-regulator" src="https://verification.curacao-egaming.com/validate.ashx?domain=verajohn.com" alt="curacao regulator"></img>
+						</noscript>
 					</a>
 					<img class="lazy" data-src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus">
+					<noscript>
+						<img src="/assets/verajohn/Vjfp/20plus.png" alt="20 plus"></img>
+					</noscript>
 				</div>
 			</div>
 		</footer>
