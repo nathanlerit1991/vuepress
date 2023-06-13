@@ -1,6 +1,6 @@
 if (typeof window !== 'undefined') { //Removed Error in Deployment
 	window.onload = function() {
-		//Check all img dimension then add the approriate dimension
+		//Check all img dimension then add the approriate dimension 
 		let imgDimension = document.querySelectorAll('img')
 		imgDimension.forEach((img, i) => {
 			let imgWidth = img.width
