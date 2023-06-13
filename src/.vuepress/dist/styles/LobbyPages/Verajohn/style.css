@@ -1,0 +1,139 @@
+.lobby .separator-top:after {
+  background: #0082BA;
+  display: block;
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.lobby .separator-bottom:before {
+  background: #0082BA;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+.lobby .container {
+  max-width: 768px;
+}
+
+.container-grid {
+  max-width: 768px;
+}
+
+.lobby a {
+  color: inherit;
+  text-decoration: none;
+}
+.lobby #s-nav-bar-main {
+  background: linear-gradient(to bottom, #009ce4 0%, #0094d5 100%);
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+  padding: 0 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 4px 0px rgba(0, 121, 173, 0.5);
+  max-height: 53px;
+}
+.lobby #s-nav-bar-main #nav-home img {
+  max-width: 30px;
+}
+.lobby #s-nav-bar-main .logo {
+  max-width: 73px;
+  width: 100%;
+  height: 100%;
+}
+.lobby #s-nav-bar-main button {
+  border-radius: 10px;
+  height: 38px;
+}
+.lobby #s-nav-bar-main > div {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  align-items: center;
+}
+.lobby main {
+  position: relative;
+  transition: all 0.3s ease;
+  min-height: 100vh;
+  height: 100%;
+  background: #009ee7;
+  padding-top: 54px;
+  padding-bottom: 50px;
+}
+.lobby #s-games {
+  padding: 16px 0;
+  text-align: center;
+}
+.lobby #s-games .container {
+  position: relative;
+}
+.lobby #s-games .right-icon i,
+.lobby #s-games .left-icon i {
+  background-image: url("/assets/verajohn/LobbyPages/hot-icon.png");
+}
+.lobby #s-games img {
+  border-radius: 0;
+  border: 0;
+}
+.lobby #s-lobby-tiles {
+  padding: 16px 0;
+}
+.lobby #s-lobby-tiles .pod-feat-img {
+  width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  background-image: linear-gradient(#6dbde5, #086b97);
+}
+.lobby #s-lobby-tiles .pods {
+  background-image: linear-gradient(#0093D4, #0093D4), none;
+}
+.lobby #s-cta {
+  background: #0093D4;
+  padding: 16px 0;
+}
+.lobby #s-cta .cta-logo {
+  margin: 30px auto;
+  max-width: 180px;
+}
+.lobby #s-cta .g-footer-item {
+  background: #0082BA;
+  margin: 8px 0;
+  padding: calc(16px / 2);
+}
+.lobby #s-seo-contents {
+  background: #0093D4;
+  padding: 16px 0;
+}
+.lobby #s-seo-contents h1, .lobby #s-seo-contents h2 {
+  text-align: center;
+}
+.lobby #s-footer-icon-wrapper {
+  background: #0093D4;
+  padding: 16px 0;
+}
+.lobby #s-footer-icon-wrapper .footer-icons {
+  border-radius: 8px 8px 0 0;
+  border: solid 2px #0082BA;
+}
+.lobby #s-footer-icon-wrapper .footer-icons > div:first-child {
+  margin-top: -2px;
+}
+.lobby .g-payment-provider,
+.lobby .g-game-providers,
+.lobby .g-license {
+  padding: 16px;
+  outline: solid 2px #0082BA;
+  margin-top: 2px;
+  background: #0093D4;
+}
+
+/*# sourceMappingURL=style.css.map */

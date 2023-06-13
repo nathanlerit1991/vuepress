@@ -1,0 +1,77 @@
+// HEAD COLOR FAMILY //
+@each $name, $color in $HEADING_COLOR {
+  .heading#{$name} {
+    font-family: $EN_FONT_FAMILY;
+    color: $color;
+    font-weight: 300;
+  }
+}
+
+// HEADING SIZE //
+@each $name, $size, $line-height in $HEADING_SIZE {
+  .heading#{$name} {
+    font-size: $size;
+    line-height: $line-height;
+  }
+}
+
+// PARAGRAPH COLOR FAMILY //
+@each $name, $color in $PARAGRAPH_COLOR {
+  .txt#{$name} {
+    font-family: $EN_FONT_FAMILY;
+    color: $color;
+    font-weight: 300;
+  }
+}
+
+// PARAGPRAH SIZE //
+@each $name, $size, $line-height in $PARAGRAPH_SIZE {
+  .txt#{$name} {
+    font-size: $size;
+    line-height: $line-height;
+  }
+}
+
+
+.btn-primary {
+  background: $BTN_PRIMARY_DEFAULT;
+  color: $BTN_PRIMARY_DEFAULT_FONTCOLOR;
+  border: $BTN_PRIMARY_DEFAULT_BORDER;
+  font-size: 15px;
+  height: 50px;
+
+  &:hover {
+    background: $BTN_PRIMARY_HOVER;
+  }
+  &:focus {
+    background: $BTN_PRIMARY_FOCUSED;
+  }
+}
+
+.btn-secondary {
+  background: $BTN_SECONDARY_DEFAULT;
+  color: $BTN_SECONDARY_DEFAULT_FONTCOLOR;
+  border: $BTN_SECONDARY_DEFAULT_BORDER;
+  height: 50px;
+
+  &:hover {
+    background: $BTN_SECONDARY_HOVER;
+  }
+  &:focus {
+    background: $BTN_SECONDARY_FOCUSED;
+  }
+}
+
+.btn-tertiary {
+  background: $BTN_TERTIARY_DEFAULT;
+  color: $BTN_TERTIARY_DEFAULT_FONTCOLOR;
+  border: $BTN_TERTIARY_DEFAULT_BORDER;
+  height: 50px;
+
+  &:hover {
+    background: $BTN_TERTIARY_HOVER;
+  }
+  &:focus {
+    background: $BTN_TERTIARY_FOCUSED;
+  }
+}

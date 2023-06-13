@@ -1,0 +1,22 @@
+// TYPOGRAPHY //
+@mixin headerTypography ($FONT_FAMILY, $FONT_SIZE, $FONT_COLOR, $LINEHEIGHT) {
+  font-family: $FONT_FAMILY;
+  font-size: $FONT_SIZE;
+  color: $FONT_COLOR;
+  line-height: $LINEHEIGHT;
+}
+
+@mixin paragraphTypography ($FONT_FAMILY, $FONT_SIZE, $FONT_COLOR, $LINEHEIGHT) {
+  font-family: $FONT_FAMILY;
+  font-size: $FONT_SIZE;
+  color: $FONT_COLOR;
+  line-height: $LINEHEIGHT;
+}
+
+//  BUTTONS //
+@mixin button ($FONT_FAMILY, $FONT_SIZE, $FONT_COLOR, $BTN_BG) {
+  background-image: $BTN_BG;
+  font-family: $FONT_FAMILY;
+  font-size: $FONT_COLOR;
+  color: $FONT_SIZE;
+}

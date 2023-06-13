@@ -1,0 +1,197 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 280px) {
+	h1 {
+		font-size: 30px;
+		line-height: 37.5px
+	}
+	h2 {
+		font-size: 25px;
+		line-height: 31.25px;
+	}
+	h3 {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	em {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.above-fold-bg {
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
+	section {
+		> .container{
+			padding: calc(#{$BASE_PADDING - 30px});
+		}
+	}
+	#s-about {
+		.row {
+			flex-direction: column-reverse;
+		}
+		#image-wrapper {
+			max-width: 300px;
+			margin: 0 auto -50px;
+			width: 100%;
+			top: 0;
+			position: relative;
+		}
+	}
+	#s-games{
+		.game-list {
+			div:last-child {
+				border-top: solid 1px #0076aa;
+			}
+		}
+	}
+	#s-payment {
+		#payment-icons {
+			padding: calc(#{$BASE_PADDING} - 40px);
+		}
+	}
+	#s-honourable-mentions {
+		h3 {
+			font-size: 25px;
+			line-height: 31.25px;
+		}
+	}
+	#s-honourable-mentions {
+		.box {
+			padding: 0 calc(#{$BASE_PADDING} - 20px);
+		}
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px) {
+	.above-fold-bg {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	#s-about {
+		.row {
+			flex-direction: inherit;
+		}
+		#image-wrapper {
+			position: absolute;
+			transform: translateY(0);
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			left: -150px;
+			min-width: 75%;
+		}
+		#text-wrapper {
+			flex: 0 0 50%;
+			max-width: 50%;
+		}
+	}
+	#s-payment {
+		#payment-icons {
+			padding: calc(#{$BASE_PADDING} - 20px) $BASE_PADDING;
+		}
+	}
+	#s-honourable-mentions {
+		padding: 0 $BASE_PADDING;
+		h3 {
+			font-size: 30px;
+			line-height: 36px;
+		}
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	#s-about {
+		#image-wrapper {
+			transform: translateY(-55px);
+			left: -120px;
+			min-width: 50%;
+			img {
+				min-width: 327px;
+			}
+		}
+		#text-wrapper {
+			flex: 0 0 60%;
+			max-width: 60%;
+		}
+	}
+	#s-games{
+		.game-list {
+			div:last-child {
+				border-left: solid 1px #0076aa;
+				border-top: none;
+			}
+		}
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	h1 {
+		font-size: 54px;
+		line-height: 64.8px;
+	}
+	h2 {
+		font-size: 30px;
+		line-height: 36px;
+	}
+	h3 {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	em {
+		font-size: 24px;
+		line-height: 34px;
+	}
+
+	section {
+		> .container{
+			padding: $BASE_PADDING;
+		}
+	}
+	#s-about {
+		#image-wrapper {
+			left: -135px;
+			min-width: 35%;
+		}
+		#text-wrapper {
+			flex: 0 0 75%;
+			max-width: 75%;
+		}
+	}
+	#s-customer-support{
+		#text-wrapper {
+			-ms-flex: 0 0 30%;
+			flex: 0 0 30%;
+			max-width: 30%;
+		}
+	}
+	#s-honourable-mentions {
+		.box {
+			padding: 0 $BASE_PADDING;
+		}
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	#s-about {
+		#image-wrapper {
+			left: -130px;
+			min-width: 30%;
+		}
+	}
+}
