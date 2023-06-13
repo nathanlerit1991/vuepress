@@ -20,5 +20,8 @@
   },
   "dependencies": {
     "vuepress-plugin-jsonld-playground": "^1.1.0"
+  },
+  "engines": {
+    "node": "18.16.0"
   }
 }
